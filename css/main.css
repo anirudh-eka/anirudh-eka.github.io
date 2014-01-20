@@ -37,10 +37,14 @@ a:visited { color: #a0a; }
 .posts {
   list-style-type: none;
   margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  /*max-width: 30em;*/
 }
 
 .posts li {
   line-height: 1.75em;
+  text-align: left
 }
 
 .posts span {
@@ -48,6 +52,7 @@ a:visited { color: #a0a; }
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
 }
+
 
 /*****************************************************************************/
 /*
@@ -127,9 +132,20 @@ a:visited { color: #a0a; }
 /* Home
 /*
 /*****************************************************************************/
+#home-body .posts {
+  max-width: 30em;
+}
+
+#home-body .posts p {
+  text-align: left
+}
+
+#home-body .posts img {
+  max-width: 20em;
+}
 
 #banner  {
-  height: 80%;
+  height: 60%;
   background-image: url(../images/sipping_tea.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -143,7 +159,7 @@ a:visited { color: #a0a; }
   position: absolute;
   width: 100%;
   left: 0%;
-  top: 55%;
+  top: 40%;
   font-size: 390%; 
 }
 
