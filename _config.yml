@@ -1,0 +1,6 @@
+name: Too Many Names
+markdown: redcarpet
+pygments: true
+poet_url: /poet
+programmer_url: /programmer
+url: /
