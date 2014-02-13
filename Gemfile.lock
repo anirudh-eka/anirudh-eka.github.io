@@ -46,6 +46,7 @@ GEM
       ffi (>= 0.5.0)
     redcarpet (2.3.0)
     safe_yaml (0.9.7)
+    sass (3.2.13)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -62,3 +63,4 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   jekyll-assets
+  sass
