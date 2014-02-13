@@ -158,8 +158,8 @@ a:visited { color: #a0a; }
   position: absolute;
   width: 100%;
   left: 0%;
-  top: 40%;
-  font-size: 390%; 
+  top: 35%;
+  font-size: 340%; 
 }
 
 #banner a {
@@ -171,10 +171,11 @@ a:visited { color: #a0a; }
   color: red;
 }
 
-#home-body h1 {
+#home-body h1 a {
+  text-decoration:none;
   padding-top: 0.8em;
   color: #339966;
-  font-size: 390%;
+  font-size: 340%;
 }
 
 /*****************************************************************************/
