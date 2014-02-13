@@ -146,8 +146,6 @@ a:visited { color: #a0a; }
 
 #banner  {
   height: 60%;
-  /*background-image: url(../images/sipping_tea.jpg);*/
-  background-image: url(asset_path('sipping_tea.jpg'));
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
