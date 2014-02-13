@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Reblog From DBC: Discovering Recursion</title>
+        <meta name="viewport" content="width=device-width">
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/assets/syntax-d69cef829c92bb463cedef8150582352.css">
+        <!-- <link rel="stylesheet" href="/css/syntax.css"> -->
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/app-38b73dbda3e140adb546e239a6b4c9a6.css">
+        <!-- <link rel="stylesheet" href="/css/main.css"> -->
+
+    </head>
+    <body>
+      <body>
+    <div class="site">
+      <div class="header">
+        <h1 class="title"><a href="/">Too Many Names</a></h1>
+        <a class="extra" href="/">home</a>
+        <a class="extra" href="/poet">poet</a>
+        <a class="extra" href="/programmer">programmer</a>
+      </div>
+
+      <h2>Reblog From DBC: Discovering Recursion</h2>
+<p class="meta">21 Jan 2014</p>
+
+<div class="post">
+<p>This is a reblog from my <a href="http://poetprogrammer.tumblr.com/">Dev Bootcamp blog</a>:</p>
+
+<p>Today was intense, but fun! Brick, our instructor, introduced us to recursion using the movie, Inception, as an example. It follows a recursive method of entering dream within dream within dream and then subsequently waking up from each inner dream until the viewer believe she is in reality. Or is she? Dun. Dun. Dun!</p>
+
+<p>Because I’m a nerd, I basically reduced the movie into a recursion in ruby.</p>
+
+<p>Spoiler Alert</p>
+
+<p>Ok, just run this ruby program and you’ve basically watched the movie:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="k">def</span> <span class="nf">inception_recursion</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">1</span>
+        <span class="nb">puts</span> <span class="s2">&quot;Oh my god...&quot;</span>
+        <span class="nb">puts</span> <span class="s2">&quot;Ken Watanabe is here too!&quot;</span>
+        <span class="k">return</span>
+    <span class="k">end</span>
+
+    <span class="nb">puts</span> <span class="s2">&quot;I&#39;m in a dream!&quot;</span>
+    <span class="n">inception_recursion</span><span class="p">(</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">&quot;ah, I just woke up&quot;</span>
+    <span class="nb">puts</span>
+    <span class="nb">puts</span> <span class="s2">&quot;Or...Did...I?&quot;</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="n">inception_recursion</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+
+</div>
+<p>Tags: devbootcamp</p>
+
+      <hr/>
+<div class="footer">
+  <div class="contact">
+    <p>
+      <a href="https://github.com/anirudh-eka">github</a> + 
+      <a href="https://twitter.com/anirudh_eka">twitter</a>
+    </p>
+  </div>
+</div>
+
+    </div>
+</body>
+
+
+
+        <!-- Custom JS -->
+        <script src="/assets/app-41af205228f35b12ca7d7b10f0d8cc7f.js"></script>
+        
+    </body>
+</html>
