@@ -17,6 +17,6 @@ $(document).ready(function(){
     });
 
     $('#home-body h1').on('click', function() {
-      $('html').animate({scrollTop: $('#banner').height()}, 600);
+      $('html').animate({scrollTop: ($('#banner').height()+10)}, 600);
     });
 });

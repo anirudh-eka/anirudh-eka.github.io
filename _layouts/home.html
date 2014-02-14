@@ -8,7 +8,10 @@ layout: head
       <h1><a href={{ site.poet_url }}>Poet</a> + <a href={{ site.programmer_url }}>Programmer</a></h1> 
     </div>
   </div>
-  {{ content }}
-  
+  <div id='home-body' >
+    <div class='panel'>
+      {{ content }}
+    </div>
+  </div>
   {% include footer.html %}
 </body>
