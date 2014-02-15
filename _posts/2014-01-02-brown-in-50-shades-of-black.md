@@ -3,6 +3,7 @@ layout: post
 title:  "Brown Is A Shade of Black!"
 date:   2014-01-19 09:15:44
 categories: poet
+share: shout
 ---
 
 <!-- ![50 Shades of Black image](/images/50_shades.jpg) -->

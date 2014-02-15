@@ -4,6 +4,7 @@ title:  "Reblog From DBC: Discovering Recursion"
 date:   2014-01-21 08:53:44
 categories: programmer
 tags: dev bootcamp
+share: discuss
 ---
 
 This is a reblog from my [Dev Bootcamp blog](http://poetprogrammer.tumblr.com/):
