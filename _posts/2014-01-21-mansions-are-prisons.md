@@ -1,5 +1,5 @@
 ---
-layout: poet
+layout: post
 title: "Mansion Is A Prison"
 categories: poet
 tags: haiku

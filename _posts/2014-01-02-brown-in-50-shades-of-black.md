@@ -1,5 +1,5 @@
 ---
-layout: poet
+layout: post
 title:  "Brown Is A Shade of Black!"
 date:   2014-01-19 09:15:44
 categories: poet

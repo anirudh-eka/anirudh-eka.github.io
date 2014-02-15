@@ -1,5 +1,5 @@
 ---
-layout: poet
+layout: post
 title:  "Published in Insight Magazine"
 categories: poet
 ---
