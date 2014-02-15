@@ -3,43 +3,76 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Programmer</title>
+        <title>programmer</title>
         <meta name="viewport" content="width=device-width">
         <!-- syntax highlighting CSS -->
         <link rel="stylesheet" href="/assets/syntax-d69cef829c92bb463cedef8150582352.css">
         <!-- <link rel="stylesheet" href="/css/syntax.css"> -->
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="/assets/app-5d5a70c769b73c232275ad489878b317.css">
+        <link rel="stylesheet" href="/assets/app-c7424b45d421034a21dbffcf4b360be3.css">
         <!-- <link rel="stylesheet" href="/css/main.css"> -->
 
     </head>
     <body>
-      <body>
-    <div class="site">
-      <div class="header">
-        <h1 class="title"><a href="/">toomanynames </a>+<a class="extra" href="/poet"> poet </a>+<a class="extra" href="/programmer"> programmer</a></h1>
+      <body id="featured">
+  <div class='programmer-banner'>
+  <div class='offsetter'></div>
+  <div class='content'>
+    <div class="header">
+      <h1 class="title"><a href="/">toomanynames/</a><a class="extra" href="#">programmer</a></h1>
+    </div>
+      
+      <div class="panel">
+        <p>I started coding because I was sick of living in the matrix, but not knowing Kung Fu. My path has presently led me to be a developer at <a href="http://www.thoughtworks.com/">ThoughtWorks</a>.</p>
       </div>
+      
 
-      <div id="programmer">
-  <h1>Programmer</h1> 
-  <ul class="posts" id="blog">
-    
-      
-        <li><span>21 Jan 2014</span> &raquo; <a href="/programmer/2014/01/21/recursion-for-beginners.html">Reblog From DBC: Discovering Recursion</a><span>programmer</span></li>
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </ul>
-</div>
+      <div class="panel" id="blog">
+        <h1><a href="#">Posts</a></h1> 
+        <ul class="posts">
+          
+            
+              <li><span>21 Jan 2014</span> &raquo; <a href="/programmer/2014/01/21/recursion-for-beginners.html">Reblog From DBC: Discovering Recursion</a></li>
+              <p><p>This is a reblog from my <a href="http://poetprogrammer.tumblr.com/">Dev Bootcamp blog</a>:</p>
 
+<p>Today was intense, but fun! Brick, our instructor, introduced us to recursion using the movie, Inception, as an example. It follows a recursive method of entering dream within dream within dream and then subsequently waking up from each inner dream until the viewer believe she is in reality. Or is she? Dun. Dun. Dun!</p>
+
+<p>Because I’m a nerd, I basically reduced the movie into a recursion in ruby.</p>
+
+<p>Spoiler Alert</p>
+
+<p>Ok, just run this ruby program and you’ve basically watched the movie:</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="k">def</span> <span class="nf">inception_recursion</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">1</span>
+        <span class="nb">puts</span> <span class="s2">&quot;Oh my god...&quot;</span>
+        <span class="nb">puts</span> <span class="s2">&quot;Ken Watanabe is here too!&quot;</span>
+        <span class="k">return</span>
+    <span class="k">end</span>
+
+    <span class="nb">puts</span> <span class="s2">&quot;I&#39;m in a dream!&quot;</span>
+    <span class="n">inception_recursion</span><span class="p">(</span><span class="n">num</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">&quot;ah, I just woke up&quot;</span>
+    <span class="nb">puts</span>
+    <span class="nb">puts</span> <span class="s2">&quot;Or...Did...I?&quot;</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="n">inception_recursion</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+</p>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </div>
       <div class="footer">
   <div class="contact">
     <p>
@@ -50,9 +83,8 @@
 </div>
 
     </div>
+  </div>
 </body>
-
-
 
         <!-- Custom JS -->
         <script src="/assets/app-446a0f6de6028419ff2949ac59ac22e6.js"></script>
