@@ -3,21 +3,20 @@ layout: head
 ---
 
 <body id="poet">
-    <div class="site">
-      <div class="header">
-        <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-        <a class="extra" href="/">home</a>
-        <a class="extra" href="{{ site.poet_url }}">poet</a>
-        <a class="extra" href="{{ site.programmer_url }}">programmer</a>
-      </div>
-      <div class='poet-container'>
-        {% if page.title != 'Poet' %}
-          <h1>{{ page.title }}</h1>
-        {% endif %}
-
-        {{ content }}
-        <p>Tags: {{ page.tags }}</p>
-      </div>
+  <div class='bg'>
+  <div class='offsetter'></div>
+  <div class='content'>
+    <div class="header">
+      <h1 class="title"><a href="/">{{ site.name }}/</a><a class="extra" href="{{ site.poet_url }}">poet</a></h1>
     </div>
-      {% include footer.html %}
+
+      {% if page.title != 'Poet' %}
+        <h1>{{ page.title }}</h1>
+      {% endif %}
+
+      {{ content }}
+      <p>Tags: {{ page.tags }}</p>
+    {% include footer.html %}
+    </div>
+  </div>
 </body>

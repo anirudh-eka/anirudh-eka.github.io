@@ -32,24 +32,15 @@ a:visited { color: #a0a; }
 
 /*****************************************************************************/
 /*
-/* Home
-/*
-/*****************************************************************************/
-
-
-
-/*****************************************************************************/
-/*
 /* Site
 /*
 /*****************************************************************************/
 
-.site {
-  font-size: 115%;
-  text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
-  line-height: 1.5em;
+.header {
+  text-align: left;
+  font-size: 250%;
+  padding-left: 1.5em;
+  margin-bottom: 0em; 
 }
 
 .header a {
@@ -59,7 +50,6 @@ a:visited { color: #a0a; }
 
 .title {
   display: inline-block;
-  margin-bottom: 2em;
 }
 
 .title a {
@@ -72,7 +62,6 @@ a:visited { color: #a0a; }
 
 .header a.extra {
   color: #339966;
-  margin-left: 1em;
 }
 
 .header a.extra:hover {
@@ -151,29 +140,6 @@ a:visited { color: #a0a; }
   color: #fc3a3a;
 }
 
-#home-body h1 {
-  padding-bottom: 1em;
-  border-bottom: .1em solid gray;
-  margin-bottom: 3em;
-}
-#home-body h1 a {
-  text-decoration:none;
-  padding-top: 0.8em;
-  color: #02a350;
-  font-size: 340%;
-}
-
-#home-body h1 a:hover {
-  color: #109653;
-}
-
-.panel {
-  display: inline-block;
-  padding: 3em;
-  margin-top: 3em;
-  margin-bottom: 3em;
-  border-radius: 1em;
-}
 
 /*****************************************************************************/
 /*
@@ -181,31 +147,78 @@ a:visited { color: #a0a; }
 /*
 /*****************************************************************************/
 
-#poet .site  {
-  min-height: 80%;
-  width: 100%;
-  background-image: url(../images/Sac_Po_Feat.jpg);
-  background-size: auto 100%;
+#poet .bg {
+  background: fixed;
   background-repeat: no-repeat;
-  background-position: right bottom;
-  background-color: black;
-  padding-bottom: 5%;
-  margin: 0px auto;
+  background-size: cover;
+  background-position: -25em 0em; 
 }
 
-#poet .poet-container h1 {
-  color: #339966;
+#poet .content {
+  display: inline-block;
+  min-width: 50%;
+  border-left: 4px solid gold;
 }
 
-#poet .poet-container {
-  margin-left: 5%;
-  padding: 2%;
-  background-color: rgba(246, 246, 246, 0.9);
-  width: 65%;
+#poet .offsetter {
+  height: 100%;
+  max-width: 50%;
+}
+/*****************************************************************************/
+/*
+/* Panel
+/*
+/*****************************************************************************/
+
+.panel h1 {
+  text-align: center;
+  padding-bottom: 1em;
+  border-bottom: .1em solid gray;
+  margin-bottom: 3em;
 }
 
-#poet .poet-container span{
-  color: #FF4D4D;
+.panel h1 a {
+  text-decoration:none;
+  padding-top: 0.8em;
+  color: #02a350;
+  font-size: 340%;
+}
+
+.panel h1 a:hover {
+  color: #109653;
+}
+
+.panel {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  border-radius: 1em;
+  max-width: 40em;
+}
+
+.panel img {
+  max-width: 20em;
+}
+
+.panel p {
+  color: #ddd;
+  margin-bottom: 2em;
+}
+
+.panel a {
+  color: gold;
+  text-decoration: none;
+}
+
+.panel a:hover {
+  color: #d1ae00;
+}
+
+.panel li a {
+  font-size: 150%;
 }
 
 /*****************************************************************************/
@@ -221,24 +234,6 @@ a:visited { color: #a0a; }
   margin-right: auto;
 }
 
-#home-body .posts p {
-  color: #ddd;
-  margin-bottom: 2em;
-}
-
-#home-body .posts a {
-  color: gold;
-  text-decoration: none;
-}
-
-#home-body .posts a:hover {
-  color: #d1ae00;
-}
-
-#home-body .posts li a {
-  font-size: 150%;
-}
-
 .posts li {
   line-height: 1.75em;
   text-align: left;
@@ -246,7 +241,7 @@ a:visited { color: #a0a; }
 }
 
 
-.posts span {
+.posts span, {
   color: #aaa;
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
@@ -352,5 +347,8 @@ body {
 #banner {
   background-image: url("/assets/sipping_tea-d446555e6596efe1977cd7e316a556f5.jpg"); }
 
-#poet .site {
-  background-image: url("/assets/Sac_Po_Feat-31893f56176eb8def137c9c1999a7d42.jpg"); }
+#poet .bg {
+  background-image: url("/assets/BloomBars1-716648009f909e0071e618f214a84539.jpg"); }
+
+#poet .content {
+  background-image: url("/assets/bg-texture-84c2c522b69d83aaceb0f52c9c0f870e.png"); }
