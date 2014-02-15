@@ -20,7 +20,7 @@ $(document).ready(function(){
       }); 
     });
 
-    $('#home-body h1').on('click', function() {
+    $('#blog').on('click', function() {
       $('html').animate({scrollTop: $('#blog').offset().top}, 600, function(){
         window.location.hash = 'blog';
       });
