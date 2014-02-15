@@ -142,24 +142,24 @@ a:visited { color: #a0a; }
 
 /*****************************************************************************/
 /*
-/* Poet
+/* Featured
 /*
 /*****************************************************************************/
 
-#poet .bg {
+.poet-banner, .programmer-banner {
   background: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -25em 0em; 
 }
 
-#poet .content {
+#featured .content {
   display: inline-block;
   min-width: 50%;
   border-left: 4px solid gold;
 }
 
-#poet .offsetter {
+#featured .offsetter {
   height: 100%;
   max-width: 50%;
 }
