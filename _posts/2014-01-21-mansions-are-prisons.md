@@ -5,7 +5,7 @@ categories: poet
 tags: haiku
 share: shout
 suggested_tweet:
-  text: "Dont sell yourself, give/ yourself, If you cost nothing/Then are you not free?"
+  text: "Dont sell yourself, give/yourself, If you cost nothing/Then are you not free?"
   hashtags: ['haiku', 'PoetProgrammer']
 ---
 
