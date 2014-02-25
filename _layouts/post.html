@@ -8,9 +8,14 @@ layout: default
   <div class="post">
   {{ content }}
   </div>
-  <p>Tags: {{ page.tags }}</p>
+  {% if page.tags != empty %}
+    <p>Tags: {{ page.tags }}</p>
+  {% endif %}
   {% if page.share == 'discuss' %}
     <div id="disqus_thread"></div>
+  {% endif %}
+  {% if page.share == 'shout' %}
+    <a target="_blank" href="{% suggested_tweet %}">Tweet</a>
   {% endif %}
 </div>
 

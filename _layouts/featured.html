@@ -25,6 +25,9 @@ layout: head
                 {% if post.share == 'discuss' %}
                   <p><a href="{{ post.url }}#disqus_thread">Ay you got something to say?</a></p>
                 {% endif %}
+                {% if post.share == 'shout' %}
+                  <a target="_blank" href="{% suggested_tweet %}">Tweet</a>
+                {% endif %}
               {% endif %}
             {% endfor %}
           </ul>
