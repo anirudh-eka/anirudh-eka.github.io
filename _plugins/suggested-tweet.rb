@@ -76,6 +76,7 @@ module Jekyll
     end
 
     private
+
     def frontmatter_config(context)
       context.environments.first['page']['suggested_tweet'] || {}
     end

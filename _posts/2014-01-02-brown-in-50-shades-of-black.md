@@ -4,6 +4,8 @@ title:  "Brown Is A Shade of Black!"
 date:   2014-01-19 09:15:44
 categories: poet
 share: shout
+suggested_tweet:
+  text: "Brown Is A Shade of Black! Thank you @50ShadesBlack!"
 ---
 
 <!-- ![50 Shades of Black image](/images/50_shades.jpg) -->
