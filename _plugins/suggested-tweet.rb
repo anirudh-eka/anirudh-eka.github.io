@@ -78,12 +78,23 @@ module Jekyll
     private
 
     def frontmatter_config(context)
+      context.environments.first['page']['suggested_tweet']['url'] = render_url(context)
       context.environments.first['page']['suggested_tweet'] || {}
     end
 
     def config(context)
       global = Jekyll.configuration({ 'suggested_tweet' => frontmatter_config(context) })
       global['suggested_tweet'] || {}
+    end
+
+    def render_url(context)
+      unless context.environments.first['page']['suggested_tweet']['url']
+        root_url = context.environments.first['site']['suggested_tweet']['url']
+        #make default url the page url
+        "#{root_url}#{context.environments.first['page']['url']}"
+      else
+        context.environments.first['page']['suggested_tweet']['url']
+      end
     end
   end
 
