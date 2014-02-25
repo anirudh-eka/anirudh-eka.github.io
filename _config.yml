@@ -5,7 +5,7 @@ poet_url: /poet
 programmer_url: /programmer
 url: /
 suggested_tweet:
-    url:                  'http://toomanynames.com/'
+    url:                  'http://toomanynames.com'
     via:                  'anirudh-eka'
     text:                 'This was cool!'
     hashtags:             ['PoetProgrammer']
