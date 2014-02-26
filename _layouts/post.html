@@ -9,7 +9,11 @@ layout: default
   {{ content }}
   </div>
   {% if page.tags != empty %}
-    <p>Tags: {{ page.tags }}</p>
+    <p>Tags: 
+      {% for tag in page.tags %}
+        {{tag}}
+      {% endfor %}
+    </p>
   {% endif %}
   {% if page.share == 'discuss' %}
     <div id="disqus_thread"></div>

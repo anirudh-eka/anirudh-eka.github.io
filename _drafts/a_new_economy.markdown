@@ -1,0 +1,6 @@
+In the age of Wikipedia, and Kahn Aacademy there is no reason our society should deny those want to learn and be creative, a top-notch education because they didn't have the exposure or forsight to plan a "successful" career. Why can't someone scribblin rhymes in South East DC, be shown how to scribble code? Our schools too often beat the creativity out of us with standardization. It is creativity that makes humans exceptional. Humans are meant to make machines not be them.
+
+I can't help, but feel a bit of irony, knowing that as I code, routine jobs become automated. The otherside of DC is being pushed out of the offices like my old one as well. But is it wrong for a robot to do a task that is as unstimulating as sending a message across the office? Human beings, as a species, will have to ask themselves what happens when there is not enough work to do because we've successfully made machines that make our life easier. Do we let those who don't work starve when we are surrounded by more abundance than ever before?
+
+
+Well I certainly don't believe we should keep jobs that treat folks like cogs in a machine. We have to imagine a new economy that doesn't create food deserts in a country produces more food than it can consume.
