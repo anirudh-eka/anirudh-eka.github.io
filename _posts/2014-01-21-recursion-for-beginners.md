@@ -6,9 +6,6 @@ categories: programmer
 tags: dev bootcamp
 share: discuss
 ---
-
-This is a reblog from my [Dev Bootcamp blog](http://poetprogrammer.tumblr.com/):
-
 Today was intense, but fun! Brick, our instructor, introduced us to recursion using the movie, Inception, as an example. It follows a recursive method of entering dream within dream within dream and then subsequently waking up from each inner dream until the viewer believe she is in reality. Or is she? Dun. Dun. Dun!
 
 Because I’m a nerd, I basically reduced the movie into a recursion in ruby.
@@ -34,3 +31,6 @@ end
 
 puts inception_recursion(3)
 {% endhighlight %}
+
+
+*This was originally posted on my old [blog](http://poetprogrammer.tumblr.com/). I am in the process of migrating some of my favorite posts over to this new blog*

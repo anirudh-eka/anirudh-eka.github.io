@@ -15,7 +15,7 @@ html, body { height: 100%; }
 body {
   /*background-color: #f6f6f6;*/
   font: 13.34px Helvetica, Arial, sans-serif;
-  font-size: small;
+  font-size: medium;
   text-align: center;
 }
 
@@ -224,6 +224,12 @@ a:visited { color: #a0a; }
   font-size: 150%;
 }
 
+.panel .date {
+  color: black;
+  font-family: Monaco, "Courier New", monospace;
+  font-size: 80%;
+}
+
 /*****************************************************************************/
 /*
 /* Posts
@@ -244,11 +250,11 @@ a:visited { color: #a0a; }
 }
 
 
-.posts span, {
+/*.posts span {
   color: #aaa;
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
-}
+}*/
 
 /* standard */
 .post pre {
