@@ -66,40 +66,49 @@ require 'twitter_web_intents'
 
 module Jekyll
   module SuggestedTweetHelper
+    attr_reader :root_url, :tweet_subject
+    
     def twitter_params(context)
-            # twitter_param_keys = %w{ url via text in_reply_to hashtags related }
-      # twitter_params = config(context).select{ |key, value| twitter_param_keys.include?(key) }
-      twitter_params = config(context)
-
+      set_root_url(context)
+      set_tweet_subject(context)
+      twitter_params = config
+      
       # convert keys from strings to symbols....grrrr
       twitter_params.inject({}){|p,(k,v)| p[k.to_sym] = v; p}
     end
 
     private
-
-    def frontmatter_config(context)
-      context.environments.first['page']['suggested_tweet']['url'] = render_url(context)
-      context.environments.first['page']['suggested_tweet'] || {}
+    
+    def set_root_url(context)
+      @root_url = context.environments.first['site']['suggested_tweet']['url']
     end
 
-    def config(context)
-      global = Jekyll.configuration({ 'suggested_tweet' => frontmatter_config(context) })
-      global['suggested_tweet'] || {}
-    end
-
-    def render_url(context)
-      unless context.environments.first['page']['suggested_tweet']['url']
-        root_url = context.environments.first['site']['suggested_tweet']['url']
-        #make default url the page url
-        "#{root_url}#{context.environments.first['page']['url']}"
+    def set_tweet_subject(context)
+      if context[@markup.strip] && context[@markup.strip]["suggested_tweet"]
+        puts 'post'
+        @tweet_subject = context[@markup.strip] && context[@markup.strip]
       else
-        context.environments.first['page']['suggested_tweet']['url']
+        raise "page does not have suggested_tweet, you must pass param that does" unless context.environments.first['page']['suggested_tweet']
+        @tweet_subject = context.environments.first['page']
       end
+    end
+
+    def frontmatter_config
+      unless tweet_subject["suggested_tweet"]["url"] 
+        tweet_subject["suggested_tweet"]["url"] = "#{root_url}#{tweet_subject["url"]}"
+      end
+      tweet_subject["suggested_tweet"] || {}
+    end
+
+    def config
+      global = Jekyll.configuration({ 'suggested_tweet' => frontmatter_config })
+      global['suggested_tweet'] || {}
     end
   end
 
   class SuggestedTweet < Liquid::Tag
     include Jekyll::SuggestedTweetHelper
+    
     def render(context)
       TwitterWebIntents.get_tweet_url(twitter_params(context))
     end

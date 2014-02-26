@@ -22,7 +22,9 @@ layout: head
               {% if post.categories contains page.title %}
                 <li><span class='date'>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
                 <p>{{post.content}}</p>
-                {% if post.share == 'discuss' %}
+                {% if post.share == 'shout' %}
+                  <p><a target="_blank" href="{% suggested_tweet post%}">Tweet</a></p>
+                {% elsif post.share == 'discuss' %}
                   <p><a href="{{ post.url }}#disqus_thread">Ay you got something to say?</a></p>
                 {% endif %}
               {% endif %}

@@ -17,8 +17,7 @@ layout: default
   {% endif %}
   {% if page.share == 'discuss' %}
     <div id="disqus_thread"></div>
-  {% endif %}
-  {% if page.share == 'shout' %}
+  {% elsif page.share == 'shout' %}
     <a target="_blank" href="{% suggested_tweet %}">Tweet</a>
   {% endif %}
 </div>
