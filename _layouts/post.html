@@ -1,6 +1,16 @@
 ---
 layout: default
 ---
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=653062264739347";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 <div class="panel">
   <h2><a href="#">{{ page.title }}</a></h2>
   <p class="meta"><span class='date'>{{ page.date | date_to_string }}</span></p>
@@ -8,6 +18,7 @@ layout: default
   <div class="post">
   {{ content }}
   </div>
+
   {% if page.tags != empty %}
     <p>Tags: 
       {% for tag in page.tags %}
@@ -18,7 +29,7 @@ layout: default
   {% if page.share == 'discuss' %}
     <div id="disqus_thread"></div>
   {% elsif page.share == 'shout' %}
-    <a target="_blank" href="{% suggested_tweet %}">Tweet</a>
+    {% include shouting.html param=page%}
   {% endif %}
 </div>
 

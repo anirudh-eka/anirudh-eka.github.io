@@ -164,6 +164,26 @@ a:visited { color: #a0a; }
   height: 100%;
   max-width: 50%;
 }
+
+/*****************************************************************************/
+/*
+/* Social (Shouting!)
+/*
+/*****************************************************************************/
+
+.facebook {
+  color: #8B9DC3;
+}
+
+.twitter {
+  color: #55ACEE;
+}
+
+.facebook:hover, .twitter:hover {
+  color: white;
+}
+
+
 /*****************************************************************************/
 /*
 /* Panel
@@ -249,13 +269,6 @@ a:visited { color: #a0a; }
   text-align: left;
   margin-bottom: 1.5em;
 }
-
-
-/*.posts span {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
-}*/
 
 /* standard */
 .post pre {
