@@ -26,14 +26,5 @@ $(document).ready(function(){
       });
     });
 
-    $window.on('scroll', function(){
-      if ($window.scrollTop() == 0) {
-        window.location.hash = '';
-      }
-
-      if ($('#blog').exists() && $window.scrollTop() >= $('#blog').offset().top) {
-        window.location.hash = 'blog';
-      }
-    });
 });
 
