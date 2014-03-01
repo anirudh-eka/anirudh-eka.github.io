@@ -11,6 +11,23 @@ layout: head
   </div>
   <div id='home-body' >
     <div class='panel'>
+      <h1 id='blog'>
+        {% for category in site.featured  %}
+          {% if category contains page.title %}
+            {% if category contains 'all' %}
+            <a href='/' class='active'>{{ category }} </a>
+            {% else %}
+            <a href='/{{ category }}' class='active'>{{ category }} </a>
+            {% endif %}
+          {% else %}
+            {% if category contains 'all' %}
+            <a href='/' class='inactive'>{{ category }} </a>
+            {% else %}
+            <a href='/{{ category }}' class='inactive'>{{ category }} </a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </h1>
       {{ content }}
     </div>
   </div>
