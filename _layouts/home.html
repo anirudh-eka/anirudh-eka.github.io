@@ -4,9 +4,9 @@ layout: head
 
 <body>
   <div id='banner'>
-    <div class='title'>
-      <h1><a class="root" href={{ site.url }}>{{ site.name }}</a><a class="extra" href={{ page.url }}>{% if page.title %}/{{ page.title }}{% endif %}
-      </a></h1> 
+    <div class='title-container'>
+      <h1 class='title'><a href={{ site.url }}>{{ site.name }}</a>{% if page.title %} / <a class="extra" href={{ page.url }}>{{ page.title }}
+      </a>{% endif %}</h1> 
     </div>
   </div>
   <div id='home-body' >
