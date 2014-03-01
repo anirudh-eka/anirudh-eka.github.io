@@ -9131,11 +9131,5 @@ $(document).ready(function(){
       }); 
     });
 
-    $('#blog').on('click', function() {
-      $('html').animate({scrollTop: $('#blog').offset().top}, 600, function(){
-        window.location.hash = 'blog';
-      });
-    });
-
 });
 
