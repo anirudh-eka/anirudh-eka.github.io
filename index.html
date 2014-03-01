@@ -1,11 +1,11 @@
 ---
 layout: home
-title: Too Many Names
 ---
 
   <h1 id='blog'><a href='#'>Blog</a></h1>
   <ul class="posts">
     {% for post in site.posts %}
+      <div class="post">
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
         {% if post.share == 'discuss' %}
           <p>{{post.excerpt}}
@@ -16,6 +16,6 @@ title: Too Many Names
             {% include shouting.html param=post%}
           </p>
         {% endif %}
-      
+      </div>
     {% endfor %}
   </ul>
