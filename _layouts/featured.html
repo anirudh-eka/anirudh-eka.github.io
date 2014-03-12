@@ -9,7 +9,7 @@ layout: home
       {% if post.share == 'shout' %}
         {% include shouting.html param=post%}
       {% elsif post.share == 'discuss' %}
-        <p><a href="{{ post.url }}#disqus_thread">Ay you got something to say?</a></p>
+        <p><a href="{{ post.url }}">Read more...</a></p>
       {% endif %}
     {% endif %}
   {% endfor %}
