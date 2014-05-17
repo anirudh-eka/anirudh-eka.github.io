@@ -15,7 +15,8 @@ html, body { height: 100%; }
 
 body {
   /*background-color: #f6f6f6;*/
-  font: 13.34px Helvetica, Arial, sans-serif;
+  /*font: 13.34px Helvetica, Arial, sans-serif;*/
+  font: 1.3em Cardo, Georgia, Cambria, 'Times New Roman', Times, serif;
   font-size: large;
   text-align: center;
 }
@@ -25,7 +26,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
 
 h1 { margin-bottom: 1em; }
-p { margin: 1em 0; }
+p { margin: 1em 0; 
+    line-height: 1.635em
+}
 
 a         { color: #00a; }
 a:hover   { color: #000; }
@@ -235,8 +238,8 @@ a:visited { color: #a0a; }
   margin-top: 3em;
   margin-bottom: 3em;
   border-radius: 1em;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-left: 10em;
+  padding-right: 10em;
 }
 
 .panel img {
