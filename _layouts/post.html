@@ -12,19 +12,19 @@ layout: default
 
 
 <div class="panel">
-  <h2><a href="#">{{ page.title }}</a></h2>
-  <p class="meta"><span class='date'>{{ page.date | date_to_string }}</span></p>
+  <h1><a href="#">{{ page.title }}</a></h1>
 
-  <div class="post">
+  <div class="post align-{{page.align}}">
   {{ content }}
   </div>
 
+  <p class="meta date">{{ page.date | date_to_string }}</p>
   {% if page.tags != empty %}
-    <p>Tags: 
+    <ul class="meta tags">
       {% for tag in page.tags %}
-        {{tag}}
+        <li>#{{tag}}<li>
       {% endfor %}
-    </p>
+    </ul>
   {% endif %}
   {% if page.share == 'discuss' %}
     <div id="disqus_thread"></div>

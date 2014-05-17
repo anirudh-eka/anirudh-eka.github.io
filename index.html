@@ -5,17 +5,8 @@ title: all
 
   <ul class="posts">
     {% for post in site.posts %}
-      <div class="post">
+      
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% if post.share == 'discuss' %}
-          <p>{{post.excerpt}}
-            <a href="{{ post.url }}">...read more</a>
-          </p>
-        {% elsif post.share == 'shout' %}
-          <p>{{post.content}}
-            {% include shouting.html param=post%}
-          </p>
-        {% endif %}
-      </div>
+      
     {% endfor %}
   </ul>

@@ -1,6 +1,6 @@
 name: toomanynames
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 poet_url: /poet
 programmer_url: /programmer
 url: /

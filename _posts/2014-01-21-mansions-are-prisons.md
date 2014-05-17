@@ -2,6 +2,7 @@
 layout: post
 title: "Mansion Is A Prison"
 categories: poet
+align: center
 tags: haiku
 share: shout
 suggested_tweet:
