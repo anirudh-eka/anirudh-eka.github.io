@@ -318,6 +318,12 @@ a:visited { color: #a0a; }
   border: none;
 }
 
+.post h2 {
+  font-size: 120%;
+  color: #757C7A;
+  margin: 2.2em 0em;
+}
+
 /* terminal */
 .post pre.terminal {
   border: 1px solid #000;

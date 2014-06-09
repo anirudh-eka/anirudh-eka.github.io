@@ -1,6 +1,11 @@
 ---
 layout: home
 ---
+
+{% if page.title contains 'about' %}
+hi
+  {{ page.content }}
+{% else %}
 <ul class="posts">
   {% for post in site.posts %}
     {% if post.categories contains page.title %}
@@ -14,3 +19,4 @@ layout: home
     {% endif %}
   {% endfor %}
 </ul>
+{% endif %}
