@@ -48,7 +48,8 @@ unplugged from the environment around them
 			- forced marriages; identity politics...different communities don't give a shit about eachother
 			- inefficient systems- there is a sense of apathy of overall systemic change beyond immediate concerns- corruption is viewed like bad weather the unfortunate result of natural phenomenon-something that cannot be controlled
 	3. There must be a way to take advantage of both the modern and ancient
-	4...
+		- Liken to Brazil's fast paced "development" before the World cup that leave's people behind
+		- We may not get there quickly, but we'll get there together
 
 ------
 I want to feel the pollution in my hair and wade through the traffic. I want to experience life when the air is not conditioned, and your time is owned by buracrats and delayed busses. Life happens in the inbetween times. 
