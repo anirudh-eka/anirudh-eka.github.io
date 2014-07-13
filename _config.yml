@@ -7,7 +7,6 @@ url: /
 featured: ['all', 'poet', 'programmer', 'about']
 suggested_tweet:
     url:                  'http://toomanynames.com'
-    via:                  'anirudh_eka'
     text:                 'This was cool!'
     hashtags:             ['PoetProgrammer']
-    related:              ['anirudh_eka']
+    related: 			  'anirudh_eka'
