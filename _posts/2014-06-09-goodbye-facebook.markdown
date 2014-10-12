@@ -4,6 +4,7 @@ title:  "Goodbye Facebook"
 categories: [general]
 tags: [Facebook, Cold Turkey]
 share: shout
+excerpt: Though I've been cynical about Facebook for some time now, I've held onto it because it had somehow inserted itself in my mind as the logical conclusion of communication, right after yelling, telephone, and email. But does it have to be? Can we not reap the liberties modern communication affords us without becoming servants to our digital identity? Or is it
 suggested_tweet:
   text: "Breaking an addiction: Goodbye #Facebook"
   hashtags: ['ColdTurkey']
@@ -40,6 +41,6 @@ I think a big part of the reason I'm still on Twitter is I have simply not devel
 After Facebook
 --------------
 
-Though I've been cynical about Facebook for some time now, I've held onto it because it had somehow inserted itself in my mind as the logical conclusion of communication, right after yelling, telephone, and email. Thus leaving it would be denying modern communication all together. But does it have to be? Can we not reap the liberties modern communication affords us without becoming servants to our digital identity? Or is it inevitable that as we find more ways to speak, we only become more enamored with the sound of our voice? More personally I wonder does having a website fundamentally undermine some big statement I'm trying to make or does it offer a better, more balanced alternative to engage with the modern world?
+Though I've been cynical about Facebook for some time now, I've held onto it because it had somehow inserted itself in my mind as the logical conclusion of communication, right after yelling, telephone, and email. But does it have to be? Can we not reap the liberties modern communication affords us without becoming servants to our digital identity? Or is it inevitable that as we find more ways to speak, we only become more enamored with the sound of our voice? More personally I wonder does having a website fundamentally undermine some big statement I'm trying to make or does it offer a better, more balanced alternative to engage with the modern world?
 
 Those are some big, scary questions that I don't know the answers too. But I do know that there are a lot of things that I'd like to fix about myself, if not for myself for the people I love and who take the trouble to love me. I need to step away from the computer, slow my thoughts and clear the storms from my mind. And in my experience, Facebook provokes more storms than it quells. As far as my website goes, I will try my best to make each post as meaningful as possible.
