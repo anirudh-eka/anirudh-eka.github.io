@@ -4,7 +4,7 @@ title:  "Goodbye Facebook"
 categories: [general]
 tags: [Facebook, Cold Turkey]
 share: shout
-excerpt: Though I've been cynical about Facebook for some time now, I've held onto it because it had somehow inserted itself in my mind as the logical conclusion of communication, right after yelling, telephone, and email. But does it have to be? Can we not reap the liberties modern communication affords us without becoming servants to our digital identity? Or is it
+excerpt: Though I've been cynical about Facebook for some time now, I've held onto it because it had somehow inserted itself in my mind as the logical conclusion of communication, right after yelling, telephone, and email. But does it have to be? Can we not reap the liberties modern communication affords us without becoming servants to our digital identity? Or is it...
 suggested_tweet:
   text: "Breaking an addiction: Goodbye #Facebook"
   hashtags: ['ColdTurkey']
