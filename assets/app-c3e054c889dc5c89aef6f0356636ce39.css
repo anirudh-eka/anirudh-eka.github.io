@@ -345,7 +345,8 @@ a:visited { color: #a0a; }
 #container {
   padding-top: 3em;
   margin: auto;
-  width: 63em;
+  width: 60em;
+  padding-left: 2em;
 }
 
 #title-panel {
@@ -446,10 +447,6 @@ a:visited { color: #a0a; }
 
 #content-panel .meta {
   color: #aaa;
-}
-
-#content-panel &#183 {
-  color: #aaa; 
 }
 .highlight  { background: #ffffff; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
