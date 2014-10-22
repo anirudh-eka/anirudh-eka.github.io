@@ -68,10 +68,6 @@ a:visited { color: #a0a; }
   color: #246B47;
 }
 
-.meta {
-  color: #aaa;
-}
-
 .footer {
   font-size: 120%;
   color: #666;
@@ -349,7 +345,8 @@ a:visited { color: #a0a; }
 #container {
   padding-top: 3em;
   margin: auto;
-  width: 63em;
+  width: 58em;
+  padding-left: 2em;
 }
 
 #title-panel {

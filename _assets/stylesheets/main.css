@@ -344,7 +344,8 @@ a:visited { color: #a0a; }
 #container {
   padding-top: 3em;
   margin: auto;
-  width: 63em;
+  width: 58em;
+  padding-left: 2em;
 }
 
 #title-panel {
