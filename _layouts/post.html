@@ -13,12 +13,10 @@ layout: default
 
 
   <h1><a href="#">{{ page.title }}</a></h1>
-
-  <div class="post align-{{page.align}}">
+  <span class='meta'>{{ page.date | date_to_string }}</span>
+  <div class="post">
   {{ content }}
-  </div>
 
-  <p class="meta date">{{ page.date | date_to_string }}</p>
   {% if page.tags != empty %}
     <ul class="meta tags">
       {% for tag in page.tags %}
@@ -26,6 +24,7 @@ layout: default
       {% endfor %}
     </ul>
   {% endif %}
+  </div>
   {% if page.share == 'discuss' %}
     <div id="disqus_thread"></div>
   {% elsif page.share == 'shout' %}
