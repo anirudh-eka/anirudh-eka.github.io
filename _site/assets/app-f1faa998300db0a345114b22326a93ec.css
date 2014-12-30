@@ -467,6 +467,54 @@ hr { border: 0;
   text-align: left;
   margin-bottom: 0.1em;
 }
+/*about page*/
+#about {
+  margin-top: 5em;
+}
+#about #title-panel {
+  width: 35%;
+}
+
+#about #title-panel h1 a {
+  font-size: 300%;
+}
+
+#about #title-panel .menu li {
+    display: inline;
+    padding-left: 0.5em;
+    float: left;
+}
+
+#about #content-panel {
+  width: 60%;
+}
+
+#about #about-me {
+  font-size: 110%;
+  margin-top: 2.5em;
+  padding-left: 1em;
+  text-align: left;
+  line-height: 1.8;
+}
+#quote {
+  display: block;
+}
+#quote h1 {
+ color: #02a350;
+ display: inline;
+ vertical-align: top;
+}
+
+#quote i {
+  color: #757C7A;
+  padding-right: 0.4em;
+  padding-left: 0.4em;
+}
+#quote .author {
+  color: #757C7A;
+  display: block;
+  float: right;
+}
 
 @media (max-width: 1200px) {
   #container {
@@ -548,6 +596,7 @@ hr { border: 0;
     margin-left: auto;
     margin-right: auto;
   }
+
 }
 .highlight  { background: #ffffff; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
