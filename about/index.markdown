@@ -29,7 +29,7 @@ title: about
 				</section>
 			</section>
 			<section id="about-me">
-				Toomanynames is about finding freedom in the world and in the self. It is written by Anirudh "Eka", a poet and software developer based in Chicago. 
+				Toomanynames is about fighting for freedom in the world and in the self. It is written by Anirudh "Eka", a poet and software developer based in Chicago. 
 			</section>      
       	</div>   
 	</div>
