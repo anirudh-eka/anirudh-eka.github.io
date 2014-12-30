@@ -9133,3 +9133,29 @@ $(document).ready(function(){
 
 });
 
+
+var quotes = (function() {
+  var allQuotes = [
+  {author: "stic.man of Dead Prez", text: "By the struggle, I was never broken, I was broken open. I tapped into a source that was omnipotent"},
+  {author: "Korra from Avatar: Legend of Korra", text: "I know I was in a pretty dark place when I was poisoned, but I needed to go through that. I needed to understand what true suffering was; so I could become more compassionate to others."},
+  {author: "Alice Walker", text: "If art doesn't make us better, then what on earth is it for." }
+  ]
+  var setup = function() {
+    console.log("ahhh")
+    setInterval(function(){
+      $("#quote").fadeOut(500, function() {
+          var quote = allQuotes[Math.floor(Math.random()*allQuotes.length)];
+          $(this).fadeIn(500); 
+      });
+    }, 20000);
+  }
+
+  return { 
+    init : setup
+  }
+})();
+
+if (window.location.pathname === "/about/") {
+  quotes.init();  
+}
+;
