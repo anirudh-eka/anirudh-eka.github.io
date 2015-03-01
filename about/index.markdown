@@ -29,7 +29,8 @@ title: about
 				</section>
 			</section>
 			<section id="about-me">
-				Toomanynames is about fighting for freedom in the world and in the self. It is written by Anirudh "Eka", a poet and software developer based in Chicago. 
+				<p>Toomanynames is written by Anirudh "Eka", a poet and software developer based in Chicago.</p>
+				<p>The content is <a href="http://zenhabits.net/uncopyright/">uncopyrighted</a>. This means you can use it however you want! Attribution is appreciated but not required.</p>
 			</section>      
       	</div>   
 	</div>

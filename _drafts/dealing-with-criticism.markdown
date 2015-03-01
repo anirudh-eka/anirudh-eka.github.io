@@ -1,5 +1,5 @@
 Look at someone who takes the time to criticize you as someone informing you about perhaps a fault in your habits. The way the deliver their critizism may push your buttons. It may make you feel they're attacking something unchangable and core to who you are. If we see their attack in this way, it may cause us to be defensive, to shut down, or to think we, fundamentally, suck in some way.
 
-Instead, see the underlying pain they feel that is causing them to criticize you. Even if their criticizm doesn't necessarily offer a clear view of what exactly is wrong, except you as an entire being, commit to the idea that you will try your best to understand and if necessary rectify the flaws in your habits. 
+Instead, see the underlying pain they feel that is causing them to criticize you. Even if their criticizm doesn't necessarily offer a clear view of what exactly is wrong, accept you as an entire being, commit to the idea that you will try your best to understand and if necessary rectify the flaws in your habits. 
 
 An important piece of not letting criticism feel like an attack on you, is to not associate yourself with the (patterns)[the paterns blog post] you have picked up throughout your life.
