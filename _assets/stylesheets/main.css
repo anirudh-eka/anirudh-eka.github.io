@@ -32,7 +32,8 @@ h1 {
 h2 { font-size: 70%}
 
 p { margin: 1em 0; 
-    line-height: 1.635em
+    line-height: 1.635em;
+    font-size: 1.1em;
 }
 
 a         { color: #00a; }
@@ -410,7 +411,7 @@ hr { border: 0;
   overflow-y: scroll;
   position: absolute;
   top: 10px;
-  left: 25%;
+  left: 27%;
   bottom: 10px;
   padding-right: 3em;
   padding-top: 3em;
