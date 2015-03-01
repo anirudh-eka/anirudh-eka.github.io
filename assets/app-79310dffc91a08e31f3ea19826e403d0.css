@@ -26,7 +26,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   font-size: 100%; }
 
-h1 { margin-bottom: 1em; }
+h1 { 
+  margin-bottom: 1em; 
+  font-family: Open Sans,Helvetica,sans-serif;
+}
 h2 { font-size: 70%}
 
 p { margin: 1em 0; 
@@ -340,7 +343,7 @@ hr { border: 0;
 #container {
   padding-top: 3em;
   margin: auto;
-  width: 68em;
+  /*width: 68em;*/
   padding-left: 2em;
 }
 
@@ -408,7 +411,7 @@ hr { border: 0;
   overflow-y: scroll;
   position: absolute;
   top: 10px;
-  left: 30%;
+  left: 25%;
   bottom: 10px;
   padding-right: 3em;
   padding-top: 3em;
@@ -505,20 +508,21 @@ hr { border: 0;
 }
 
 #about #title-panel .menu ul {
+  display: block;
   text-align: center;
   width: 86%;
   margin: auto;
 }
 
 #about #content-panel {
-  max-width: 60%;
+  max-width: 53%;
   display: inline-block;
   position: static;
-  margin: 0 0 0 2.5em;
+  margin: 0 0 0 0;
   padding: 0;
 }
 
-#about #about-me {
+#about #about-me p {
   font-size: 120%;
   padding-left: 1em;
   text-align: left;
@@ -533,6 +537,7 @@ hr { border: 0;
  color: #02a350;
  display: inline;
  vertical-align: top;
+ line-height: 1.2em;
 }
 
 #quote i {
