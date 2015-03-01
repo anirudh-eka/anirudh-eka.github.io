@@ -406,7 +406,6 @@ hr { border: 0;
 
 /* content panel*/
 #content-panel {
-  float: left;
   margin-left: 3em;
   overflow-y: scroll;
   position: absolute;
@@ -515,10 +514,10 @@ hr { border: 0;
 }
 
 #about #content-panel {
-  max-width: 56%;
+  max-width: 60%;
   display: inline-block;
   position: static;
-  margin: 0 0 0 0;
+  margin: 0 0 0 -2em;
   padding: 0;
 }
 
