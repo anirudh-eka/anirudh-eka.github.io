@@ -407,7 +407,6 @@ hr { border: 0;
 
 /* content panel*/
 #content-panel {
-  float: left;
   margin-left: 3em;
   overflow-y: scroll;
   position: absolute;
@@ -516,10 +515,10 @@ hr { border: 0;
 }
 
 #about #content-panel {
-  max-width: 56%;
+  max-width: 60%;
   display: inline-block;
   position: static;
-  margin: 0 0 0 0;
+  margin: 0 0 0 -2em;
   padding: 0;
 }
 
@@ -705,3 +704,72 @@ hr { border: 0;
 
 #featured .content {
   background-image: url("/assets/bg-texture-84c2c522b69d83aaceb0f52c9c0f870e.png"); }
+
+body {
+  font-size: 1.4em; }
+
+#simple-body {
+  color: #333333;
+  background-color: white;
+  overflow: initial;
+  text-align: left; }
+  #simple-body nav {
+    background-color: #45a39a;
+    padding: 0.2em 0em 0.3em 0em; }
+    #simple-body nav a {
+      color: white;
+      font-size: 1.5em;
+      text-decoration: none;
+      transition: color 1s;
+      -webkit-transition: color 1s; }
+    #simple-body nav a:hover {
+      color: #fecfa1;
+      transition: color 1s;
+      -webkit-transition: color 1s; }
+    #simple-body nav #nav-container {
+      width: 54em;
+      margin: auto; }
+  #simple-body #container {
+    width: 39em; }
+  #simple-body h1 {
+    text-align: center;
+    font-size: 2em; }
+    #simple-body h1 a {
+      text-decoration: none;
+      color: #45a39a; }
+  #simple-body h2 {
+    text-align: center; }
+  #simple-body .meta {
+    color: #828986;
+    text-align: center;
+    display: block; }
+
+#simple-home {
+  background-color: white;
+  overflow-y: scroll; }
+  #simple-home #title-container {
+    padding-top: 11em;
+    background-color: #fecfa1; }
+    #simple-home #title-container h1 {
+      text-align: center;
+      font-size: 4.7em;
+      display: inline-block;
+      margin-bottom: 0em;
+      vertical-align: 60%;
+      letter-spacing: 0.05em; }
+    #simple-home #title-container a {
+      text-decoration: none;
+      color: #45a39a; }
+    #simple-home #title-container h2 {
+      color: #828986;
+      font-size: 1.4em;
+      max-width: 30em;
+      text-align: left;
+      margin: 1em auto;
+      padding: 0em 0.5em;
+      letter-spacing: 0.03em;
+      line-height: 1.2em; }
+    #simple-home #title-container #read-more-arrow {
+      padding: 1.44em 0em;
+      font-size: 2.9em;
+      display: inline-block; }
