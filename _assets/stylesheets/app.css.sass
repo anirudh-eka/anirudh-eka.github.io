@@ -1,4 +1,8 @@
 //= require_tree .
+$beige: #FECFA1
+$teal: #45A39A
+$black: #333
+$gray: #828986
 
 #banner
   background-image: url(asset_path('sipping_tea.jpg'))
@@ -8,6 +12,20 @@
   background-image: url(asset_path('italian_graffiti.jpg'))
 #featured .content
   background-image: url(asset_path('bg-texture.png'))
+
+.post
+  a
+    text-decoration: none
+    color: $black
+    border-bottom: 1px dashed $black
+    transition: color .5s
+    -webkit-transition: color .5s
+
+  a:hover
+    color: $gray
+    border-bottom: 1px dashed $gray
+    transition: color .5s
+    -webkit-transition: color .5s
 
 body
   font-size: 1.4em
@@ -19,7 +37,7 @@ body
   text-align: left
   
   nav
-    background-color: #45A39A
+    background-color: $teal
     padding: 0.2em 0em 0.3em 0em
 
     a
@@ -30,7 +48,7 @@ body
       -webkit-transition: color 1s
 
     a:hover
-      color: #FECFA1
+      color: $beige
       transition: color 1s
       -webkit-transition: color 1s
 
@@ -58,13 +76,33 @@ body
     text-align: center
     display: block
 
+  .read-more
+    text-decoration: none
+    display: inline-block
+    padding: 0.3em
+    border-radius: 0.2em
+    background-color: $teal
+    color: white
+    transition: color 1s
+    -webkit-transition: color 1s
+
+  .read-more:hover
+    color: $beige
+    transition: color 1s
+    -webkit-transition: color 1s
+
+  .read-more-container
+    text-align: right
+    margin-bottom: 2em  
+
 #simple-home
   background-color: white
   overflow-y: scroll
 
   #title-container
-    padding-top: 11em
-    background-color: #FECFA1
+    height: 100%
+    min-height: 633px
+    background-color: $beige
 
     h1
       text-align: center
@@ -73,10 +111,11 @@ body
       margin-bottom: 0em
       vertical-align: 60%
       letter-spacing: 0.05em
+      margin-top: 10%
 
     a
       text-decoration: none
-      color: #45A39A
+      color: $teal
 
     h2
       color: #828986
@@ -89,6 +128,5 @@ body
       line-height: 1.2em
 
     #read-more-arrow
-      padding: 1.44em 0em
       font-size: 2.9em
       display: inline-block
