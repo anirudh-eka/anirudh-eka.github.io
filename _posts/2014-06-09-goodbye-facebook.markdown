@@ -11,6 +11,8 @@ suggested_tweet:
 
 I am finally leaving Facebook. I've been wrapped up in this world for nearly my entire adult life. I signed up in high school, back when you still had to be invited. When I left home to discover the bigger world, Facebook remained my autobiographer, my loyal friend who would listen and let me present myself as I wanted to. It served the benign purpose of letting me stay in touch with the people I've met on this journey. But what is staying in touch?
 
+<span style="display: none;"><!--more--></span>
+
 With the majority of my "friends" I've never taken the time to even say hi after adding them. Still, I've clicked through their pictures, read their status and believed I understood who they are. And with the ones that really do matter, the ones I can reach via other means, I've used a "like" to replace a phone call.
 
 Facebook's really been more about me than my friends. And my ego craves it. Even now I wonder why I'm writing this. Who am I trying to talk to? I can't help but feel like I'm just looking to be noticed. Maybe us humans have a deeply ingrained disposition to be concerned with recognition from the world around us. After all, even my [website](http://toomanynames.com/) is just another platform for me to seek that validation.

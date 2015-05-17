@@ -7,6 +7,8 @@ share: discuss
 
 It used to bother me when people said don't waste time. I thought it couldn't coexist with living in the present. I interpreted it as being excessively goal oriented and impatient when things aren't working. 
 
+<span style="display: none;"><!--more--></span>
+
 But it doesn't have to mean that. Lately I've been thinking of time as water in a pot. Wasting time is letting it trickle away on frivolous and fleeting things. 
 
 Focus establishes the sturdiness of the container. If you have weak focus the pot will leak. You will loose time. Time you wanted to pour into something worth while, like the present moment. 

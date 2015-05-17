@@ -8,6 +8,8 @@ share: discuss
 
 Ten months ago I was reaching the end of my second year as an Economics Research Assistant and was facing the question of whether I should go to graduate school. I looked at a few programs, but I couldn't bring myself to write the college essays. I didn't want go selling myself again so that a bunch of folks can decide to give me the privilege to pay them.
 
+<span style="display: none;"><!--more--></span>
+
 It's safe to say my undergraduate experience left a bad taste in my mouth. I went to a private top-20 university and received good grades, but beyond having professors write me recommendations, I was provided no support in getting an internship or a job. Still, I was one of the lucky ones. I got a job in a recession(fittingly, in economic research), which my university could happily advertise as justification for their expensive service.
 
 Their general lack of support in my job search could all be overlooked if the university experience made me significantly more prepared to succeed at work. Though a background in Economics was necessary for context, on a day-to-day basis I found that work mainly entailed writing computer programs, a skill I picked up on the job. It reminded me of a concept in economics called [signaling](http://en.wikipedia.org/wiki/Signalling_(economics)#The_result). The theory argues that (formal) education signals to an employer that an individual has a higher ability and therefore individuals with higher abilities will likely pursue education. Which leads to the question: did Emory make me smart or because I was smart or capable (whatever that means) did I go to Emory?
