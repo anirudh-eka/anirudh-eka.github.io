@@ -344,7 +344,7 @@ hr { border: 0;
   padding-top: 3em;
   margin: auto;
   /*width: 68em;*/
-  padding-left: 2em;
+  /*padding-left: 2em;*/
 }
 
 #title-panel {
@@ -551,12 +551,12 @@ hr { border: 0;
 }
 
 @media (max-width: 1100px) {
-  #container {
+/*  #container {
     padding-top: 0em;
     margin: auto;
     width: 100%;
     padding-left: 0em;
-  }
+  }*/
 
   #title-panel {
     width: 100%;
