@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>toomanynames</title>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+        <meta name="viewport" content="width=device-width">
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/assets/syntax-26c5bb2ec038f707800c4fb2993b4566.css">
+        <!-- <link rel="stylesheet" href="/css/syntax.css"> -->
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/app-dc1d48fa1149ffb2645939c37f5049dc.css">
+        <!-- <link rel="stylesheet" href="/css/main.css"> -->
+    </head>
+    <body>
+      <body id="simple-body">
+	<nav><div id="nav-container"><a href="/">&#8592; toomanynames</a></div></nav>
+	<div id="container">
+		<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=653062264739347";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <h1><a href="#">Maps Are Folds</a></h1>
+  <span class='meta'>10 Jul 2015</span>
+  <div class="post">
+  <p>To kill time as I waited for my flight in the Yangon international airport, where all great revelations happen, I was working on a coding challenge in Haskell when I stumbled on this discovery.</p>
+
+<p><span style="display: none;">&lt;!--more--&gt;</span></p>
+
+<p>The problem I was working on required me to filter a list into a sublist based on a function that goes through each item of a list and says if it belongs or doesn&#39;t, by returning True or False). The method signiture should look like this:  </p>
+
+<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="p">(</span><span class="n">a</span> <span class="ow">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="ow">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="ow">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span></code></pre></div>
+
+<p>(Much later I recognized Prelude, the Haskell standard library, already has a function with this signiture called <code>filter</code>. Sometimes it pays to be dull.) </p>
+
+<p>To define the function, let&#39;s call it <code>filter&#39;</code>, the first thing I asked myself was &quot;is this function that takes in a list a map or a fold?&quot; </p>
+
+<h2>What is a map?</h2>
+
+<p>At a high level, maps take a list and return a list of the same length with each item transformed by a function:</p>
+
+<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="c1">-- given f and [a, b, c] -map-&gt; returns [f a, f b, f c]</span>
+<span class="c1">-- given +1 and [1, 2, 3] -map-&gt; returns [2, 3, 4]</span></code></pre></div>
+
+<h2>What is a fold?</h2>
+
+<p>Folds take a list, and return a single value after going through each element in a list:</p>
+
+<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="c1">-- given f, a starting value for the aggregation x, </span>
+<span class="c1">-- and [a, b, c] -fold-&gt; return f c (f b (f a x))</span></code></pre></div>
+
+<p>The method signiture for foldl is:</p>
+
+<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">foldl</span> <span class="ow">::</span> <span class="p">(</span><span class="n">b</span> <span class="ow">-&gt;</span> <span class="n">a</span> <span class="ow">-&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="ow">-&gt;</span> <span class="n">b</span> <span class="ow">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="ow">-&gt;</span> <span class="n">b</span></code></pre></div>
+
+<p>The simplest example of a fold I immediately think of is adding each number in a list of numbers, starting the total sum at 0. It would look like this:</p>
+
+<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">sum</span> <span class="n">ns</span> <span class="ow">=</span> <span class="n">foldl</span> <span class="p">(</span><span class="o">+</span><span class="p">)</span> <span class="mi">0</span> <span class="n">ns</span></code></pre></div>
+
+<h2>To reduce a list is to fold it</h2>
+
+<p>Given a list, map returns a list of the same length and fold returns a single value, but the function we&#39;re defining is supposed to return something that&#39;s in-between-- a list that&#39;s smaller than the original, it could be as small as an empty list, but not a single value. Then I glanced at the method signiture of foldl, again:</p>
+
+<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">foldl</span> <span class="ow">::</span> <span class="p">(</span><span class="n">b</span> <span class="ow">-&gt;</span> <span class="n">a</span> <span class="ow">-&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="ow">-&gt;</span> <span class="n">b</span> <span class="ow">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="ow">-&gt;</span> <span class="n">b</span></code></pre></div>
+
+<p>Nothing here stopped <code>b</code> from being a list! <code>b</code> is just an aggregator. What if we were building a list, instead of say, a number, in our <code>sum</code> example? We could just call <code>foldl</code> like this:</p>
+
+<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">foldl</span> <span class="p">(</span><span class="nf">\</span><span class="n">bs</span> <span class="n">a</span> <span class="ow">-&gt;</span> <span class="n">bs</span> <span class="o">++</span> <span class="p">[</span><span class="n">a</span><span class="p">])</span> <span class="kt">[]</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="c1">-- =&gt; [1, 2, 3]</span></code></pre></div>
+
+<p>Or if we wanted to filter the list so that it doesn&#39;t have 2&#39;s in it:</p>
+
+<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">foldl</span> <span class="p">(</span><span class="nf">\</span><span class="n">bs</span> <span class="n">a</span> <span class="ow">-&gt;</span> <span class="kr">if</span> <span class="n">a</span> <span class="o">/=</span> <span class="mi">2</span> <span class="kr">then</span> <span class="n">bs</span> <span class="o">++</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="kr">else</span> <span class="n">bs</span><span class="p">)</span> <span class="kt">[]</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="c1">-- =&gt; [1, 3]</span></code></pre></div>
+
+<p>We expressed filter, in terms of fold. Well I did, and you watched if you got this far... Here&#39;s a named definition
+of filter using a fold:</p>
+
+<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">filter&#39;</span> <span class="ow">::</span> <span class="p">(</span><span class="n">a</span> <span class="ow">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="ow">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="ow">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span>
+<span class="nf">filter&#39;</span> <span class="n">f</span> <span class="n">as</span> <span class="ow">=</span> <span class="n">foldl</span> <span class="p">(</span><span class="nf">\</span><span class="n">bs</span> <span class="ow">-&gt;</span> <span class="p">(</span><span class="nf">\</span><span class="n">a</span> <span class="ow">-&gt;</span> <span class="kr">if</span> <span class="n">f</span> <span class="n">a</span> <span class="kr">then</span> <span class="n">bs</span> <span class="o">++</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="kr">else</span> <span class="n">bs</span><span class="p">))</span> <span class="kt">[]</span> <span class="n">as</span></code></pre></div>
+
+<h2>Maps are Folds</h2>
+
+<p>But if we back up a little, we performed a fold that builds a list of the same size as the input list (printed again below):</p>
+
+<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">foldl</span> <span class="p">(</span><span class="nf">\</span><span class="n">bs</span> <span class="n">a</span> <span class="ow">-&gt;</span> <span class="n">bs</span> <span class="o">++</span> <span class="p">[</span><span class="n">a</span><span class="p">])</span> <span class="kt">[]</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="c1">-- =&gt; [1, 2, 3]</span></code></pre></div>
+
+<p>It&#39;s not too much more work to perform any function, <code>f</code>, on the item before adding it to the list. That means we go through each item of the list and create another list with the result of calling <code>f</code> with each item. This is the definition of a map! So here is a map defined using a fold:</p>
+
+<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">map&#39;&#39;</span> <span class="ow">::</span> <span class="p">(</span><span class="n">a</span> <span class="ow">-&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="ow">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="ow">-&gt;</span> <span class="p">[</span><span class="n">b</span><span class="p">]</span>
+<span class="nf">map&#39;&#39;</span> <span class="n">f</span> <span class="n">as</span> <span class="ow">=</span> <span class="n">foldl</span> <span class="p">(</span><span class="nf">\</span><span class="n">bs</span> <span class="n">a</span> <span class="ow">-&gt;</span> <span class="n">bs</span> <span class="o">++</span> <span class="p">[</span><span class="n">f</span> <span class="n">a</span><span class="p">])</span> <span class="kt">[]</span> <span class="n">as</span></code></pre></div>
+
+<h2>Moral of the story: Folds are flexible</h2>
+
+<p>This was a revelation to me because when I think of fold-ing something, I think of a piece of paper folded into something smaller. But this metaphor limited my understanding of the flexibility of fold (no pun intended) in Haskell. All a fold really does is it goes through a list passing to a given function each item and another value, the aggregator, that becomes the return value when the last item has been processed.</p>
+
+<p>A map is just a subset of a fold with a starting value of <code>[]</code> and a function that adds each item to the list after it is passed to a function given by the caller of map.</p>
+
+
+  
+    <ul class="meta tags">
+      
+        <li>#haskell<li>
+      
+        <li>#code<li>
+      
+        <li>#functional<li>
+      
+    </ul>
+  
+  </div>
+  
+    <div id="disqus_thread"></div>
+  
+
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'toomanynames'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    </div>
+</body>
+
+        <!-- Custom JS -->
+        <script src="/assets/app-2022d96160ab57fdaa910f7e54750179.js"></script>
+        
+    </body>
+</html>

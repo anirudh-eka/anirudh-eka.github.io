@@ -53,7 +53,7 @@ sum ns = foldl (+) 0 ns
 To reduce a list is to fold it
 ------------------------------
 
-Given a list, map returns a list of the same length and fold returns a single value, but the function we're defining is supposed to return something that's in-between. A list that's smaller than the original, it could be as small as an empty list, but not a single value. Then I glanced at the method signiture of foldl, again:
+Given a list, map returns a list of the same length and fold returns a single value, but the function we're defining is supposed to return something that's in-between-- a list that's smaller than the original, it could be as small as an empty list, but not a single value. Then I glanced at the method signiture of foldl, again:
 
 {% highlight haskell %}
 foldl :: (b -> a -> b) -> b -> [a] -> b
@@ -91,7 +91,7 @@ foldl (\bs a -> bs ++ [a]) [] [1, 2, 3]
 -- => [1, 2, 3]	
 {% endhighlight %}
 
-It's not too much more work to perform any function, `f` on the item before adding it to the list. That means we go through each item of the list and create another list with the result of each item using `f`, which is the definition of a map! So here is a map defined using a fold:
+It's not too much more work to perform any function, `f`, on the item before adding it to the list. That means we go through each item of the list and create another list with the result of calling `f` with each item. This is the definition of a map! So here is a map defined using a fold:
 
 {% highlight haskell %}
 map'' :: (a -> b) -> [a] -> [b]
@@ -101,6 +101,6 @@ map'' f as = foldl (\bs a -> bs ++ [f a]) [] as
 Moral of the story: Folds are flexible
 --------------------------------------
 
-This was a revelation to me because when I think of fold-ing something, I think of a piece of paper folded into something smaller. But this metaphor limited my understanding of the flexibility of fold (no pun intended) in Haskell. All a fold really does is it goes through a list passing each item as one argument to a given function and another value, the aggregator, that becomes the return value when the last item has been processed as the second argument. 
+This was a revelation to me because when I think of fold-ing something, I think of a piece of paper folded into something smaller. But this metaphor limited my understanding of the flexibility of fold (no pun intended) in Haskell. All a fold really does is it goes through a list passing to a given function each item and another value, the aggregator, that becomes the return value when the last item has been processed.
 
-A map is just a subset of a fold with a starting value of `[]` and a function that addes each item to the list after it is passed to a function given by the caller of map.
+A map is just a subset of a fold with a starting value of `[]` and a function that adds each item to the list after it is passed to a function given by the caller of map.
