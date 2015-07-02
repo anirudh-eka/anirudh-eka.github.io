@@ -33,23 +33,21 @@ body
   font-size: 1.4em
   
   @media screen and (max-width: $break-medium)
-    font-size: 1.6em
+    font-size: 1.4em
 
   @media screen and (max-width: $break-small)
-    font-size: 3.3em
+    font-size: 1em
 
 #simple-body
   color: #333
   background-color: white
   overflow: initial
+  overflow-x: hidden
   text-align: left
   width: 100%
 
   @media screen and (max-width: $break-medium)
-    width: 135%
-  
-  @media screen and (max-width: $break-small)
-    width: 380%
+    width: 100%
 
   nav
     background-color: $teal
@@ -63,7 +61,7 @@ body
       -webkit-transition: color 1s
 
       @media screen and (max-width: $break-medium)
-        font-size: 3em
+        font-size: 2em
 
     a:hover
       color: $beige
@@ -81,9 +79,11 @@ body
   #container
     width: 39em
     margin: auto
-
-    @media screen and (max-width: $break-small)
-      width: 22em
+    
+    @media screen and (max-width: $break-medium)
+      width: 90%
+      padding-left: 4%
+      padding-right: 4%
 
   h1
     text-align: center
@@ -138,6 +138,9 @@ body
       vertical-align: 60%
       letter-spacing: 0.05em
       margin-top: 10%
+    
+      @media screen and (max-width: $break-medium)
+        font-size: 2.5em
 
     a
       text-decoration: none
