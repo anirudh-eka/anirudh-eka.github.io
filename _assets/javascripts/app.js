@@ -1,5 +1,5 @@
 //= require vendor/jquery
-
+//= require_tree .
 
 $(document).ready(function(){
   $("#read-more-arrow").on("click", function(e){

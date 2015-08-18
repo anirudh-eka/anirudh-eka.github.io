@@ -2,7 +2,7 @@
 layout: simple_home
 ---
 <div id="simple-body">
-	<nav><div id="nav-container"><a href="/">&#8592; toomanynames</a> <a href='#'></a></div></nav>
+	{% include navigation.html %}
 	<div id="container">
 		{% for post in site.posts %}
 			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
