@@ -98,65 +98,21 @@ body
   background-color: white
   overflow-y: scroll
 
-  #title-container
-    height: 100%
-    min-height: 633px
-    background-color: $beige
-
-    h1
-      text-align: center
-      font-size: 4.7em
-      display: inline-block
-      margin-bottom: 0em
-      vertical-align: 60%
-      letter-spacing: 0.05em
-      margin-top: 10%
-    
-      @media screen and (max-width: $break-medium)
-        font-size: 2.5em
+  #home-links
+    margin: 1.6em auto
 
     a
       text-decoration: none
-      color: $teal
+      color: $gray
+      transition: color .5s
+      -webkit-transition: color .5s
 
-    h2
-      color: #828986
-      font-size: 1.4em
-      max-width: 30em
-      text-align: left
-      margin: 1em auto
-      padding: 0em 0.5em
-      letter-spacing: 0.03em
-      line-height: 1.2em
+    a:hover
+      color: $black
+      border-bottom: 1px dashed $black
+      transition: color .5s
+      -webkit-transition: color .5s
 
-      a
-        text-decoration: none
-        color: $gray
-        border-bottom: 1px dashed $gray
-        transition: color .5s
-        -webkit-transition: color .5s
-
-      a:hover
-        color: $black
-        border-bottom: 1px dashed $black
-        transition: color .5s
-        -webkit-transition: color .5s
-
-    #home-links
-      margin: 1.6em auto
-
-      a
-        text-decoration: none
-        color: $gray
-        transition: color .5s
-        -webkit-transition: color .5s
-
-      a:hover
-        color: $black
-        border-bottom: 1px dashed $black
-        transition: color .5s
-        -webkit-transition: color .5s
-
-    #read-more-arrow
-      font-size: 2.5em
-      display: inline-block
+  #read-more-arrow
+    font-size: 2.5em
+    display: inline-block

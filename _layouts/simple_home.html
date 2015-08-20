@@ -3,17 +3,8 @@ layout: head
 ---
 
 <body id="simple-home">
-		<div id="title-container">
-			<section>
-				<h1><a href="#">{{ site.name }}</a></h1>
-			</section>
-			<h2>The writings of <a href="https://twitter.com/anirudh_eka" target="_blank">Anirudh "Eka"</a>, a poet and software developer passionate about alternative education, creativity, and finding peace in here and out there.</h2>
-			<div id="home-links">
-				{% include social_icons.html %}
-			</div>
-			<a href="#posts" id="read-more-arrow">&#8595;</a>
-		</div>
-		<div id="posts">
-			{{content}}
-		</div>
+		{% include header.html %}
+	<div id="posts">
+		{{content}}
+	</div>
 </body>
