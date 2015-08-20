@@ -18,7 +18,7 @@ task :deploy do
 end
 
 desc "Commit _site/"
-task :commit do
+task :commit, [:message] do
   puts "\n## Staging modified files"
   status = system("git add -A")
   puts status ? "Success" : "Failed"
