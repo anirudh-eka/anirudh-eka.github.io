@@ -17,6 +17,9 @@ task :deploy do
   puts status ? "Success" : "Failed"
 end
 
+# to commit in zsh you must escape the '[]', eg:
+# rake commit\['make header css not dependant on surrounding class/id structure and create about page'\]
+
 desc "Commit _site/"
 task :commit, [:message] do |t, args|
   puts "\n## Staging modified files"
