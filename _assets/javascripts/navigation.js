@@ -1,14 +1,14 @@
 $(document).ready(function(){
-
+  var nav_top = $("nav.sticky").offset().top
   $(window).on("scroll", function(){
   	if( topOfTheWindowIsPassedHeader() ){
-  		$("nav").addClass("scrolled-to-top");
+  		$("nav.sticky").addClass("scrolled-to-top");
   	} else {
-  		$("nav").removeClass("scrolled-to-top");
+  		$("nav.sticky").removeClass("scrolled-to-top");
   	}
   });
 
   var topOfTheWindowIsPassedHeader = function() {
-  	return $(this).scrollTop() > $("#simple-home #title-container").height();
+    return $(window).scrollTop() > nav_top
   }
 });
