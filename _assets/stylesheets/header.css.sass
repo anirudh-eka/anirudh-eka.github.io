@@ -21,16 +21,22 @@
     text-decoration: none
     color: $teal
 
-  h2
-    color: #828986
+  .summary
     font-size: 1.4em
-    max-width: 30em
     text-align: left
+
+  .subheading
+    font-size: 2em
+    text-align: center
+
+  .summary, .subheading
+    color: #828986
+    max-width: 30em
     margin: 1em auto
     padding: 0em 0.5em
     letter-spacing: 0.03em
     line-height: 1.2em
-
+    
     a
       text-decoration: none
       color: $gray
@@ -43,3 +49,22 @@
       border-bottom: 1px dashed $black
       transition: color .5s
       -webkit-transition: color .5s
+
+  #home-links
+    margin: 1.6em auto
+
+    a
+      text-decoration: none
+      color: $gray
+      transition: color .5s
+      -webkit-transition: color .5s
+
+    a:hover
+      color: $black
+      border-bottom: 1px dashed $black
+      transition: color .5s
+      -webkit-transition: color .5s
+  
+  #read-more-arrow
+    font-size: 2.5em
+    display: inline-block

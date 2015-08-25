@@ -1,4 +1,5 @@
 name: toomanynames
+summary: The writings of <a href="https://twitter.com/anirudh_eka" target="_blank">Anirudh "Eka"</a>, a poet and software developer passionate about alternative education, creativity, and finding peace in here and out there.
 markdown: redcarpet
 highlighter: pygments
 poet_url: /poet

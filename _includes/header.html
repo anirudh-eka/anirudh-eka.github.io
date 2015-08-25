@@ -1,10 +1,19 @@
 <div id="title-container">
 	<section>
-		<h1><a href="#">{{ include.param }}</a></h1>
+		<h1><a href="#">{{ include.heading }}</a></h1>
 	</section>
-	<h2>The writings of <a href="https://twitter.com/anirudh_eka" target="_blank">Anirudh "Eka"</a>, a poet and software developer passionate about alternative education, creativity, and finding peace in here and out there.</h2>
+		{% if include.summary %}
+			<h2 class="summary">{{ include.summary }}</h2>
+		{% endif %}
+		{% if include.subheading %}
+			<h2 class="subheading">{{ include.subheading }}</h2>
+		{% endif %}
+	{% unless include.social_icons == false %}
 	<div id="home-links">
 		{% include social_icons.html %}
 	</div>
+	{% endunless %}
+	{% unless include.read_more_arrow == false %}
 	<a href="#posts" id="read-more-arrow">&#8595;</a>
+	{% endunless %}
 </div>
