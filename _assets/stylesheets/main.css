@@ -38,7 +38,6 @@ p { margin: 1em 0;
 
 a         { color: #00a; }
 a:hover   { color: #000; }
-a:visited { color: #a0a; }
 
 /*****************************************************************************/
 /*
@@ -46,30 +45,12 @@ a:visited { color: #a0a; }
 /*
 /*****************************************************************************/
 
-.header {
-  font-size: 250%;
-  margin-bottom: 0em; 
-}
-
-.header a {
-  /*font-weight: bold;*/
-  text-decoration: none;
-}
-
 .title a {
   color: #FF4D4D;
 }
 
 .title a:hover {
   color: #a00;
-}
-
-.header a.extra {
-  color: #339966;
-}
-
-.header a.extra:hover {
-  color: #246B47;
 }
 
 .footer {
