@@ -5,7 +5,7 @@ tags: [immigrant, short story, poem, India, brown people]
 share: discuss
 ---
 
-I'm studying my heart  <br/>
+I'm studying my <span class="pulse">heart<span>  <br/>
 and digesting my name
 
 I'm taking borders apart <br/>
