@@ -1,30 +1,25 @@
-var els = {};
+// frames in css must all have an -end version to say the ending state
+var movie = {};
 var init = function() {
-	els = Transit.getClass("fade-in")
-	fadeInEls(0)
+	movie = Transit.getClass("fade-in")
+	playMovie(0)
 }
 
 var reset = function() {
-	els.rewindToFirstFrame();
+	movie.rewindToFirstFrame();
 }
 
-var fadeInEls = function(index) {
-	if(els[index] == undefined){
+var playMovie = function(index) {
+	var scene = movie[index];
+	if(scene == undefined){
 		return;
 	}
 
-	els[index].nextFrame("fade-in-end")
-	runOtherFX(els[index])
+	scene.nextFrame()
 
 	var pauseTime = 200;
 	if((index + 1) % 4 == 0 ) { pauseTime = 1300}
-	window.setTimeout(function(){fadeInEls(index + 1)}, pauseTime)
-}
-
-var runOtherFX = function(el) {
-	if (el.className.match(/(^|\s)pulse(\s|$)/) != null){
-		el.nextFrame("pulse-end");
-	}
+	window.setTimeout(function(){playMovie(index + 1)}, pauseTime)
 }
 
 Transit = {
@@ -36,12 +31,17 @@ Transit = {
 		for (var i = 0; i < els.length; i++) {
 			var scene = els[i];
 			scene.frames = [];
-			scene.nextFrame = function(fameName) {
-				var re = new RegExp("(^|\\s)"+fameName+"(\\s|$)")
-				if(this.className.match(re) == null){
-					this.frames.push(fameName);
-					this.className += (" " + fameName);	
-				}
+			scene.nextFrame = function() {
+				var startFrames = this.className.split(" ");
+				for (var i = 0; i < startFrames.length; i++) {
+					var endFrame = startFrames[i] + "-end"
+					var re = new RegExp("(^|\\s)"+endFrame+"(\\s|$)")
+
+					if(this.className.match(re) == null){
+						this.frames.push(endFrame);
+						this.className += (" " + endFrame);	
+					}
+				};
 			}
 			scene.rewindToFirstFrame = function(){
 				var lastFrameName = this.frames.pop()
@@ -54,11 +54,11 @@ Transit = {
 			scenes.length += 1;
 		}
 		
-		scenes.nextFrame = function(frameName) {
+		scenes.nextFrame = function() {
 			// map nextFrame on all classes
 			for (var key in this) {
 			    if (this.hasOwnProperty(key) && this[key].nextFrame != undefined) {
-			        this[key].nextFrame(frameName);
+			        this[key].nextFrame();
 			    }
 			}
 		}

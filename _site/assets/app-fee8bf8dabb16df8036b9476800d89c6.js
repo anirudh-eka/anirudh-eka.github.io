@@ -9124,32 +9124,32 @@ $(document).ready(function(){
     return $(window).scrollTop() > nav_top
   }
 });
-var els = {};
+var movie = {};
 var init = function() {
-	els = Transit.getClass("fade-in")
+	movie = Transit.getClass("fade-in")
 	fadeInEls(0)
 }
 
 var reset = function() {
-	els.rewindToFirstFrame();
+	movie.rewindToFirstFrame();
 }
 
 var fadeInEls = function(index) {
-	if(els[index] == undefined){
+	if(movie[index] == undefined){
 		return;
 	}
 
-	els[index].nextFrame("fade-in-end")
-	runOtherFX(els[index])
+	movie[index].nextFrame("fade-in-end")
+	runOtherFX(movie[index])
 
 	var pauseTime = 200;
 	if((index + 1) % 4 == 0 ) { pauseTime = 1300}
 	window.setTimeout(function(){fadeInEls(index + 1)}, pauseTime)
 }
 
-var runOtherFX = function(el) {
-	if (el.className.match(/(^|\s)pulse(\s|$)/) != null){
-		el.nextFrame("pulse-end");
+var runOtherFX = function(scene) {
+	if (scene.className.match(/(^|\s)pulse(\s|$)/) != null){
+		scene.nextFrame("pulse-end");
 	}
 }
 
@@ -9162,12 +9162,15 @@ Transit = {
 		for (var i = 0; i < els.length; i++) {
 			var scene = els[i];
 			scene.frames = [];
-			scene.nextFrame = function(fameName) {
-				var re = new RegExp("(^|\\s)"+fameName+"(\\s|$)")
-				if(this.className.match(re) == null){
-					this.frames.push(fameName);
-					this.className += (" " + fameName);	
-				}
+			scene.nextFrame = function() {
+				var startFrames = this.className.split(" ");
+				for (var i = 0; i < startFrames.length; i++) {
+					var re = new RegExp("(^|\\s)"+startFrames[i]+"(\\s|$)")
+					if(this.className.match(re) == null){
+						this.frames.push(fameName);
+						this.className += (" " + fameName);	
+					}
+				};
 			}
 			scene.rewindToFirstFrame = function(){
 				var lastFrameName = this.frames.pop()

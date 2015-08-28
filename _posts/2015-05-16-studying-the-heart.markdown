@@ -8,7 +8,7 @@ share: discuss
 <span class="fade-in">I'm</span><span class="fade-in"> studying</span><span class="fade-in"> my </span><span class="pulse fade-in">heart</span>  <br/>
 <span class="fade-in">I'm</span><span class="fade-in"> digesting</span><span class="fade-in"> my </span><span class="fade-in">name</span>
 
-I'm taking borders apart <br/>
+<span class="fade-in">I'm</span><span class="fade-in"> taking</span><span class="fade-in"> borders</span><span class="fade-in"> apart </span> <br/>
 <span class="fade-in">putting my pride to shame</span>
 
 <span class="hithere">I've been a shell of myself</span> <br/>
