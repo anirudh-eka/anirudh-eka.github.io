@@ -18,7 +18,7 @@ task :deploy do
 end
 
 # to commit in zsh you must escape the '[]', eg:
-# rake commit\['make header css not dependant on surrounding class/id structure and create about page'\]
+# rake commit\[''\]
 
 desc "Commit _site/"
 task :commit, [:message] do |t, args|

@@ -1,0 +1,52 @@
+@import constants
+
+.invite-mouse
+  border-bottom: 1px dashed $black
+  cursor: pointer
+
+.pulse
+  @extend .invite-mouse
+  transition-property: transform, color, transform
+  transition-duration: 0.5s
+
+.pulse:hover
+  color: $maroon
+  transform: scale(1.1)
+
+.pulse-end
+  display: inline-block
+  animation-name: pulse
+  animation-duration: 0.4s 
+  animation-timing-function: ease-out 
+  animation-delay: 0
+  animation-direction: alternate
+  animation-iteration-count: 2
+  animation-fill-mode: none
+  animation-play-state: running
+
+  @keyframes pulse 
+    0%
+      transform: scale(1)  
+    100%
+      transform: scale(1.1)
+      color: $maroon
+  
+
+.fade-out
+  @extend .invite-mouse
+  visibility: visible
+  opacity: 1
+  transition: visibility 0s linear 1s, opacity 1s linear
+
+.fade-out:hover
+  visibility: hidden
+  opacity: 0
+
+.fade-in
+  opacity: 0
+  /*transition: opacity .1s ease-in-out*/
+
+.fade-in-end
+  opacity: 1
+
+

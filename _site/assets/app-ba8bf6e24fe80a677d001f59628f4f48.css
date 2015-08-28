@@ -16,25 +16,48 @@
     font-size: 3em; }
   .contact-info-list .social-icon {
     padding-right: 0.7em; }
-.invite-mouse, .pulse {
+.invite-mouse, .pulse, .fade-out {
   border-bottom: 1px dashed #333;
   cursor: pointer; }
 
 .pulse {
-  transition-property: font-size, color, transform;
-  transition-duration: 2s; }
+  transition-property: transform, color, transform;
+  transition-duration: 0.5s; }
 
 .pulse:hover {
-  color: red;
-  font-size: 1.3em; }
+  color: #7D0606;
+  transform: scale(1.1); }
 
-.sibling-to-fade-in {
-  visibility: hidden;
-  opacity: 0;
+.pulse-end {
+  display: inline-block;
+  animation-name: pulse;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  animation-fill-mode: none;
+  animation-play-state: running; }
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.1);
+    color: #7D0606; } }
+.fade-out {
+  visibility: visible;
+  opacity: 1;
   transition: visibility 0s linear 1s, opacity 1s linear; }
 
-.fade-in-sibling:hover + .sibling-to-fade-in {
-  visibility: visible;
+.fade-out:hover {
+  visibility: hidden;
+  opacity: 0; }
+
+.fade-in {
+  opacity: 0;
+  /*transition: opacity .1s ease-in-out */ }
+
+.fade-in-end {
   opacity: 1; }
 .header {
   background-color: #FECFA1; }
@@ -842,7 +865,7 @@ body {
   @media screen and (max-width: 1024px) {
     body {
       font-size: 1.4em; } }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 500px1) {
     body {
       font-size: 1em; } }
 
