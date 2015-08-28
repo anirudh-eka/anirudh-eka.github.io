@@ -1,17 +1,110 @@
 ---
 layout: post
 title:  "Studying The Heart"
-tags: [immigrant, short story, poem, India, brown people]
+tags: [reminders, rhyme]
 share: discuss
 ---
+<style type="text/css">
+	.fade-in {
+		opacity: 0;
+		/*transition: opacity .1s ease-in-out;*/
+	}
 
-I'm studying my <span class="pulse">heart</span><br/>
-<span class="fade-out"> and digesting my name </span>
+	.fade-in-end {
+		opacity: 1;
+	}
+
+	.pulse-end {
+		display: inline-block;
+		animation-name: pulse;
+  		animation-duration: 0.5s; 
+  		animation-timing-function: ease-out; 
+  		animation-delay: 0;
+  		animation-direction: alternate;
+  		animation-iteration-count: 2;
+  		animation-fill-mode: none;
+  		animation-play-state: running; 
+	}
+	.pulse {
+		display: inline-block;
+		transition: transform .1s ease-in-out, color .1s ease-in-out;
+	}
+
+	.pulse:hover {
+		transform: scale(1.2);
+		color: red;
+	}
+
+	@keyframes pulse {
+	  0% {
+	  }
+	  100% {
+	  	transform: scale(1.2);
+	    color: red;
+	  }
+	}
+</style>
+
+<script type="text/javascript">
+		var els = {};
+		var init = function() {
+			els = Transit.getClass("fade-in")
+			fadeInEls(0)
+		}
+		var fadeInEls = function(index) {
+			if(els[index] == undefined){
+				return;
+			}
+
+			els[index].changeTo("fade-in-end") 
+			runOtherFX(els[index])
+
+			var pauseTime = 170;
+			if((index + 1) % 4 == 0 ) { pauseTime = 1300}
+			window.setTimeout(function(){fadeInEls(index + 1)}, pauseTime)
+		}
+
+		var runOtherFX = function(el) {
+			if (el.className.match(/(^|\s)pulse(\s|$)/) != null){
+				el.changeTo("pulse-end");
+			}
+		}
+
+		Transit = {
+			getClass: function(className) {
+				var els = document.getElementsByClassName(className)
+				var newObj = {}
+				for (var i = 0; i < els.length; i++) {
+    				newObj[i] = els[i];
+    				newObj[i].changeTo = function(endClass) {
+    					var re = new RegExp("(^|\\s)"+endClass+"(\\s|$)")
+    					if(this.className.match(re) == null){
+    						this.className += (" " + endClass);	
+    					}
+					}
+				}
+				
+				newObj.changeTo = function(endClass) {
+					// map changeTo on all classes
+					for (var key in this) {
+					    if (this.hasOwnProperty(key) && this[key].changeTo != undefined) {
+					        this[key].changeTo(endClass);
+					    }
+					}
+				}
+
+				return newObj
+			}
+		}
+</script>
+
+<span class="fade-in">I'm</span><span class="fade-in"> studying</span><span class="fade-in"> my </span><span class="pulse fade-in">heart</span>  <br/>
+<span class="fade-in">I'm</span><span class="fade-in"> digesting</span><span class="fade-in"> my </span><span class="fade-in">name</span>
 
 I'm taking borders apart <br/>
-putting my pride to shame
+<span class="fade-in">putting my pride to shame</span>
 
-I've been a shell of myself <br/>
+<span class="hithere">I've been a shell of myself</span> <br/>
 but it's the season of change
 
 Aint no reason for doubt, <br/>
