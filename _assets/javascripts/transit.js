@@ -17,8 +17,7 @@ var playMovie = function(index) {
 
 	scene.nextFrame()
 
-	var pauseTime = 100;
-	// if((index + 1) % 4 == 0 ) { pauseTime = 1300}
+	var pauseTime = scene.dataset.sceneStep ? scene.dataset.sceneStep : 100
 	window.setTimeout(function(){playMovie(index + 1)}, pauseTime)
 }
 
