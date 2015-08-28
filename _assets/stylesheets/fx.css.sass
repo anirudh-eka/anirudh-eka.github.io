@@ -7,7 +7,7 @@
 .pulse
   @extend .invite-mouse
   transition-property: transform, color, transform
-  transition-duration: 0.5s
+  transition-duration: 3.5s
 
 .pulse:hover
   color: $maroon
@@ -16,7 +16,7 @@
 .pulse-end
   display: inline-block
   animation-name: pulse
-  animation-duration: 0.4s 
+  animation-duration: 0.5s 
   animation-timing-function: ease-out 
   animation-delay: 0
   animation-direction: alternate
@@ -44,9 +44,19 @@
 
 .fade-in
   opacity: 0
-  /*transition: opacity .1s ease-in-out*/
+  transition: opacity .1s ease-in-out
 
 .fade-in-end
   opacity: 1
 
+.break-away-right
+  letter-spacing: 0em
+  margin-left: -0.2em
+  transition-property: letter-spacing, padding-left
+  transition-delay: 0s
+  transition-duration: 0.5s
+  transition-timing-function: ease
 
+.break-away-right-end
+  letter-spacing: 0.25em
+  padding-left: 0.3em

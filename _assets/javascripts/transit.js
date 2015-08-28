@@ -1,7 +1,7 @@
 // frames in css must all have an -end version to say the ending state
 var movie = {};
 var init = function() {
-	movie = Transit.getClass("fade-in")
+	movie = Transit.getClass("scene")
 	playMovie(0)
 }
 
@@ -17,8 +17,8 @@ var playMovie = function(index) {
 
 	scene.nextFrame()
 
-	var pauseTime = 200;
-	if((index + 1) % 4 == 0 ) { pauseTime = 1300}
+	var pauseTime = 100;
+	// if((index + 1) % 4 == 0 ) { pauseTime = 1300}
 	window.setTimeout(function(){playMovie(index + 1)}, pauseTime)
 }
 

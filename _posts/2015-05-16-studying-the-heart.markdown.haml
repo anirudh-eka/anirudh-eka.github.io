@@ -4,39 +4,36 @@ title:  "Studying The Heart"
 tags: [reminders, rhyme]
 share: discuss
 ---
-
-%span.fade-in I'm
-%span.fade-in studying
-%span.fade-in my 
-%span.fade-in.pulse heart
+- ["I'm", "studying", "my"].each do |word|
+	%span.scene.fade-in= word
+%span.scene.fade-in.pulse{"data-scene-step" => 3} heart
 %br
-%span.fade-in I'm
-%span.fade-in digesting
-%span.fade-in my 
-%span.fade-in name
+- ["I'm", "digesting", "my", "name"].each do |word|
+	%span.scene.fade-in= word
 %br 
 %br
-%span.fade-in I'm
-%span.fade-in taking
-%span.fade-in borders 
-%span.fade-in apart
+- ["I'm", "taking", "borders"].each do |word|
+	%span.scene.fade-in= word 
+%span.scene.break-away-right apart
 %br
-%span.fade-in putting
-%span.fade-in my
-%span.fade-in pride 
-%span.fade-in to shame
+- ["putting", "my", "pride", "to shame"].each do |word|
+	%span.scene.fade-in= word
 %br
 %br
-%span.fade-in I've been 
-%span.fade-in a shell 
-%span.fade-in of my<span class="fade-in">self</span>
+- ["I've been", "a shell", "of myself"].each do |word|
+	%span.scene.fade-in= word
 %br
-%span.fade-in but it's 
-%span.fade-in the sea<span class="fade-in">son</span>
-%span.fade-in of change
-
-Aint no reason for doubt, <br/>
-this is when a moth meets its flames
+- ["but it's", "the season", "of change"].each do |word|
+	%span.scene.fade-in= word
+%br
+%br
+- ["Aint", "no", "reason", "for", "doubt"].each do |word|
+	%span.scene.fade-in= word
+%br
+- ["this", "is", "when", "a moth", "meets", "its", "flames"].each do |word|
+	%span.scene.fade-in= word
+%br
+%br
 <span style="display: none;"><!--more--></span>
 
 when a perfectionist dies <br/>
