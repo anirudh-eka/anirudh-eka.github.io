@@ -16,20 +16,26 @@
     font-size: 3em; }
   .contact-info-list .social-icon {
     padding-right: 0.7em; }
-.invite-mouse, .pulse, .fade-out {
+.invite-mouse, .fade-out {
   border-bottom: 1px dashed #333;
   cursor: pointer; }
 
 .pulse {
-  transition-property: transform, color, transform;
+  display: inline-block;
+  transition-property: transform, color;
   transition-duration: 3.5s; }
 
 .pulse:hover {
-  color: #7D0606;
-  transform: scale(1.1); }
+  animation-name: pulse;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running; }
 
 .pulse-end {
-  display: inline-block;
   animation-name: pulse;
   animation-duration: 0.5s;
   animation-timing-function: ease-out;
@@ -62,15 +68,14 @@
 
 .break-away-right {
   letter-spacing: 0em;
-  margin-left: -0.2em;
   transition-property: letter-spacing, padding-left;
   transition-delay: 0s;
-  transition-duration: 0.5s;
+  transition-duration: 1s;
   transition-timing-function: ease; }
 
 .break-away-right-end {
-  letter-spacing: 0.25em;
-  padding-left: 0.3em; }
+  letter-spacing: 0.1em;
+  padding-left: 0.1em; }
 .header {
   background-color: #FECFA1; }
   .header .heading {
@@ -849,16 +854,16 @@ nav.scrolled-to-top {
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
 #banner {
-  background-image: url("/assets/sipping_tea-52735d37ab56aebea7eb06f1b516733c.jpg"); }
+  background-image: url("/assets/sipping_tea-cb9a895489f5df8b2b3f0d53f7064cd7.jpg"); }
 
 .poet-banner {
-  background-image: url("/assets/BloomBars1-676851b839182bd384e5883f910ebd1f.jpg"); }
+  background-image: url("/assets/BloomBars1-c3ca74c81332ec947b2403d4a015ddd0.jpg"); }
 
 .programmer-banner {
-  background-image: url("/assets/italian_graffiti-1ccd66af12b692b5a13c6aa80cdc0c08.jpg"); }
+  background-image: url("/assets/italian_graffiti-304895dc90fc51af215f724358cc1661.jpg"); }
 
 #featured .content {
-  background-image: url("/assets/bg-texture-6e583c3de9100afac377a501e30098f2.png"); }
+  background-image: url("/assets/bg-texture-34ee290f257c7fabc7d3f93e1c63551e.png"); }
 
 .post a {
   text-decoration: none;

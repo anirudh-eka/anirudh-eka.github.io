@@ -5,16 +5,11 @@
   cursor: pointer
 
 .pulse
-  @extend .invite-mouse
-  transition-property: transform, color, transform
+  display: inline-block
+  transition-property: transform, color
   transition-duration: 3.5s
 
-.pulse:hover
-  color: $maroon
-  transform: scale(1.1)
-
-.pulse-end
-  display: inline-block
+.pulse-end, .pulse:hover
   animation-name: pulse
   animation-duration: 0.5s 
   animation-timing-function: ease-out 
@@ -23,6 +18,13 @@
   animation-iteration-count: 2
   animation-fill-mode: none
   animation-play-state: running
+
+.pulse-end
+  animation-iteration-count: 2
+
+.pulse:hover
+  @extend .invite-mouse
+  animation-iteration-count: infinite
 
   @keyframes pulse 
     0%
@@ -51,12 +53,15 @@
 
 .break-away-right
   letter-spacing: 0em
-  margin-left: -0.2em
   transition-property: letter-spacing, padding-left
   transition-delay: 0s
-  transition-duration: 0.5s
+  transition-duration: 1s
   transition-timing-function: ease
 
 .break-away-right-end
-  letter-spacing: 0.25em
-  padding-left: 0.3em
+  letter-spacing: 0.1em
+  padding-left: 0.1em
+
+.break-away-right:hover
+  @extend .invite-mouse
+  letter-spacing: 0em

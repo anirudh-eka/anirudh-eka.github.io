@@ -4,38 +4,29 @@ title:  "Studying The Heart"
 tags: [reminders, rhyme]
 share: discuss
 ---
-- ["I'm", "studying", "my"].each do |word|
-	%span.scene.fade-in= word
-%span.scene.fade-in.pulse{"data-scene-step" => 1300} heart
-%br
-- ["I'm", "digesting", "my", "name"].each do |word|
-	%span.scene.fade-in= word
-%br 
-%br
-- ["I'm", "taking", "borders"].each do |word|
-	%span.scene.fade-in= word 
-%span.scene.break-away-right apart
-%br
-- ["putting", "my", "pride", "to shame"].each do |word|
-	%span.scene.fade-in= word
-%br
-%br
-- ["I've been", "a shell", "of myself"].each do |word|
-	%span.scene.fade-in= word
-%br
-- ["but it's", "the season", "of change"].each do |word|
-	%span.scene.fade-in= word
-%br
-%br
-- ["Aint", "no", "reason", "for", "doubt"].each do |word|
-	%span.scene.fade-in= word
-%br
-- ["this", "is", "when", "a moth", "meets", "its", "flames"].each do |word|
-	%span.scene.fade-in= word
-%br
-%br
-<span style="display: none;"><!--more--></span>
 
+%audio{"src" =>"/audio/studying_my_heart.ogg", "preload" => "auto"}
+	Your browser does not support the <code>audio</code> element.
+
+- [{word: "I'm", step: 100}, {word: "studying"}, {word: "my"}, {word: "heart", step: 1600, class: "pulse"}, {line_break: 1},
+	{word: "I'm"}, {word: "digesting", step: 300}, {word: "my", step: 200}, {word: "name", step: 1600}, {line_break: 2}, 
+	{word: "I'm"}, {word: "taking", step: 300}, {word: "borders"}, {word: "apart", step: 500 , class: "break-away-right"}, {line_break: 1},
+	{word: "and"}, {word:"putting", step: 300}, {word: "my"}, {word: "pride", step: 300}, {word: "to"}, {word: "shame", step: 1600}, {line_break: 2},
+	{word: "I've", step: 100}, {word: "been"}, {word: "a", step: 100}, {word: "shell", step: 300}, {word: "of"}, {word: "myself", step: 600}, {line_break: 1},
+	{word: "but"}, {word: "its"}, {word: "the"}, {word: "season", step: 300},{word: "of"}, {word: "change", step: 1600}, {line_break: 2},
+	{word: "Aint"}, {word: "no"}, {word: "reason"}, {word: "for"}, {word: "doubt", step: 1300}, {line_break: 1}, 
+	{word: "this"}, {word: "is"}, {word: "when", step: 300}, {word: "a"}, {word: "moth", step: 300}, {word: "meets", step: 300}, {word: "its"}, {word: "flames", step: 1600}, {line_break: 2}].each do |scene|
+	- if scene[:line_break]
+		- scene[:line_break].times do
+			%br
+	- else
+		- class_names = "#{"fade-in " unless scene[:no_fade_in]} #{scene[:class]}"
+		%span.scene{"data-scene-step" => scene[:step], :class => (class_names unless class_names.gsub(" ", "").empty?) }= scene[:word]
+
+
+
+<span style="display: none;"><!--more--></span>
+<div style="display: none">
 when a perfectionist dies <br/>
 so the perfection remains
 
@@ -128,3 +119,4 @@ Every breath in my lung
 
 Is a thank you <br/>
 in the voice of the dumb
+</div>

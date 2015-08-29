@@ -9128,7 +9128,12 @@ $(document).ready(function(){
 var movie = {};
 var init = function() {
 	movie = Transit.getClass("scene")
-	playMovie(0)
+	var audio = document.getElementsByTagName("audio")[0]
+	audio.play();
+	audio.addEventListener("canplaythrough", function(){ console.log("can play through")},false)
+	audio.addEventListener("canplay", function(){ console.log("can play")},false)
+        // debugger
+	// playMovie(0)
 }
 
 var reset = function() {

@@ -1,23 +1,30 @@
 // frames in css must all have an -end version to say the ending state
 var movie = {};
+var audio = document.getElementsByTagName("audio")[0]
 var init = function() {
 	movie = Transit.getClass("scene")
-	playMovie(0)
+	// audio.play();
+        // debugger
+    audio.play();
+    window.setTimeout(function(){playMovie(0)}, 1500);
 }
 
 var reset = function() {
+	audio.pause();
+	audio.currentTime = 0;
 	movie.rewindToFirstFrame();
 }
 
 var playMovie = function(index) {
 	var scene = movie[index];
 	if(scene == undefined){
+		audio.pause();
 		return;
 	}
 
 	scene.nextFrame()
 
-	var pauseTime = scene.dataset.sceneStep ? scene.dataset.sceneStep : 100
+	var pauseTime = scene.dataset.sceneStep ? scene.dataset.sceneStep : 200
 	window.setTimeout(function(){playMovie(index + 1)}, pauseTime)
 }
 
