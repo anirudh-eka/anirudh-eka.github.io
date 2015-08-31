@@ -3,16 +3,29 @@ var movie = {};
 var audio = document.getElementsByTagName("audio")[0]
 var init = function() {
 	movie = Transit.getClass("scene")
-	audio.play();
-    window.setTimeout(function(){movie.play(200, function(){
-    	audio.pause();
-    })}, 1500);
+	// audio.play();
+        // debugger
+    audio.play();
+    window.setTimeout(function(){playMovie(0)}, 1500);
 }
 
 var reset = function() {
 	audio.pause();
 	audio.currentTime = 0;
 	movie.rewindToFirstFrame();
+}
+
+var playMovie = function(index) {
+	var scene = movie[index];
+	if(scene == undefined){
+		audio.pause();
+		return;
+	}
+
+	scene.nextFrame()
+
+	var pauseTime = scene.dataset.sceneStep ? scene.dataset.sceneStep : 200
+	window.setTimeout(function(){playMovie(index + 1)}, pauseTime)
 }
 
 Transit = {
@@ -48,7 +61,7 @@ Transit = {
 		}
 		
 		scenes.nextFrame = function() {
-			// make all scenes go to next frame 
+			// map nextFrame on all classes
 			for (var key in this) {
 			    if (this.hasOwnProperty(key) && this[key].nextFrame != undefined) {
 			        this[key].nextFrame();
@@ -63,24 +76,6 @@ Transit = {
 			        this[key].rewindToFirstFrame();
 			    }
 			}
-		}
-
-		scenes.play = function(defaultStepTime, callback) {
-			// makes each scene go to next frame in order with a pause time
-			var self = this;
-			var _play = function(index, defaultStepTime){
-				var scene = self[index];
-				if(scene == undefined){
-					callback();
-					return;
-				}
-
-				scene.nextFrame()
-
-				var stepTime = scene.dataset.sceneStep ? scene.dataset.sceneStep : defaultStepTime
-				window.setTimeout(function(){_play(index + 1)}, stepTime)
-			}
-			_play(0, defaultStepTime);
 		}
 
 		return scenes;
