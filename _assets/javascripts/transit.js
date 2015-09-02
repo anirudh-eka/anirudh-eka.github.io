@@ -2,7 +2,7 @@
 var movie = {};
 var audio = document.getElementsByTagName("audio")[0]
 var init = function() {
-	movie = Transit.getClass("scene")
+	movie = Transit.getScenes(".scene")
 	// audio.play();
         // debugger
     audio.play();
@@ -24,16 +24,13 @@ var playMovie = function(index) {
 
 	scene.nextFrame()
 
+
 	var pauseTime = scene.dataset.sceneStep ? scene.dataset.sceneStep : 200
 	window.setTimeout(function(){playMovie(index + 1)}, pauseTime)
 }
 
 Transit = {
-	getClass: function(className) {
-		var els = document.getElementsByClassName(className)		
-		var scenes = {}
-		scenes.length = 0;
-
+	__makeIndividualScenes: function(scenes, els){
 		for (var i = 0; i < els.length; i++) {
 			var scene = els[i];
 			scene.frames = [];
@@ -48,6 +45,7 @@ Transit = {
 						this.className += (" " + endFrame);	
 					}
 				};
+				this.externalScenesToAffect.nextFrame();
 			}
 			scene.rewindToFirstFrame = function(){
 				var lastFrameName = this.frames.pop()
@@ -56,8 +54,48 @@ Transit = {
 				this.className = this.className.replace(re, "");
 				this.rewindToFirstFrame();
 			}
+			scene.addFirstFrame = function(startFrame){
+				var re = new RegExp("(^|\\s)"+startFrame+"(\\s|$)")
+
+				if(this.className.match(re) == null){
+					this.frames.push(startFrame);
+					if(this.className == ""){
+						this.className += startFrame;
+					} else {
+						this.className += (" " + startFrame);	
+					}
+				}
+			}
+
+			scene.externalScenesToAffect = Transit.getScenes();
+			
+			if(scene.dataset.fxOther != undefined) {
+				var externalFx = JSON.parse(scene.dataset.fxOther);			
+				for (var key in externalFx) {
+				    if (externalFx.hasOwnProperty(key)) {
+				    	var scenesToApplyFX = Transit.getScenes(key)
+				    	scenesToApplyFX.addFirstFrame(externalFx[key]);
+				    	scene.externalScenesToAffect.addScenes(scenesToApplyFX);
+				    }
+				}
+			}
+
 			scenes[i] = scene;
 			scenes.length += 1;
+		}
+	},
+
+	getScenes: function(name) {
+		var scenes = {}
+		scenes.length = 0;
+
+		if(name != undefined) {
+			var els;
+			if(name.startsWith("."))
+				{ els = document.getElementsByClassName(name.replace(".", "")) }
+			else
+				{ els = document.getElementsByTagName(name) }
+			Transit.__makeIndividualScenes(scenes, els)		
 		}
 		
 		scenes.nextFrame = function() {
@@ -69,11 +107,29 @@ Transit = {
 			}
 		}
 
+		scenes.addFirstFrame = function(frameName) {
+			// map nextFrame on all classes
+			for (var key in this) {
+			    if (this.hasOwnProperty(key) && this[key].addFirstFrame != undefined) {
+			        this[key].addFirstFrame(frameName);
+			    }
+			}	
+		}
+
 		scenes.rewindToFirstFrame = function() {
 			// map rewind on all classes
 			for (var key in this) {
 			    if (this.hasOwnProperty(key) && this[key].rewindToFirstFrame != undefined) {
 			        this[key].rewindToFirstFrame();
+			    }
+			}
+		}
+
+		scenes.addScenes = function(otherScenes) {
+			for (var key in otherScenes) {
+			    if (otherScenes.hasOwnProperty(key)) {
+			        this[this.length] = otherScenes[key];
+			        this.length += 1;
 			    }
 			}
 		}
