@@ -1,7 +1,8 @@
 // frames in css must all have an -end version to say the ending state
 var movie = {};
-var audio = document.getElementsByTagName("audio")[0]
+var audio;   
 var init = function() {
+	audio = document.getElementsByTagName("audio")[0]
 	movie = Transit.getScenes(".scene")
 	// audio.play();
         // debugger
@@ -31,7 +32,7 @@ var playMovie = function(index) {
 
 Transit = {
 	__makeIndividualScenes: function(scenes, els){
-		
+
 		for (var i = 0; i < els.length; i++) {
 			var scene = els[i];
 			scene.frames = [];

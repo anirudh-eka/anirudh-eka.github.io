@@ -9124,6 +9124,12 @@ $(document).ready(function(){
     return $(window).scrollTop() > nav_top
   }
 });
+var studyingMyHeart = {
+	init: function() {
+		$('body').prepend()
+	}
+}
+;
 // frames in css must all have an -end version to say the ending state
 var movie = {};
 var audio = document.getElementsByTagName("audio")[0]

@@ -9124,6 +9124,12 @@ $(document).ready(function(){
     return $(window).scrollTop() > nav_top
   }
 });
+var studyingMyHeart = {
+	init: function(imgPath) {
+		$('body').prepend('<img class="bg-night-sky-overlay" src= "imgPath"/>')
+	}
+}
+;
 // frames in css must all have an -end version to say the ending state
 var movie = {};
 var audio = document.getElementsByTagName("audio")[0]
@@ -9157,6 +9163,7 @@ var playMovie = function(index) {
 
 Transit = {
 	__makeIndividualScenes: function(scenes, els){
+		
 		for (var i = 0; i < els.length; i++) {
 			var scene = els[i];
 			scene.frames = [];
@@ -9220,7 +9227,7 @@ Transit = {
 			if(name.startsWith("."))
 				{ els = document.getElementsByClassName(name.replace(".", "")) }
 			else if (name.startsWith("#"))
-				{ els = document.getElementsByClassName(name.replace("#", ""))}
+				{ els = document.getElementById(name.replace("#", ""))}
 			else
 				{ els = document.getElementsByTagName(name) }
 			Transit.__makeIndividualScenes(scenes, els)		

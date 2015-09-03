@@ -9124,6 +9124,12 @@ $(document).ready(function(){
     return $(window).scrollTop() > nav_top
   }
 });
+var studyingMyHeart = {
+	init: function() {
+		$('body').prepend("<h1>yay</h1>")
+	}
+}
+;
 // frames in css must all have an -end version to say the ending state
 var movie = {};
 var audio = document.getElementsByTagName("audio")[0]
@@ -9157,7 +9163,7 @@ var playMovie = function(index) {
 
 Transit = {
 	__makeIndividualScenes: function(scenes, els){
-		console.log(els.length)
+		
 		for (var i = 0; i < els.length; i++) {
 			var scene = els[i];
 			scene.frames = [];
