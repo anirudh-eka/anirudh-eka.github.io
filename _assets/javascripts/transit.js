@@ -31,6 +31,7 @@ var playMovie = function(index) {
 
 Transit = {
 	__makeIndividualScenes: function(scenes, els){
+		
 		for (var i = 0; i < els.length; i++) {
 			var scene = els[i];
 			scene.frames = [];
@@ -93,6 +94,8 @@ Transit = {
 			var els;
 			if(name.startsWith("."))
 				{ els = document.getElementsByClassName(name.replace(".", "")) }
+			else if (name.startsWith("#"))
+				{ els = document.getElementById(name.replace("#", ""))}
 			else
 				{ els = document.getElementsByTagName(name) }
 			Transit.__makeIndividualScenes(scenes, els)		
