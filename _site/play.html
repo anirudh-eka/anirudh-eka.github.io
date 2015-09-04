@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>toomanynames</title>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width">
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/assets/syntax-26c5bb2ec038f707800c4fb2993b4566.css">
+        <!-- <link rel="stylesheet" href="/css/syntax.css"> -->
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/assets/app-11d1114e02adb43514d651a08784a853.css">
+        <!-- <link rel="stylesheet" href="/css/main.css"> -->
+    </head>
+    <body>
+        <!-- Custom JS -->
+        <script src="/assets/app-139aea9dd3a9f012cf450c0cd6c2826e.js"></script>
+
+      <style type="text/css">
+	.parallax {
+	/* makes a 1px perspective which means children can exist further away with -xpx*/
+	  perspective: 1px;
+	  height: 100vh;
+	  overflow-x: hidden;
+	  overflow-y: auto;
+	}
+	.parallax__layer {
+		/* need padding at top to create an overflow-y which allows you to scroll*/
+	  padding: 100vh 0px;
+	  /* takes layers out of the flow, so that one can go on top of another*/
+	  position: absolute;
+	  /* makes size of layers as big as container*/
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	}
+	.parallax__layer--base {
+		margin-top: -5vh;
+		padding: 0vh 0px;
+	  	transform: translateZ(0);
+	}
+	.parallax__layer--back {
+		height: 40vh;
+		/*this is further away; so as you scroll it's parent it moves slower- think of a mountain in the background of a moving car in a video*/
+	  transform: translateZ(-1px) scale(2);
+	  background-image: url(/assets/stars-6320898c965c1b3c62dce8d974d54ab6.jpg);
+	}
+
+	.base_1{
+		height: 80vh;
+		background-color: white;
+	}
+	.base_2 {
+		width: 0; 
+		height: 0; 
+		/*border-left: 20px solid transparent;*/
+		border-right: 100vw solid transparent;
+		border-top: 20vh solid white;
+	}
+</style>
+
+
+
+<div class="parallax">
+  <div class="parallax__layer parallax__layer--back">
+  	<h1>back</h1>
+  </div>
+  <div class="parallax__layer parallax__layer--base">
+  	<div class="base_1">
+   		<h1>base 1</h1>
+    </div>
+    <div class="base_2">
+    </div>
+  </div>
+</div>
+
+
+    </body>
+</html>

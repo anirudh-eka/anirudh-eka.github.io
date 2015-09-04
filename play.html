@@ -1,0 +1,62 @@
+---
+layout: head
+---
+<style type="text/css">
+	.parallax {
+	/* makes a 1px perspective which means children can exist further away with -xpx*/
+	  perspective: 1px;
+	  height: 100vh;
+	  overflow-x: hidden;
+	  overflow-y: auto;
+	}
+	.parallax__layer {
+		/* need padding at top to create an overflow-y which allows you to scroll*/
+	  padding: 100vh 0px;
+	  /* takes layers out of the flow, so that one can go on top of another*/
+	  position: absolute;
+	  /* makes size of layers as big as container*/
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	}
+	.parallax__layer--base {
+		margin-top: -5vh;
+		padding: 0vh 0px;
+	  	transform: translateZ(0);
+	}
+	.parallax__layer--back {
+		height: 40vh;
+		/*this is further away; so as you scroll it's parent it moves slower- think of a mountain in the background of a moving car in a video*/
+	  transform: translateZ(-1px) scale(2);
+	  background-image: url({% asset_path stars.jpg %});
+	}
+
+	.base_1{
+		height: 80vh;
+		background-color: white;
+	}
+	.base_2 {
+		width: 0; 
+		height: 0; 
+		/*border-left: 20px solid transparent;*/
+		border-right: 100vw solid transparent;
+		border-top: 20vh solid white;
+	}
+</style>
+
+
+
+<div class="parallax">
+  <div class="parallax__layer parallax__layer--back">
+  	<h1>back</h1>
+  </div>
+  <div class="parallax__layer parallax__layer--base">
+  	<div class="base_1">
+   		<h1>base 1</h1>
+    </div>
+    <div class="base_2">
+    </div>
+  </div>
+</div>
+
