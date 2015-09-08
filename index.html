@@ -9,14 +9,6 @@ layout: simple_home
 			<span class='meta'>{{ post.date | date_to_string }}</span>
 			<div class="post">
 				{{post.excerpt}}
-				{% if post.tags != empty %}
-
-	<!-- 			<ul class="meta tags">
-				  {% for tag in post.tags %}
-				    <li>#{{tag}}<li>
-				  {% endfor %}
-				</ul> -->
-				{% endif %}
 			</div>
 			<div class="read-more-container">
 				<a class="read-more" href="{{ post.url }}">Read More &#8594;</a>

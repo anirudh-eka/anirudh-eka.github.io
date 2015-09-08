@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: canvas
 title:  "Studying The Heart"
 tags: [reminders, rhyme]
 share: discuss
@@ -10,73 +10,86 @@ share: discuss
 
 %audio{"src" =>"/audio/studying_my_heart.ogg", "preload" => "auto"}
 	Your browser does not support the <code>audio</code> element.
+%div.parallax#canvas-container
+	%div.parallax__group
+		%div.parallax__layer--base.light-theme
+			%div.l-centered-content
+				- [{word: "I'm", step: 100, fx_other: {"h1" => "fade-out", ".meta" => "fade-out"}}, {word: "studying"}, {word: "my"}, {word: "heart", step: 1600, fx: "pulse"}, {line_break: 1},
+					{word: "I'm"}, {word: "digesting", step: 300}, {word: "my", step: 200}, {word: "name", step: 1600}, {line_break: 2}, 
+					{word: "I'm"}, {word: "taking", step: 300}, {word: "borders"}, {word: "apart", step: 500 , fx: "break-away-right"}, {line_break: 1},
+					{word: "and"}, {word:"putting", step: 300}, {word: "my"}, {word: "pride", step: 300}, {word: "to"}, {word: "shame", step: 1600}, {line_break: 2},
+					{word: "I've", step: 100}, {word: "been"}, {word: "a", step: 100}, {word: "shell", step: 300}, {word: "of"}, {word: "myself", step: 600}, {line_break: 1},
+					{word: "but"}, {word: "its"}, {word: "the"}, {word: "season", step: 300},{word: "of"}, {word: "change", step: 1600}, {line_break: 2},
+					{word: "Aint"}, {word: "no"}, {word: "reason"}, {word: "for"}, {word: "doubt", step: 1300}, {line_break: 1}, 
+					{word: "this"}, {word: "is"}, {word: "when", step: 300}, {word: "a"}, {word: "moth", step: 300}, {word: "meets", step: 300}, {word: "its"}, {word: "flames", step: 1600, fx:"slide-from-right"}, {line_break: 2},
+					{word: "when"}, {word: "a"}, {word: "perfectionist"}, {word: "dies"}, {line_break: 1},
+					{word: "so"}, {word: "the"}, {word: "perfection"}, {word: "remains"}, {line_break: 2},
+					{word: "like"}, {word: "this"}, {word: "universe"}, {word: "was"}, {word: "beautiful"}, {line_break: 1}, {word: "before"}, {word: "I"}, {word: "ever"}, {word: "came", fx_other: {"body" => "fade-text-color-light"}}, {line_break: 2}].each do |scene|
+					- if scene[:line_break]
+						- scene[:line_break].times do
+							%br
+					- else
+						- fx_names = "#{"fade-in " unless scene[:no_fade_in]} #{scene[:fx]}"
+						%span.scene{"data-scene-step" => scene[:step], "data-fx-other" => scene[:fx_other].to_json, :class => (fx_names unless fx_names.gsub(" ", "").empty?) }= scene[:word]
 
-- [{word: "I'm", step: 100}, {word: "studying"}, {word: "my"}, {word: "heart", step: 1600, fx: "pulse"}, {line_break: 1},
-	{word: "I'm"}, {word: "digesting", step: 300}, {word: "my", step: 200}, {word: "name", step: 1600}, {line_break: 2}, 
-	{word: "I'm"}, {word: "taking", step: 300}, {word: "borders"}, {word: "apart", step: 500 , fx: "break-away-right"}, {line_break: 1},
-	{word: "and"}, {word:"putting", step: 300}, {word: "my"}, {word: "pride", step: 300}, {word: "to"}, {word: "shame", step: 1600}, {line_break: 2},
-	{word: "I've", step: 100}, {word: "been"}, {word: "a", step: 100}, {word: "shell", step: 300}, {word: "of"}, {word: "myself", step: 600}, {line_break: 1},
-	{word: "but"}, {word: "its"}, {word: "the"}, {word: "season", step: 300},{word: "of"}, {word: "change", step: 1600}, {line_break: 2},
-	{word: "Aint"}, {word: "no"}, {word: "reason"}, {word: "for"}, {word: "doubt", step: 1300}, {line_break: 1}, 
-	{word: "this"}, {word: "is"}, {word: "when", step: 300}, {word: "a"}, {word: "moth", step: 300}, {word: "meets", step: 300}, {word: "its"}, {word: "flames", step: 1600, fx:"slide-from-right"}, {line_break: 2},
-	{word: "when"}, {word: "a"}, {word: "perfectionist"}, {word: "dies"}, {line_break: 1},
-	{word: "so"}, {word: "the"}, {word: "perfection"}, {word: "remains"}, {line_break: 2},
-	{word: "like"}, {word: "this"}, {word: "universe"}, {word: "was"}, {word: "beautiful"}, {line_break: 1}, {word: "before"}, {word: "I"}, {word: "ever"}, {word: "came", fx_other: {".bg-night-sky-overlay" => "fade-in-bg-overlay", "body" => "fade-text-color-light"}}, {line_break: 2},
-	{word: "I've"}, {word: "got"}, {word: "nothin"}, {word: "to"}, {word: "claim"}, {line_break: 1},
-	{word: "not"}, {word: "even"}, {word: "the"}, {word: "place"}, {word: "where"}, {word: "I"}, {word: "stay"}, {line_break: 2},
-	{word: "because"}, {word: "if"}, {word: "you"}, {word: "give"}, {word: "a"}, {word: "fish"}, {line_break: 1},
-	{word: "a"}, {word: "bowl"}, {word: "you"}, {word: "take"}, {word: "its"}, {word: "ocean"}, {word: "away"}, {line_break: 2},
-	{word: "if"}, {word: "they"}, {word: "asked"}, {word: "what"}, {word: "I've"}, {word: "learned"}, {line_break: 1},
-	{word: "tell"}, {word: "em"}, {word: "its"}, {word: "as"}, {word: "simple"}, {word: "as"}, {word: "this"}, {line_break: 2},
-	{word: "pride"}, {word: "is"}, {word: "just"}, {word: "fear"}, {line_break: 1},
-	{word: "clenched"}, {word: "in"}, {word: "a"}, {word: "fist"}, {line_break: 2},
-	{word: "To learn"}, {word: "to"}, {word: "let"}, {word: "go"}, {line_break: 1},
-	{word: "is"}, {word: "what"}, {word: "it"}, {word: "means"}, {word: "to"}, {word: "resist"}, {line_break: 2},
-	{word: "I've"}, {word: "learned"}, {word: "to"}, {word: "love"}, {word: "myself"}, {word: "fully"}, {line_break: 1},
-	{word: "and"}, {word: "not"}, {word: "just"}, {word: "for"}, {word: "the"}, {word: "positive"}, {word: "things"}, {line_break: 2},
-	{word: "For"}, {word: "When"}, {word: "I"}, {word: "grew"}, {word: "wings,"}, {line_break: 1},
-	{word: "they"}, {word: "said"}, {word: "they"}, {word: "were"}, {word: "proud."}, {line_break: 2},
-	{word: "They"}, {word: "adorned"}, {word: "me"}, {word: "in"}, {word: "jewels"}, {word: "so"}, {word: "heavy"}, {line_break: 1},
-	{word: "I"}, {word: "could"}, {word: "never"}, {word: "leave"}, {word: "the"}, {word: "ground."}, {line_break: 2},
-	{word: "That's"}, {word: "why"}, {word: "I'd"}, {word: "rather"}, {word: "be"}, {word: "a"}, {word: "pidgin"}, {word: "than"}, {word: "a"}, {word: "peacock,"}, {line_break: 1},
-	{word: "A"}, {word: "feather"}, {word: "too"}, {word: "many,"}, {word: "is"}, {word: "too"}, {word: "heavy"}, {word: "for"}, {word: "me"}, {line_break: 2},
-	{word: "Don't"}, {word: "sweeten"}, {word: "my"}, {word: "air"}, {word: "with"}, {word: "sugar,"}, {line_break: 1},
-	{word: "because"}, {word: "I"}, {word: "like"}, {word: "it"}, {word: "when"}, {word: "I"}, {word: "can"}, {word: "breath"}, {line_break: 2},
-	{word: "a"}, {word: "feather"}, {word: "can"}, {word: "be"}, {word: "a"}, {word: "tether"}, {line_break: 1},
-	{word: "just"}, {word: "as"}, {word: "much"}, {word: "as"}, {word: "it"}, {word: "is"}, {word: "a"}, {word: "key"}, {line_break: 2},
-	{word: "I'd"}, {word: "rather"}, {word: "give"}, {word: "it"}, {word: "to"}, {word: "someone"}, {word: "with"}, {word: "lesser"}, {line_break: 1},
-	{word: "than"}, {word: "let"}, {word: "it"}, {word: "hold"}, {word: "me"}, {word: "down"}, {word: "by"}, {word: "my"}, {word: "greed"}, {line_break: 2},
-	{word: "Cuz"}, {word: "the"}, {word: "fruits"}, {word: "that"}, {word: "I"}, {word: "eat,"}, {line_break: 1},
-	{word: "are"}, {word: "the"}, {word: "product"}, {word: "of"}, {word: "someone"}, {word: "else's"}, {word: "hard"}, {word: "work"}, {line_break: 2},
-	{word: "I've"}, {word: "learned,"}, {word: "that"}, {word: "the"}, {word: "guilt"}, {word: "of"}, {word: "privilege"}, {word: "hurts,"}, {line_break: 1},
-	{word: "ignorance"}, {word: "is"}, {word: "the"}, {word: "most"}, {word: "painful"}, {word: "of"}, {word: "losses"}, {line_break: 2},
-	{word: "But"}, {word: "it"}, {word: "doesn't"}, {word: "compare"}, {word: "to"}, {word: "the"}, {word: "pain"}, {line_break: 1},
-	{word: "the"}, {word: "cost"}, {word: "of"}, {word: "that"}, {word: "privilege"}, {word: "causes"}, {line_break: 2},
-	{word: "I've"}, {word: "learned,"}, {word: "Compassion"}, {word: "is"}, {word: "a"}, {word: "path"}, {word: "to"}, {word: "solidarity"}, {line_break: 1},
-	{word: "pity"}, {word: "is"}, {word: "just"}, {word: "a"}, {word: "narrow"}, {word: "way"}, {word: "to"}, {word: "feel"}, {word: "tall"}, {line_break: 2},
-	{word: "If"}, {word: "you"}, {word: "grow"}, {word: "like"}, {word: "a"}, {word: "red"}, {word: "wood,"}, {line_break: 1},
-	{word: "you"}, {word: "may"}, {word: "scrape"}, {word: "the"}, {word: "sun"}, {word: "for"}, {word: "a"}, {word: "moment,"}, {line_break: 1},
-	{word: "but"}, {word: "you"}, {word: "are"}, {word: "destined"}, {word: "to"}, {word: "fall"}, {line_break: 2},
-	{word: "But"}, {word: "if"}, {word: "you"}, {word: "grow"}, {word: "like"}, {word: "a"}, {word: "banyan"}, {word: "tree,"}, {line_break: 1},
-	{word: "in"}, {word: "every"}, {word: "leaf"}, {word: "in"}, {word: "the"}, {word: "forest"}, {line_break: 1},
-	{word: "you"}, {word: "feel"}, {word: "the"}, {word: "light"}, {word: "through"}, {word: "us"}, {word: "all"}, {line_break: 2},
-	{word: "But"}, {word: "most"}, {word: "of"}, {word: "all,"}, {word: "I've"}, {word: "learned,"}, {line_break: 1},	
-	{word: "I"}, {word: "was"}, {word: "never"}, {word: "a"}, {word: "poet"}, {line_break: 1},
-	{word: "in"}, {word: "all"}, {word: "that"}, {word: "I've"}, {word: "written"}, {line_break: 2},
-	{word: "I've"}, {word: "just"}, {word: "been"}, {word: "trying"}, {word: "to"}, {word: "interpret"}, {line_break: 1},
-	{word: "the"}, {word: "metaphor"}, {word: "that"}, {word: "we"}, {word: "live"}, {word: "in"}, {line_break: 2},
-	{word: "So"}, {word: "to"}, {word: "all"}, {word: "I've"}, {word: "been"}, {word: "given,"}, {line_break: 1},
-	{word: "Since"}, {word: "my"}, {word: "journey's"}, {word: "begun"}, {line_break: 2},
-	{word: "Every"}, {word: "stroke"}, {word: "of"}, {word: "my"}, {word: "pen"}, {line_break: 1},
-	{word: "Every"}, {word: "breath"}, {word: "in"}, {word: "my"}, {word: "lung"}, {line_break: 2},
-	{word: "Is"}, {word: "a"}, {word: "thank"}, {word: "you"}, {line_break: 1},
-	{word: "in"}, {word: "the"}, {word: "voice"}, {word: "of"}, {word: "the"}, {word: "dumb"}].each do |scene|
-	- if scene[:line_break]
-		- scene[:line_break].times do
-			%br
-	- else
-		- fx_names = "#{"fade-in " unless scene[:no_fade_in]} #{scene[:fx]}"
-		%span.scene{"data-scene-step" => scene[:step], "data-fx-other" => scene[:fx_other].to_json, :class => (fx_names unless fx_names.gsub(" ", "").empty?) }= scene[:word]
+	%div.parallax__group.space-theme
+		%div.parallax__layer--back
+		%div.parallax__layer--base.l-centered-content
+			- [{word: "I've"}, {word: "got"}, {word: "nothin"}, {word: "to"}, {word: "claim"}, {line_break: 1},
+				{word: "not"}, {word: "even"}, {word: "the"}, {word: "place"}, {word: "where"}, {word: "I"}, {word: "stay"}, {line_break: 2},
+				{word: "because"}, {word: "if"}, {word: "you"}, {word: "give"}, {word: "a"}, {word: "fish"}, {line_break: 1},
+				{word: "a"}, {word: "bowl"}, {word: "you"}, {word: "take"}, {word: "its"}, {word: "ocean"}, {word: "away"}, {line_break: 2},
+				{word: "if"}, {word: "they"}, {word: "asked"}, {word: "what"}, {word: "I've"}, {word: "learned"}, {line_break: 1},
+				{word: "tell"}, {word: "em"}, {word: "its"}, {word: "as"}, {word: "simple"}, {word: "as"}, {word: "this"}, {line_break: 2},
+				{word: "pride"}, {word: "is"}, {word: "just"}, {word: "fear"}, {line_break: 1},
+				{word: "clenched"}, {word: "in"}, {word: "a"}, {word: "fist"}, {line_break: 2},
+				{word: "To learn"}, {word: "to"}, {word: "let"}, {word: "go"}, {line_break: 1},
+				{word: "is"}, {word: "what"}, {word: "it"}, {word: "means"}, {word: "to"}, {word: "resist"}, {line_break: 2},
+				{word: "I've"}, {word: "learned"}, {word: "to"}, {word: "love"}, {word: "myself"}, {word: "fully"}, {line_break: 1},
+				{word: "and"}, {word: "not"}, {word: "just"}, {word: "for"}, {word: "the"}, {word: "positive"}, {word: "things"}, {line_break: 2},
+				{word: "For"}, {word: "When"}, {word: "I"}, {word: "grew"}, {word: "wings,"}, {line_break: 1},
+				{word: "they"}, {word: "said"}, {word: "they"}, {word: "were"}, {word: "proud."}, {line_break: 2},
+				{word: "They"}, {word: "adorned"}, {word: "me"}, {word: "in"}, {word: "jewels"}, {word: "so"}, {word: "heavy"}, {line_break: 1},
+				{word: "I"}, {word: "could"}, {word: "never"}, {word: "leave"}, {word: "the"}, {word: "ground."}, {line_break: 2},
+				{word: "That's"}, {word: "why"}, {word: "I'd"}, {word: "rather"}, {word: "be"}, {word: "a"}, {word: "pidgin"}, {word: "than"}, {word: "a"}, {word: "peacock,"}, {line_break: 1},
+				{word: "A"}, {word: "feather"}, {word: "too"}, {word: "many,"}, {word: "is"}, {word: "too"}, {word: "heavy"}, {word: "for"}, {word: "me"}, {line_break: 2},
+				{word: "Don't"}, {word: "sweeten"}, {word: "my"}, {word: "air"}, {word: "with"}, {word: "sugar,"}, {line_break: 1},
+				{word: "because"}, {word: "I"}, {word: "like"}, {word: "it"}, {word: "when"}, {word: "I"}, {word: "can"}, {word: "breath"}, {line_break: 2},
+				{word: "a"}, {word: "feather"}, {word: "can"}, {word: "be"}, {word: "a"}, {word: "tether"}, {line_break: 1},
+				{word: "just"}, {word: "as"}, {word: "much"}, {word: "as"}, {word: "it"}, {word: "is"}, {word: "a"}, {word: "key"}, {line_break: 2},
+				{word: "I'd"}, {word: "rather"}, {word: "give"}, {word: "it"}, {word: "to"}, {word: "someone"}, {word: "with"}, {word: "lesser"}, {line_break: 1},
+				{word: "than"}, {word: "let"}, {word: "it"}, {word: "hold"}, {word: "me"}, {word: "down"}, {word: "by"}, {word: "my"}, {word: "greed"}, {line_break: 2},
+				{word: "Cuz"}, {word: "the"}, {word: "fruits"}, {word: "that"}, {word: "I"}, {word: "eat,"}, {line_break: 1},
+				{word: "are"}, {word: "the"}, {word: "product"}, {word: "of"}, {word: "someone"}, {word: "else's"}, {word: "hard"}, {word: "work"}, {line_break: 2},
+				{word: "I've"}, {word: "learned,"}, {word: "that"}, {word: "the"}, {word: "guilt"}, {word: "of"}, {word: "privilege"}, {word: "hurts,"}, {line_break: 1},
+				{word: "ignorance"}, {word: "is"}, {word: "the"}, {word: "most"}, {word: "painful"}, {word: "of"}, {word: "losses"}, {line_break: 2},
+				{word: "But"}, {word: "it"}, {word: "doesn't"}, {word: "compare"}, {word: "to"}, {word: "the"}, {word: "pain"}, {line_break: 1},
+				{word: "the"}, {word: "cost"}, {word: "of"}, {word: "that"}, {word: "privilege"}, {word: "causes"}, {line_break: 2},
+				{word: "I've"}, {word: "learned,"}, {word: "Compassion"}, {word: "is"}, {word: "a"}, {word: "path"}, {word: "to"}, {word: "solidarity"}, {line_break: 1},
+				{word: "pity"}, {word: "is"}, {word: "just"}, {word: "a"}, {word: "narrow"}, {word: "way"}, {word: "to"}, {word: "feel"}, {word: "tall"}, {line_break: 2},
+				{word: "If"}, {word: "you"}, {word: "grow"}, {word: "like"}, {word: "a"}, {word: "red"}, {word: "wood,"}, {line_break: 1},
+				{word: "you"}, {word: "may"}, {word: "scrape"}, {word: "the"}, {word: "sun"}, {word: "for"}, {word: "a"}, {word: "moment,"}, {line_break: 1},
+				{word: "but"}, {word: "you"}, {word: "are"}, {word: "destined"}, {word: "to"}, {word: "fall"}, {line_break: 2},
+				{word: "But"}, {word: "if"}, {word: "you"}, {word: "grow"}, {word: "like"}, {word: "a"}, {word: "banyan"}, {word: "tree,"}, {line_break: 1},
+				{word: "in"}, {word: "every"}, {word: "leaf"}, {word: "in"}, {word: "the"}, {word: "forest"}, {line_break: 1},
+				{word: "you"}, {word: "feel"}, {word: "the"}, {word: "light"}, {word: "through"}, {word: "us"}, {word: "all"}, {line_break: 2},
+				{word: "But"}, {word: "most"}, {word: "of"}, {word: "all,"}, {word: "I've"}, {word: "learned,"}, {line_break: 1},	
+				{word: "I"}, {word: "was"}, {word: "never"}, {word: "a"}, {word: "poet"}, {line_break: 1},
+				{word: "in"}, {word: "all"}, {word: "that"}, {word: "I've"}, {word: "written"}, {line_break: 2},
+				{word: "I've"}, {word: "just"}, {word: "been"}, {word: "trying"}, {word: "to"}, {word: "interpret"}, {line_break: 1},
+				{word: "the"}, {word: "metaphor"}, {word: "that"}, {word: "we"}, {word: "live"}, {word: "in"}, {line_break: 2},
+				{word: "So"}, {word: "to"}, {word: "all"}, {word: "I've"}, {word: "been"}, {word: "given,"}, {line_break: 1},
+				{word: "Since"}, {word: "my"}, {word: "journey's"}, {word: "begun"}, {line_break: 2},
+				{word: "Every"}, {word: "stroke"}, {word: "of"}, {word: "my"}, {word: "pen"}, {line_break: 1},
+				{word: "Every"}, {word: "breath"}, {word: "in"}, {word: "my"}, {word: "lung"}, {line_break: 2},
+				{word: "Is"}, {word: "a"}, {word: "thank"}, {word: "you"}, {line_break: 1},
+				{word: "in"}, {word: "the"}, {word: "voice"}, {word: "of"}, {word: "the"}, {word: "dumb"}].each do |scene|
+				- if scene[:line_break]
+					- scene[:line_break].times do
+						%br
+				- else
+					- fx_names = "#{"fade-in " unless scene[:no_fade_in]} #{scene[:fx]}"
+					%span.scene{"data-scene-step" => scene[:step], "data-fx-other" => scene[:fx_other].to_json, :class => (fx_names unless fx_names.gsub(" ", "").empty?) }= scene[:word]
 
 
 

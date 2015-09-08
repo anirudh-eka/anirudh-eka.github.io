@@ -4,6 +4,7 @@ layout: head
 <style type="text/css">
 	.parallax {
 	/* makes a 1px perspective which means children can exist further away with -xpx*/
+	  -webkit-perspective: 1px;
 	  perspective: 1px;
 	  height: 100vh;
 	  overflow-x: hidden;
@@ -23,11 +24,13 @@ layout: head
 	.parallax__layer--base {
 		margin-top: -5vh;
 		padding: 0vh 0px;
+		-webkit-transform: translateZ(0);
 	  	transform: translateZ(0);
 	}
 	.parallax__layer--back {
 		height: 40vh;
 		/*this is further away; so as you scroll it's parent it moves slower- think of a mountain in the background of a moving car in a video*/
+		-webkit-transform: translateZ(-1px) scale(2);
 	  transform: translateZ(-1px) scale(2);
 	  background-image: url({% asset_path stars.jpg %});
 	}

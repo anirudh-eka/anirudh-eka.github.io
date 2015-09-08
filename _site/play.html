@@ -13,16 +13,17 @@
         <!-- <link rel="stylesheet" href="/css/syntax.css"> -->
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="/assets/app-11d1114e02adb43514d651a08784a853.css">
+        <link rel="stylesheet" href="/assets/app-b158ca34574c27b35abc4eec4cfcfdf8.css">
         <!-- <link rel="stylesheet" href="/css/main.css"> -->
     </head>
     <body>
         <!-- Custom JS -->
-        <script src="/assets/app-139aea9dd3a9f012cf450c0cd6c2826e.js"></script>
+        <script src="/assets/app-c446d2ef9832cfe9d409053541996028.js"></script>
 
       <style type="text/css">
 	.parallax {
 	/* makes a 1px perspective which means children can exist further away with -xpx*/
+	  -webkit-perspective: 1px;
 	  perspective: 1px;
 	  height: 100vh;
 	  overflow-x: hidden;
@@ -42,11 +43,13 @@
 	.parallax__layer--base {
 		margin-top: -5vh;
 		padding: 0vh 0px;
+		-webkit-transform: translateZ(0);
 	  	transform: translateZ(0);
 	}
 	.parallax__layer--back {
 		height: 40vh;
 		/*this is further away; so as you scroll it's parent it moves slower- think of a mountain in the background of a moving car in a video*/
+		-webkit-transform: translateZ(-1px) scale(2);
 	  transform: translateZ(-1px) scale(2);
 	  background-image: url(/assets/stars-6320898c965c1b3c62dce8d974d54ab6.jpg);
 	}

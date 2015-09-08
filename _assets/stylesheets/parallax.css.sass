@@ -1,0 +1,37 @@
+@import constants
+
+/* makes a 1px perspective which means children can exist further away with -xpx*/
+.parallax
+  -webkit-perspective: 1px
+  perspective: 1px
+  height: 100vh
+  overflow-x: hidden
+  overflow-y: auto
+
+
+.parallax__layer
+  /* need padding at top to create an overflow-y which allows you to scroll*/
+  padding: 100vh 0px
+  /* takes layers out of the flow, so that one can go on top of another*/
+  position: absolute
+  /* makes size of layers as big as container*/
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.parallax__layer--back
+  height: 40vh
+  /*this is further away; so as you scroll it's parent it moves slower- think of a mountain in the background of a moving car in a video*/
+  -webkit-transform: translateZ(-1px) scale(2)
+  transform: translateZ(-1px) scale(2)
+
+.parallax__layer--base
+  padding: 0vh 0px
+  -webkit-transform: translateZ(0px)
+  transform: translateZ(0px)
+
+.parallax__group
+  position: relative
+  height: 100vh
+  transform-style: preserve-3d

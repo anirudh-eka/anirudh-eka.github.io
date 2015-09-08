@@ -39,7 +39,7 @@
   opacity: 1
   transition: visibility 0s linear 1s, opacity 1s linear
 
-.fade-out:hover
+.fade-out:hover, .fade-out-end
   visibility: hidden
   opacity: 0
 
@@ -73,29 +73,3 @@
 
 .slide-from-right-end
   padding-left: 0em
-
-.bg-night-sky-overlay
-  position: fixed
-  z-index: -1
-  width: 100%
-  height: 100%
-  opacity: 0
-
-.fade-in-bg-overlay
-  -webkit-transition: opacity 1s ease-in-out
-  -moz-transition: opacity 1s ease-in-out
-  -o-transition: opacity 1s ease-in-out
-  transition: opacity 1s ease-in-out
-
-.fade-in-bg-overlay-end
-  opacity: 1
-
-.fade-text-color-light
-  -webkit-transition: color 1s ease-in-out
-  -moz-transition: color 1s ease-in-out
-  -o-transition: color 1s ease-in-out
-  transition: color 1s ease-in-out
-
-.fade-text-color-light-end
-  color: #CCDBE0
-  background-color: rgba(0,0,0,0.4)

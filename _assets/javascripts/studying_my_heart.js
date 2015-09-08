@@ -1,5 +1,11 @@
 var studyingMyHeart = {
 	init: function(imgPath) {
-		$('body').prepend('<img class="bg-night-sky-overlay" src= "' + imgPath + '"/>')
+	},
+	play: function() {
+		$("nav").toggle();
+		// autoscroll
+		// var container = $('.parallax');
+		// container.animate({scrollTop: 2600}, 200000);
+		init();
 	}
 }
