@@ -24,7 +24,7 @@ share: discuss
 					{word: "this"}, {word: "is"}, {word: "when", step: 300}, {word: "a"}, {word: "moth", step: 300}, {word: "meets", step: 300}, {word: "its"}, {word: "flames", step: 1600, fx:"slide-from-right"}, {line_break: 2},
 					{word: "when"}, {word: "a"}, {word: "perfectionist"}, {word: "dies"}, {line_break: 1},
 					{word: "so"}, {word: "the"}, {word: "perfection"}, {word: "remains"}, {line_break: 2},
-					{word: "like"}, {word: "this"}, {word: "universe"}, {word: "was"}, {word: "beautiful"}, {line_break: 1}, {word: "before"}, {word: "I"}, {word: "ever"}, {word: "came", fx_other: {"body" => "fade-text-color-light"}}, {line_break: 2}].each do |scene|
+					{word: "like"}, {word: "this"}, {word: "universe"}, {word: "was"}, {word: "beautiful"}, {line_break: 1}, {word: "before"}, {word: "I"}, {word: "ever"}, {word: "came", fx: "scroll-to-space"}, {line_break: 2}].each do |scene|
 					- if scene[:line_break]
 						- scene[:line_break].times do
 							%br
@@ -36,7 +36,7 @@ share: discuss
 		%div.parallax__layer--back
 		%div.parallax__layer--base.l-centered-content
 			- [{word: "I've"}, {word: "got"}, {word: "nothin"}, {word: "to"}, {word: "claim"}, {line_break: 1},
-				{word: "not"}, {word: "even"}, {word: "the"}, {word: "place"}, {word: "where"}, {word: "I"}, {word: "stay"}, {line_break: 2},
+				{word: "not"}, {word: "even"}, {word: "the"}, {word: "place"}, {word: "where"}, {word: "I"}, {word: "stay", fx: "scroll-to-space-end"}, {line_break: 2},
 				{word: "because"}, {word: "if"}, {word: "you"}, {word: "give"}, {word: "a"}, {word: "fish"}, {line_break: 1},
 				{word: "a"}, {word: "bowl"}, {word: "you"}, {word: "take"}, {word: "its"}, {word: "ocean"}, {word: "away"}, {line_break: 2},
 				{word: "if"}, {word: "they"}, {word: "asked"}, {word: "what"}, {word: "I've"}, {word: "learned"}, {line_break: 1},

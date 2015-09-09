@@ -9126,14 +9126,15 @@ $(document).ready(function(){
 });
 var studyingMyHeart = {
 	init: function(imgPath) {
-		// $('body').prepend('<img class="bg-night-sky-overlay" src= "' + imgPath + '"/>')
-		// $("#container").wrap("<div class='parallax'></div>");
-		// $(".parallax").prepend("<div class='parallax__layer parallax__layer--base'><div class='base_1'></div></div>");
-		// $(".parallax").prepend("<div class='parallax__layer parallax__layer--back'></div>");
-		// $("#container").addClass("parallax__layer");
 	},
 	play: function() {
 		$("nav").toggle();
+		var scrollToSpaceEnd = $(".scroll-to-space-end").offset().top;
+
+		$(".scroll-to-space").on("fx:fade-in-end", function(){ 
+			$("#canvas-container").animate({scrollTop: 1000}, 2000);
+		});
+
 		// autoscroll
 		// var container = $('.parallax');
 		// container.animate({scrollTop: 2600}, 200000);
@@ -9187,7 +9188,14 @@ Transit = {
 
 					if(this.className.match(re) == null){
 						this.frames.push(endFrame);
-						this.className += (" " + endFrame);	
+						this.className += (" " + endFrame);
+
+						var fxEvent = new CustomEvent("fx:" + endFrame, { bubbles: true, cancelable: false });
+						if(this.className.match(".scroll-to-space")){
+							console.log(fxEvent)
+							console.log(this)
+						}
+						this.dispatchEvent(fxEvent);
 					}
 				};
 				this.externalScenesToAffect.nextFrame();

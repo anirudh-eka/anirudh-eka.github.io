@@ -44,7 +44,10 @@ Transit = {
 
 					if(this.className.match(re) == null){
 						this.frames.push(endFrame);
-						this.className += (" " + endFrame);	
+						this.className += (" " + endFrame);
+
+						var fxEvent = new CustomEvent("fx:" + endFrame, { bubbles: true, cancelable: false });
+						this.dispatchEvent(fxEvent);
 					}
 				};
 				this.externalScenesToAffect.nextFrame();
