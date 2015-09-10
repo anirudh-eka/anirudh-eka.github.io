@@ -3,10 +3,15 @@ layout: canvas
 title:  "Studying The Heart"
 tags: [reminders, rhyme]
 share: discuss
+excerpt: <p>A fusion of code and spoken word into single piece of art.</p>
 ---
+
 %script{:type => "text/javascript"}
 	$(document).ready(function() { studyingMyHeart.init(); });
 %div.theater-controls
+	%h1
+		%a
+			{{ page.title }}
 	%ul
 		%li.play
 			%i.fa.fa-play
