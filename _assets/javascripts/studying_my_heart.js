@@ -1,12 +1,21 @@
 var studyingMyHeart = {
-	init: function(imgPath) {
+	init: function() {
+		var self = this;
+		$("#canvas-container").css("overflow-y", "hidden");
+		$("body").css("overflow-y", "hidden");
+		$(".theater-controls .play").on('click', function() {
+			$(".theater-controls").addClass("theater-is-playing");
+			$("#canvas-container").css("overflow-y", "auto");
+			$("body").css("overflow-y", "auto");
+			self.play();
+		});
 	},
 	play: function() {
 		$("nav").toggle();
-		var scrollToSpaceEnd = $(".scroll-to-space-end").offset().top;
+		var scrollToSpaceEnd = $(".scroll-to-space-end").offset().top - 100;
 
 		$(".scroll-to-space").on("fx:fade-in-end", function(){ 
-			$("#canvas-container").animate({scrollTop: scrollToSpaceEnd}, 2000);
+			$("#canvas-container").animate({scrollTop: scrollToSpaceEnd}, 1000);
 		});
 
 		// autoscroll

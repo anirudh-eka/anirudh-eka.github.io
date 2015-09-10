@@ -1,13 +1,26 @@
 @import constants
 
 .light-theme
-	font-size: 1.3em
-	color: black
-	background: white
+  font-size: 1.3em
+  color: black
+  background: white
 
 .space-theme
-	color: #CCDBE0
-	font-size: 1.3em
-	.parallax__layer--back
-		background-image: url(asset_path('stars.jpg'))
-		height: 100vh
+  color: #CCDBE0
+  font-size: 1.3em
+  .parallax__layer--back
+    background-image: url(asset_path('stars.jpg'))
+    height: 100vh
+
+.button-hover-animation
+  transition: color 1s
+  -webkit-transition: color 1s
+  color: white
+
+.button-hover-animation:hover
+  color: $beige
+  transition: color 1s
+  -webkit-transition: color 1s
+
+.button-hover-animation:visited
+  color: white

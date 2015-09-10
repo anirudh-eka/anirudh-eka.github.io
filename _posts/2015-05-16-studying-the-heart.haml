@@ -5,8 +5,11 @@ tags: [reminders, rhyme]
 share: discuss
 ---
 %script{:type => "text/javascript"}
-	$(document).ready(function() { studyingMyHeart.init("{% asset_path stars.jpg %}"); });
-	
+	$(document).ready(function() { studyingMyHeart.init(); });
+%div.theater-controls
+	%ul
+		%li.play
+			%i.fa.fa-play
 
 %audio{"src" =>"/audio/studying_my_heart.ogg", "preload" => "auto"}
 	Your browser does not support the <code>audio</code> element.
@@ -35,8 +38,8 @@ share: discuss
 	%div.parallax__group.space-theme
 		%div.parallax__layer--back
 		%div.parallax__layer--base.l-centered-content
-			- [{word: "I've"}, {word: "got"}, {word: "nothin"}, {word: "to"}, {word: "claim"}, {line_break: 1},
-				{word: "not"}, {word: "even"}, {word: "the"}, {word: "place"}, {word: "where"}, {word: "I"}, {word: "stay", fx: "scroll-to-space-end"}, {line_break: 2},
+			- [{word: "I've", fx: "scroll-to-space-end"}, {word: "got"}, {word: "nothin"}, {word: "to"}, {word: "claim"}, {line_break: 1},
+				{word: "not"}, {word: "even"}, {word: "the"}, {word: "place"}, {word: "where"}, {word: "I"}, {word: "stay"}, {line_break: 2},
 				{word: "because"}, {word: "if"}, {word: "you"}, {word: "give"}, {word: "a"}, {word: "fish"}, {line_break: 1},
 				{word: "a"}, {word: "bowl"}, {word: "you"}, {word: "take"}, {word: "its"}, {word: "ocean"}, {word: "away"}, {line_break: 2},
 				{word: "if"}, {word: "they"}, {word: "asked"}, {word: "what"}, {word: "I've"}, {word: "learned"}, {line_break: 1},

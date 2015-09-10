@@ -1,0 +1,30 @@
+@import constants
+@import theme
+
+.theater-controls
+  max-width: 9em
+  margin: 1em auto
+  text-align: center
+  position: absolute
+  z-index: 1000
+  max-width: 9em
+  left: 45%
+  top: 40%
+
+  ul
+    list-style-type: none
+
+  .play
+    @extend .button-hover-animation
+    cursor: pointer
+    font-size: 4.5em
+
+    i
+      background-color: $teal
+      padding-left: 0.2em
+      padding-right: 0.2em
+      border-radius: 0.2em
+
+
+.theater-is-playing
+  display: none
