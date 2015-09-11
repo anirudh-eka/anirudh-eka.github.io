@@ -155,9 +155,6 @@
 
 #container {
   padding-top: 3em; }
-
-#canvas-container {
-  padding-top: 2em; }
 /*****************************************************************************/
 /*
 /* Common
@@ -826,8 +823,6 @@ nav.scrolled-to-top {
   overflow-y: auto; }
 
 .parallax__layer {
-  /* need padding at top to create an overflow-y which allows you to scroll */
-  padding: 100vh 0px;
   /* takes layers out of the flow, so that one can go on top of another */
   position: absolute;
   /* makes size of layers as big as container */
@@ -837,19 +832,16 @@ nav.scrolled-to-top {
   left: 0; }
 
 .parallax__layer--back {
-  height: 40vh;
   /*this is further away; so as you scroll it's parent it moves slower- think of a mountain in the background of a moving car in a video */
-  -webkit-transform: translateZ(-1px) scale(2);
-  transform: translateZ(-1px) scale(2); }
+  -webkit-transform: translateZ(-2px) scale(3);
+  transform: translateZ(-2px) scale(3); }
 
 .parallax__layer--base {
-  padding: 0vh 0px;
   -webkit-transform: translateZ(0px);
   transform: translateZ(0px); }
 
 .parallax__group {
   position: relative;
-  height: 100vh;
   transform-style: preserve-3d; }
 .social-icons .social-icon {
   display: inline;
@@ -920,11 +912,13 @@ nav.scrolled-to-top {
   font-size: 1.3em;
   color: black;
   background: white;
-  height: 100vh; }
+  min-height: 100vh; }
 
 .space-theme {
   color: #CCDBE0;
   font-size: 1.3em; }
+  .space-theme .parallax__layer--base {
+    top: 40vh; }
   .space-theme .parallax__layer--back {
     background-image: url("/assets/stars-6320898c965c1b3c62dce8d974d54ab6.jpg");
     height: 200vh; }
@@ -965,11 +959,13 @@ nav.scrolled-to-top {
   font-size: 1.3em;
   color: black;
   background: white;
-  height: 100vh; }
+  min-height: 100vh; }
 
 .space-theme {
   color: #CCDBE0;
   font-size: 1.3em; }
+  .space-theme .parallax__layer--base {
+    top: 40vh; }
   .space-theme .parallax__layer--back {
     background-image: url("/assets/stars-6320898c965c1b3c62dce8d974d54ab6.jpg");
     height: 200vh; }

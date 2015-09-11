@@ -155,9 +155,6 @@
 
 #container {
   padding-top: 3em; }
-
-#canvas-container {
-  padding-top: 2em; }
 /*****************************************************************************/
 /*
 /* Common
@@ -836,8 +833,8 @@ nav.scrolled-to-top {
 
 .parallax__layer--back {
   /*this is further away; so as you scroll it's parent it moves slower- think of a mountain in the background of a moving car in a video */
-  -webkit-transform: translateZ(-1px) scale(2);
-  transform: translateZ(-1px) scale(2); }
+  -webkit-transform: translateZ(-2px) scale(3);
+  transform: translateZ(-2px) scale(3); }
 
 .parallax__layer--base {
   -webkit-transform: translateZ(0px);
@@ -915,14 +912,17 @@ nav.scrolled-to-top {
   font-size: 1.3em;
   color: black;
   background: white;
-  min-height: 100vh; }
+  min-height: 100vh;
+  padding-top: 2em; }
 
 .space-theme {
   color: #CCDBE0;
   font-size: 1.3em; }
+  .space-theme .parallax__layer--base {
+    top: 40vh; }
   .space-theme .parallax__layer--back {
     background-image: url("/assets/stars-6320898c965c1b3c62dce8d974d54ab6.jpg");
-    height: 100vh; }
+    height: 200vh; }
 
 .button-hover-animation, .theater-controls .play {
   transition: color 1s;
@@ -960,14 +960,17 @@ nav.scrolled-to-top {
   font-size: 1.3em;
   color: black;
   background: white;
-  min-height: 100vh; }
+  min-height: 100vh;
+  padding-top: 2em; }
 
 .space-theme {
   color: #CCDBE0;
   font-size: 1.3em; }
+  .space-theme .parallax__layer--base {
+    top: 40vh; }
   .space-theme .parallax__layer--back {
     background-image: url("/assets/stars-6320898c965c1b3c62dce8d974d54ab6.jpg");
-    height: 100vh; }
+    height: 200vh; }
 
 .button-hover-animation {
   transition: color 1s;
