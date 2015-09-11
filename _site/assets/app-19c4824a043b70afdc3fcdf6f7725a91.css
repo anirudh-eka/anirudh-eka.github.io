@@ -837,19 +837,16 @@ nav.scrolled-to-top {
   left: 0; }
 
 .parallax__layer--back {
-  height: 40vh;
   /*this is further away; so as you scroll it's parent it moves slower- think of a mountain in the background of a moving car in a video */
   -webkit-transform: translateZ(-1px) scale(2);
   transform: translateZ(-1px) scale(2); }
 
 .parallax__layer--base {
-  padding: 0vh 0px;
   -webkit-transform: translateZ(0px);
   transform: translateZ(0px); }
 
 .parallax__group {
   position: relative;
-  height: 100vh;
   transform-style: preserve-3d; }
 .social-icons .social-icon {
   display: inline;
@@ -919,7 +916,8 @@ nav.scrolled-to-top {
 .light-theme {
   font-size: 1.3em;
   color: black;
-  background: white; }
+  background: white;
+  height: 100vh; }
 
 .space-theme {
   color: #CCDBE0;
@@ -942,14 +940,13 @@ nav.scrolled-to-top {
   color: white; }
 
 .theater-controls {
-  max-width: 9em;
   margin: 1em auto;
   text-align: center;
   position: absolute;
   z-index: 1000;
-  max-width: 9em;
   left: 0;
-  right: 0; }
+  right: 0;
+  top: 20%; }
   .theater-controls ul {
     list-style-type: none; }
   .theater-controls .play {
@@ -964,7 +961,8 @@ nav.scrolled-to-top {
 .light-theme {
   font-size: 1.3em;
   color: black;
-  background: white; }
+  background: white;
+  height: 100vh; }
 
 .space-theme {
   color: #CCDBE0;

@@ -41,8 +41,8 @@ excerpt: <p>A fusion of code and spoken word into single piece of art.</p>
 						%span.scene{"data-scene-step" => scene[:step], "data-fx-other" => scene[:fx_other].to_json, :class => (fx_names unless fx_names.gsub(" ", "").empty?) }= scene[:word]
 
 	%div.parallax__group.space-theme
-		%div.parallax__layer--back
-		%div.parallax__layer--base.l-centered-content
+		%div.parallax__layer.parallax__layer--back
+		%div.parallax__layer.parallax__layer--base.l-centered-content
 			- [{word: "I've", fx: "scroll-to-space-end"}, {word: "got"}, {word: "nothin"}, {word: "to"}, {word: "claim"}, {line_break: 1},
 				{word: "not"}, {word: "even"}, {word: "the"}, {word: "place"}, {word: "where"}, {word: "I"}, {word: "stay"}, {line_break: 2},
 				{word: "because"}, {word: "if"}, {word: "you"}, {word: "give"}, {word: "a"}, {word: "fish"}, {line_break: 1},

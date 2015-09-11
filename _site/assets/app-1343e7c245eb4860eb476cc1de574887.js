@@ -9131,8 +9131,8 @@ var studyingMyHeart = {
 		$("body").css("overflow-y", "hidden");
 		$(".theater-controls .play").on('click', function() {
 			$(".theater-controls").addClass("theater-is-playing");
-			$("#canvas-container").css("overflow-y", "auto");
-			$("body").css("overflow-y", "auto");
+			// $("#canvas-container").css("overflow-y", "auto");
+			// $("body").css("overflow-y", "auto");
 			self.play();
 		});
 	},
@@ -9141,7 +9141,7 @@ var studyingMyHeart = {
 		var scrollToSpaceEnd = $(".scroll-to-space-end").offset().top - 100;
 
 		$(".scroll-to-space").on("fx:fade-in-end", function(){ 
-			$("#canvas-container").animate({scrollTop: scrollToSpaceEnd}, 1000);
+			$("#canvas-container").animate({scrollTop: scrollToSpaceEnd}, 1300);
 		});
 
 		// autoscroll

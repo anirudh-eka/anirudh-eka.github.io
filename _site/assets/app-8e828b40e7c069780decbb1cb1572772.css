@@ -919,14 +919,15 @@ nav.scrolled-to-top {
 .light-theme {
   font-size: 1.3em;
   color: black;
-  background: white; }
+  background: white;
+  height: 100vh; }
 
 .space-theme {
   color: #CCDBE0;
   font-size: 1.3em; }
   .space-theme .parallax__layer--back {
     background-image: url("/assets/stars-6320898c965c1b3c62dce8d974d54ab6.jpg");
-    height: 100vh; }
+    height: 200vh; }
 
 .button-hover-animation, .theater-controls .play {
   transition: color 1s;
@@ -963,14 +964,15 @@ nav.scrolled-to-top {
 .light-theme {
   font-size: 1.3em;
   color: black;
-  background: white; }
+  background: white;
+  height: 100vh; }
 
 .space-theme {
   color: #CCDBE0;
   font-size: 1.3em; }
   .space-theme .parallax__layer--back {
     background-image: url("/assets/stars-6320898c965c1b3c62dce8d974d54ab6.jpg");
-    height: 100vh; }
+    height: 200vh; }
 
 .button-hover-animation {
   transition: color 1s;
