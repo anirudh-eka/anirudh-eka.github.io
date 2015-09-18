@@ -1,4 +1,5 @@
 @import constants
+@import cloud
 
 .light-theme
   font-size: 1.3em
@@ -7,7 +8,11 @@
   min-height: 100vh
   padding-top: 2em
 
+.dark-cloud, .dark-cloud:before, .dark-cloud:after
+  background-color: #8F9EA8
+
 .space-theme
+  height: 200vh
   color: #CCDBE0
   font-size: 1.3em
   .parallax__layer--base
@@ -15,6 +20,12 @@
   .parallax__layer--back
     background-image: url(asset_path('stars.jpg'))
     height: 200vh
+
+.gray-theme
+  background-color: #C0CAD1
+
+.dark-cloud
+  @extend .cloud
 
 .button-hover-animation
   transition: color 1s

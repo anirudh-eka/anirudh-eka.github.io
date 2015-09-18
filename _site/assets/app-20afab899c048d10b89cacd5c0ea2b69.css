@@ -912,9 +912,16 @@ nav.scrolled-to-top {
   font-size: 1.3em;
   color: black;
   background: white;
-  min-height: 100vh; }
+  min-height: 100vh;
+  padding-top: 2em; }
+
+.cloud {
+  height: 200px;
+  width: 200px;
+  border-radius: 200px; }
 
 .space-theme {
+  height: 200vh;
   color: #CCDBE0;
   font-size: 1.3em; }
   .space-theme .parallax__layer--base {
@@ -922,6 +929,9 @@ nav.scrolled-to-top {
   .space-theme .parallax__layer--back {
     background-image: url("/assets/stars-6320898c965c1b3c62dce8d974d54ab6.jpg");
     height: 200vh; }
+
+.gray-theme {
+  background-color: #C0CAD1; }
 
 .button-hover-animation, .theater-controls .play {
   transition: color 1s;
@@ -959,9 +969,16 @@ nav.scrolled-to-top {
   font-size: 1.3em;
   color: black;
   background: white;
-  min-height: 100vh; }
+  min-height: 100vh;
+  padding-top: 2em; }
+
+.cloud {
+  height: 200px;
+  width: 200px;
+  border-radius: 200px; }
 
 .space-theme {
+  height: 200vh;
   color: #CCDBE0;
   font-size: 1.3em; }
   .space-theme .parallax__layer--base {
@@ -969,6 +986,9 @@ nav.scrolled-to-top {
   .space-theme .parallax__layer--back {
     background-image: url("/assets/stars-6320898c965c1b3c62dce8d974d54ab6.jpg");
     height: 200vh; }
+
+.gray-theme {
+  background-color: #C0CAD1; }
 
 .button-hover-animation {
   transition: color 1s;

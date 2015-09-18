@@ -16,9 +16,12 @@ var studyingMyHeart = {
 		var endOfContainer = $("#canvas-container").height
 
 		$(".scroll-to-space").on("fx:fade-in-end", function(){ 
-			$("#canvas-container").animate({scrollTop: scrollToSpaceTheme}, 1300, function() {
-    			$("#canvas-container").animate({scrollTop: 1500}, 32000, 'linear')
-  			});
+			window.setTimeout(function(){
+				console.log("hi")
+				$("#canvas-container").animate({scrollTop: scrollToSpaceTheme}, 1300, function() {
+    				$("#canvas-container").animate({scrollTop: 1500}, 32000, 'linear')
+  				});
+			}, 800)
 		});
 
 		// autoscroll
