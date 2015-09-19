@@ -34,6 +34,9 @@ $dark-cloud-skin-gradient-left: radial-gradient(circle farthest-corner at 30% 10
   .parallax__layer--base
     top: 40vh
   .parallax__layer--back
+    -webkit-transform: translateZ(-0.7px) scale(1)
+    transform: translateZ(-0.5px) scale(1)
+  .parallax__layer--deep
     background-image: url(asset_path('stars.jpg'))
     height: 200vh
 
@@ -52,7 +55,7 @@ $dark-cloud-skin-gradient-left: radial-gradient(circle farthest-corner at 30% 10
 
 .button-hover-animation
   transition: color 1s
-  -webkit-transition: color 1s
+    -webkit-transition: color 1s
   color: white
 
 .button-hover-animation:hover

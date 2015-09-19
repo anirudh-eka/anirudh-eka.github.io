@@ -18,10 +18,14 @@
   bottom: 0
   left: 0
 
-.parallax__layer--back
+.parallax__layer--deep
   /*this is further away; so as you scroll it's parent it moves slower- think of a mountain in the background of a moving car in a video*/
   -webkit-transform: translateZ(-2px) scale(3)
   transform: translateZ(-2px) scale(3)
+
+.parallax__layer--back
+  -webkit-transform: translateZ(-1px) scale(2)
+  transform: translateZ(-1px) scale(2)
 
 .parallax__layer--base
   -webkit-transform: translateZ(0px)
