@@ -1,15 +1,31 @@
 @import constants
 @import cloud
 
+$dark-cloud-solid-color: #8F9EA8
+$dark-cloud-skin-gradient-right: radial-gradient(circle farthest-corner at 70% 100% , $dark-cloud-solid-color 50%, rgba(143, 158, 168, 0.9) 65%, rgba(143, 158, 168, 0.4) 95%)
+$dark-cloud-skin-gradient-left: radial-gradient(circle farthest-corner at 30% 100% , $dark-cloud-solid-color 50%, rgba(143, 158, 168, 0.9) 65%, rgba(143, 158, 168, 0.4) 95%)
+
+.dark-cloud-1, .dark-cloud-2
+  background-color: $dark-cloud-solid-color
+
+.dark-cloud-2:before, .dark-cloud-1:after
+  background-image: $dark-cloud-skin-gradient-right
+
+.dark-cloud-1:before, .dark-cloud-2:after
+  background-image: $dark-cloud-skin-gradient-left
+
+.dark-cloud-1
+  @extend .cloud
+
+.dark-cloud-2
+  @extend .cloud-2
+
 .light-theme
   font-size: 1.3em
   color: black
   background: white
   min-height: 100vh
   padding-top: 2em
-
-.dark-cloud, .dark-cloud:before, .dark-cloud:after
-  background-color: #8F9EA8
 
 .space-theme
   height: 200vh
@@ -22,10 +38,17 @@
     height: 200vh
 
 .gray-theme
-  background-color: #C0CAD1
+  background-color: $dark-cloud-solid-color
 
-.dark-cloud
-  @extend .cloud
+.cloud-border
+  white-space: nowrap
+  margin-bottom: -6vw
+  li
+    margin-left: -9vw
+    display: inline-block
+
+  li:nth-child(even)
+    top: -3vw
 
 .button-hover-animation
   transition: color 1s

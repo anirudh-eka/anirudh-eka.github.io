@@ -59,9 +59,13 @@ excerpt: <p>A fusion of code and spoken word into single piece of art.</p>
 				- else
 					- fx_names = "#{"fade-in " unless scene[:no_fade_in]} #{scene[:fx]}"
 					%span.scene{"data-scene-step" => scene[:step], "data-fx-other" => scene[:fx_other].to_json, :class => (fx_names unless fx_names.gsub(" ", "").empty?) }= scene[:word]
-			%div.dark-cloud
+			%div.dark-cloud-2
 
 	%div.parallax__group.feather-theme
+		%div.parallax__layer--base
+			%ul.cloud-border
+				- 9.times do
+					%li{ :class => "dark-cloud-#{rand(1..2)}"}
 		%div.parallax__layer--base.gray-theme
 			%div.l-centered-content
 				- [	{word: "I've"}, {word: "learned"}, {word: "to"}, {word: "love"}, {word: "myself"}, {word: "fully"}, {line_break: 1},
