@@ -1,0 +1,37 @@
+---
+layout: canvas
+title:  "Electronic Sonnec"
+share: discuss
+excerpt: <p>A fusion of code and spoken word into single piece of art.</p>
+---
+
+%script{:type => "text/javascript"}
+	$(document).ready(function() { electronicSonnec.init(); });
+
+%audio{"src" =>"/audio/electronic_sonnec.ogg", "preload" => "auto"}
+	Your browser does not support the <code>audio</code> element.
+
+%div.black-computer-screen-theme
+	%div.l-centered-content
+		%p.stanza-one.fade-in{"data-scene-step" => 3300}
+			We pulsate to the current
+		%p
+			%span.stanza-one.fade-in 
+				Driving through 
+			%span.stanza-one.fade-in{"data-scene-step" => 3100}
+				our veins
+		%p
+			%span.stanza-one.fade-in 
+				Which acts as
+			%span.stanza-one.fade-in{"data-scene-step" => 3100}
+				a deterrent
+		%p
+			%span.stanza-one.fade-in 
+				To your aged
+			%span.stanza-one.fade-in{"data-scene-step" => 3100}
+				cultural reins
+
+%video{"preload" => "auto"}
+	%source{"src"=> "/video/electronic_sonnec_video.mp4", "type" => "video/mp4"}
+	%source{"src"=> "/video/electronic_sonnec_video.ogg", "type" => "video/ogg"}
+	I'm sorry; your browser doesn't support HTML5 video in WebM with VP8 or MP4 with H.264.

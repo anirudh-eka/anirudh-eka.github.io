@@ -1,12 +1,8 @@
 var studyingMyHeart = {
 	init: function() {
 		var self = this;
-		// $("#canvas-container").css("overflow-y", "hidden");
-		// $("body").css("overflow-y", "hidden");
 		$(".theater-controls .play").on('click', function() {
 			$(".theater-controls").addClass("theater-is-playing");
-			// $("#canvas-container").css("overflow-y", "auto");
-			// $("body").css("overflow-y", "auto");
 			self.play();
 		});
 	},
@@ -24,9 +20,12 @@ var studyingMyHeart = {
 			}, 800)
 		});
 
-		// autoscroll
-		// var container = $('.parallax');
-		// container.animate({scrollTop: 2600}, 200000);
-		init();
+		var audio = document.getElementsByTagName("audio")[0]
+		movie = Transit.getScenes(".scene")
+	    audio.play();
+	    window.setTimeout(function(){movie.play(0, function(){
+	    	audio.pause();
+	    })}, 1500);
+		
 	}
 }
