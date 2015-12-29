@@ -109,21 +109,33 @@ Transit = {
 		}
 
 		scenes.addScenes = function(otherScenes) {
+
 			for (var key in otherScenes) {
 			    if (otherScenes.hasOwnProperty(key)) {
-			        this[this.length] = otherScenes[key];
-			        this.length += 1;
+			    	var value = otherScenes[key];
+			    	if (isScene(value)) {
+				        this[this.length] = otherScenes[key];
+				        this.length += 1;
+			    	}
 			    }
+			}
+			function isScene(value) {
+				return value.nextFrame != undefined
 			}
 		}
 
-		scenes.play = function(index, callback) {
-			var self = this;
-			var scene = self[index];
+		scenes.last = function() {
+			return this[this.length - 1]
+		}
+
+		scenes.play = function(callback) {
+			__play(this, 0, callback)
+		}
+
+		var __play = function(scenes, index, callback) {
+			var scene = scenes[index];
 			if(scene == undefined){
-				// audio.pause();
-				console.log(callback)
-				callback()
+				if(callback != undefined) {callback()}
 				return;
 			}
 
@@ -131,7 +143,7 @@ Transit = {
 
 
 			var pauseTime = scene.dataset.sceneStep ? scene.dataset.sceneStep : 200
-			window.setTimeout(function(){self.play(index + 1, callback)}, pauseTime)
+			window.setTimeout(function(){__play(scenes, index + 1, callback)}, pauseTime)
 		}
 
 		return scenes;

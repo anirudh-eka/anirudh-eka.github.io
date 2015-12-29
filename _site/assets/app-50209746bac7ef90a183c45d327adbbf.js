@@ -9110,22 +9110,6 @@ if ( typeof noGlobal === strundefined ) {
 return jQuery;
 
 }));
-var electronicSonnec = {
-	init: function() {
-		var self = this;
-		$("nav").toggle();
-		
-		var audio = document.getElementsByTagName("audio")[0]
-		var video = document.getElementsByTagName("video")[0]
-		var movie = Transit.getScenes(".stanza-one")
-	    audio.play();
-	    window.setTimeout(function(){movie.play(function(){
-	    	audio.pause();
-	    	video.play();
-	    })}, 0);
-	}
-}
-;
 $(document).ready(function(){
   var nav_top = $("nav.sticky").offset().top
   $(window).on("scroll", function(){
@@ -9143,12 +9127,8 @@ $(document).ready(function(){
 var studyingMyHeart = {
 	init: function() {
 		var self = this;
-		// $("#canvas-container").css("overflow-y", "hidden");
-		// $("body").css("overflow-y", "hidden");
 		$(".theater-controls .play").on('click', function() {
 			$(".theater-controls").addClass("theater-is-playing");
-			// $("#canvas-container").css("overflow-y", "auto");
-			// $("body").css("overflow-y", "auto");
 			self.play();
 		});
 	},
@@ -9166,26 +9146,18 @@ var studyingMyHeart = {
 			}, 800)
 		});
 
-		// autoscroll
-		// var container = $('.parallax');
-		// container.animate({scrollTop: 2600}, 200000);
-		init();
+		var audio = document.getElementsByTagName("audio")[0]
+		movie = Transit.getScenes(".scene")
+	    audio.play();
+	    window.setTimeout(function(){movie.play(0, function(){
+	    	audio.pause();
+	    })}, 1500);
+		
 	}
 }
 ;
 // frames in css must all have an -end version to say the ending state
 var movie = {};
-var init = function() {
-	var audio = document.getElementsByTagName("audio")[0]
-	movie = Transit.getScenes(".scene")
-	// audio.play();
-        // debugger
-    audio.play();
-    window.setTimeout(function(){playMovie(0, function(){
-    	audio.pause();
-    })}, 1500);
-}
-
 var reset = function() {
 	audio.pause();
 	audio.currentTime = 0;
@@ -9295,33 +9267,41 @@ Transit = {
 		}
 
 		scenes.addScenes = function(otherScenes) {
+
 			for (var key in otherScenes) {
 			    if (otherScenes.hasOwnProperty(key)) {
-			        this[this.length] = otherScenes[key];
-			        this.length += 1;
+			    	var value = otherScenes[key];
+			    	if (isScene(value)) {
+				        this[this.length] = otherScenes[key];
+				        this.length += 1;
+			    	}
 			    }
+			}
+			function isScene(value) {
+				return value.nextFrame != undefined
 			}
 		}
 
+		scenes.last = function() {
+			return this[this.length - 1]
+		}
+
 		scenes.play = function(callback) {
-			console.log(callback)
-			var playMovie = function(index, callback) {
-				var scene = movie[index];
-				if(scene == undefined){
-					// audio.pause();
-					console.log(callback)
-					callback()
-					return;
-				}
+			__play(this, 0, callback)
+		}
 
-				scene.nextFrame()
-
-
-				var pauseTime = scene.dataset.sceneStep ? scene.dataset.sceneStep : 200
-				window.setTimeout(function(){playMovie(index + 1, callback)}, pauseTime)
+		var __play = function(scenes, index, callback) {
+			var scene = scenes[index];
+			if(scene == undefined){
+				if(callback != undefined) {callback()}
+				return;
 			}
 
-			playMovie(0, callback);
+			scene.nextFrame()
+
+
+			var pauseTime = scene.dataset.sceneStep ? scene.dataset.sceneStep : 200
+			window.setTimeout(function(){__play(scenes, index + 1, callback)}, pauseTime)
 		}
 
 		return scenes;

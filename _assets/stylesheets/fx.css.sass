@@ -34,14 +34,18 @@
   
 
 .fade-out
-  @extend .invite-mouse
-  visibility: visible
   opacity: 1
-  transition: visibility 0s linear 1s, opacity 1s linear
+  transition: opacity 1s linear
 
-.fade-out:hover, .fade-out-end
-  visibility: hidden
+.fade-out-end
   opacity: 0
+
+.fade-out-partial
+  opacity: 1
+  transition: opacity 1s linear
+
+.fade-out-partial-end
+  opacity: 0.2
 
 .fade-in
   opacity: 0
@@ -82,3 +86,45 @@
 
 .slide-right-end, .slide-right:hover
   transform: translateX(10vw)
+
+.glitch
+  position: relative
+
+@keyframes noise-anim
+  $steps: 20
+  @for $i from 0 through $steps
+    #{percentage($i*(1/$steps))}
+      clip: rect(random(100)+px,9999px,random(100)+px,0)
+    
+  
+
+.glitch:after
+  content: attr(data-text)
+  position: absolute
+  left: 2px
+  text-shadow: -1px 0 red
+  top: 0
+  color: white
+  background: black
+  overflow: hidden
+  clip: rect(0,900px,0,0) 
+  animation: noise-anim 2s infinite linear alternate-reverse
+
+@keyframes noise-anim-2
+  $steps:20
+  @for $i from 0 through $steps
+    #{percentage($i*(1/$steps))}
+      clip: rect(random(100)+px,9999px,random(100)+px,0)
+    
+
+.glitch:before
+  content: attr(data-text)
+  position: absolute
+  left: -2px
+  text-shadow: 1px 0 blue 
+  top: 0
+  color: white
+  background: black
+  overflow: hidden
+  clip: rect(0,900px,0,0) 
+  animation: noise-anim-2 3s infinite linear alternate-reverse
