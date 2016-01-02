@@ -363,12 +363,6 @@ a:hover   { color: #000; }
   border: none;
 }
 
-.post h2 {
-  font-size: 120%;
-  color: #757C7A;
-  margin: 2.2em 0em;
-}
-
 /* terminal */
 .post pre.terminal {
   border: 1px solid #000;
@@ -816,6 +810,10 @@ nav.scrolled-to-top {
   border-bottom: 1px dashed #828986;
   transition: color 0.5s;
   -webkit-transition: color 0.5s; }
+.post h2 {
+  font-size: 120%;
+  color: #828986;
+  margin: 2.2em 0em; }
 
 body {
   font-size: 1.4em; }
