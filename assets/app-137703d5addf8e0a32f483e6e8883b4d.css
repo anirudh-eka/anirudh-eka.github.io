@@ -775,18 +775,6 @@ nav.scrolled-to-top {
 .highlight .vg { color: #008080 } /* Name.Variable.Global */
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
-#banner {
-  background-image: url("/assets/sipping_tea-52735d37ab56aebea7eb06f1b516733c.jpg"); }
-
-.poet-banner {
-  background-image: url("/assets/BloomBars1-676851b839182bd384e5883f910ebd1f.jpg"); }
-
-.programmer-banner {
-  background-image: url("/assets/italian_graffiti-1ccd66af12b692b5a13c6aa80cdc0c08.jpg"); }
-
-#featured .content {
-  background-image: url("/assets/bg-texture-6e583c3de9100afac377a501e30098f2.png"); }
-
 p {
   margin: 1em 0;
   line-height: 1.635em;
