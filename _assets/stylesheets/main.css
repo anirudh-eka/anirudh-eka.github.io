@@ -12,19 +12,6 @@
 
 html, body { height: 100%; }
 
-body {
-  /*background-color: #f6f6f6;*/
-  /*font: 13.34px Helvetica, Arial, sans-serif;*/
-  font: 1.3em Cardo, Georgia, Cambria, 'Times New Roman', Times, serif;
-  /*font-size: large;*/
-  text-align: center;
-  overflow-x: hidden;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
-  font-size: 100%; }
-
 h1 { 
   margin-bottom: 1em; 
   font-family: Open Sans,Helvetica,sans-serif;

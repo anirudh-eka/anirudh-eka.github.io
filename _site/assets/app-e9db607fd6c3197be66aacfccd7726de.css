@@ -17,7 +17,8 @@
   .contact-info-list .social-icon {
     padding-right: 0.7em; }
 .header {
-  background-color: #FECFA1; }
+  background-color: #FECFA1;
+  text-align: center; }
   .header .heading {
     text-align: center;
     font-size: 4.7em;
@@ -88,19 +89,6 @@
 }
 
 html, body { height: 100%; }
-
-body {
-  /*background-color: #f6f6f6;*/
-  /*font: 13.34px Helvetica, Arial, sans-serif;*/
-  font: 1.3em Cardo, Georgia, Cambria, 'Times New Roman', Times, serif;
-  /*font-size: large;*/
-  text-align: center;
-  overflow-x: hidden;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
-  font-size: 100%; }
 
 h1 { 
   margin-bottom: 1em; 
@@ -799,6 +787,70 @@ nav.scrolled-to-top {
 #featured .content {
   background-image: url("/assets/bg-texture-6e583c3de9100afac377a501e30098f2.png"); }
 
+p {
+  margin: 1em 0;
+  line-height: 1.635em;
+  font-size: 1.1em; }
+
+h1, h2 {
+  font-weight: 300;
+  text-align: center; }
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  font-family: Open Sans, Helvetica, sans-serif;
+  font-weight: 300; }
+  h1 a {
+    text-decoration: none;
+    color: #45A39A; }
+
+body {
+  font: 1.4em Cardo, Georgia, Cambria, "Times New Roman", Times, serif;
+  color: #333;
+  background-color: white;
+  overflow: initial;
+  overflow-x: hidden;
+  text-align: left;
+  width: 100%; }
+  @media screen and (max-width: 1024px) {
+    body {
+      font-size: 1.4em; } }
+  @media screen and (max-width: 500px) {
+    body {
+      font-size: 1em; } }
+  @media screen and (max-width: 1024px) {
+    body {
+      width: 100%; } }
+  body #container {
+    width: 39em;
+    margin: auto; }
+    @media screen and (max-width: 1024px) {
+      body #container {
+        width: 90%;
+        padding-left: 4%;
+        padding-right: 4%; } }
+  body .meta {
+    color: #828986;
+    text-align: center;
+    display: block; }
+  body .read-more {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.3em;
+    border-radius: 0.2em;
+    background-color: #45A39A;
+    color: white;
+    transition: color 1s;
+    -webkit-transition: color 1s; }
+  body .read-more:hover {
+    color: #FECFA1;
+    transition: color 1s;
+    -webkit-transition: color 1s; }
+  body .read-more-container {
+    text-align: right;
+    margin-bottom: 2em; }
+
 .post a {
   text-decoration: none;
   color: #333;
@@ -812,64 +864,8 @@ nav.scrolled-to-top {
   -webkit-transition: color 0.5s; }
 .post h2 {
   font-size: 120%;
-  color: #828986;
+  color: #757C7A;
   margin: 2.2em 0em; }
-
-body {
-  font-size: 1.4em; }
-  @media screen and (max-width: 1024px) {
-    body {
-      font-size: 1.4em; } }
-  @media screen and (max-width: 500px) {
-    body {
-      font-size: 1em; } }
-
-#simple-body {
-  color: #333;
-  background-color: white;
-  overflow: initial;
-  overflow-x: hidden;
-  text-align: left;
-  width: 100%; }
-  @media screen and (max-width: 1024px) {
-    #simple-body {
-      width: 100%; } }
-  #simple-body #container {
-    width: 39em;
-    margin: auto; }
-    @media screen and (max-width: 1024px) {
-      #simple-body #container {
-        width: 90%;
-        padding-left: 4%;
-        padding-right: 4%; } }
-  #simple-body h1 {
-    text-align: center;
-    font-size: 2em; }
-    #simple-body h1 a {
-      text-decoration: none;
-      color: #45A39A; }
-  #simple-body h2 {
-    text-align: center; }
-  #simple-body .meta {
-    color: #828986;
-    text-align: center;
-    display: block; }
-  #simple-body .read-more {
-    text-decoration: none;
-    display: inline-block;
-    padding: 0.3em;
-    border-radius: 0.2em;
-    background-color: #45A39A;
-    color: white;
-    transition: color 1s;
-    -webkit-transition: color 1s; }
-  #simple-body .read-more:hover {
-    color: #FECFA1;
-    transition: color 1s;
-    -webkit-transition: color 1s; }
-  #simple-body .read-more-container {
-    text-align: right;
-    margin-bottom: 2em; }
 
 #simple-home {
   background-color: white;
