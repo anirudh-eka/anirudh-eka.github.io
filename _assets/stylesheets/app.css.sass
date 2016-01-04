@@ -6,34 +6,39 @@ $gray: #828986
 $dark-gray: #757C7A
 $break-medium: 1024px
 $break-small: 500px
+$serif-font: Open Sans,Helvetica,sans-serif
+
+.l-text-align-right
+  text-align: right
+  display: block
 
 p 
   margin: 1em 0
   line-height: 1.635em
-  font-size: 1.1em
 
 h1, h2
   font-weight: 300
   text-align: center
 
 h1
-  font-size: 2em
+  font-size: 1.82em
   margin-bottom: 1em
-  font-family: Open Sans,Helvetica,sans-serif
+  font-family: $serif-font
   font-weight: 300
 
   a
     text-decoration: none
     color: #45A39A
 
-body
-  font: 1.4em Cardo, Georgia, Cambria, 'Times New Roman', Times, serif
-  
-  @media screen and (max-width: $break-medium)
-    font-size: 1.4em
+/*code block styling*/
+code
+  font-size: 0.78em
 
+body
+  font: 24.6px Cardo, Georgia, Cambria, 'Times New Roman', Times, serif
+  
   @media screen and (max-width: $break-small)
-    font-size: 1em
+    font-size: 17.6px
 
   color: #333
   background-color: white
@@ -46,7 +51,7 @@ body
     width: 100%
 
   #container
-    width: 39em
+    width: 35.46em
     margin: auto
     
     @media screen and (max-width: $break-medium)

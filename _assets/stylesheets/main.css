@@ -12,16 +12,7 @@
 
 html, body { height: 100%; }
 
-h1 { 
-  margin-bottom: 1em; 
-  font-family: Open Sans,Helvetica,sans-serif;
-}
 h2 { font-size: 70%}
-
-p { margin: 1em 0; 
-    line-height: 1.635em;
-    font-size: 1.1em;
-}
 
 a         { color: #00a; }
 a:hover   { color: #000; }
