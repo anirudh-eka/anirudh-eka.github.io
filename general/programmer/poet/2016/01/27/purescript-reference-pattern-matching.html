@@ -89,7 +89,7 @@ variable patterns  are ones that bind arguments to a name like so:</p>
     <span class="n">takeFive</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="kr">_</span><span class="p">]</span> <span class="ow">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
     <span class="n">takeFive</span> <span class="kr">_</span> <span class="ow">=</span> <span class="mi">0</span></code></pre></div>
 
-<p><em>NOTE: Purescript does not support pattern matching with cons (:) operator on Data.Array! This is due to poor performance. :(  You can use Cons for pattern matching on Data.List using &#39;Cons&#39;</em></p>
+<p><em>Note: Purescript does not support pattern matching with <code>cons (:)</code> operator on <code>Data.Array</code>! This is due to poor performance. :(  You can use <code>Cons</code> for pattern matching on Data.List using <code>Cons</code></em></p>
 
 <h2>Record Patterns</h2>
 
@@ -155,8 +155,6 @@ algorithm:</p>
 
 <h2>Algebraic Datatypes</h2>
 
-<p>(I promise this is related to pattern matching...)</p>
-
 <p>Algebraic Datatypes offers the ability to maintain modularity while extending the functionality of an abstraction. It&#39;s helpful to understand it&#39;s benefit by comparing it with OO. Imagine we are working with shapes and we wanted to represent some common functionality all shapes will have. In an OO language we might do this:</p>
 
 <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">interface</span> <span class="nc">Shape</span> <span class="o">{</span>
@@ -180,13 +178,9 @@ algorithm:</p>
 <p>With algebraic data types, we:</p>
 
 <ol>
-<li>capture the various types of shapes in the datatype definition (use the <code>data</code> keyword to define a datatype):</li>
-</ol>
-
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="kr">data</span> <span class="kt">Shape</span> <span class="ow">=</span> <span class="kt">Circle</span> <span class="kt">Point</span> <span class="kt">Number</span> <span class="o">|</span> <span class="kt">Rectangle</span> <span class="kt">Point</span> <span class="kt">Number</span> <span class="kt">Number</span></code></pre></div>
-
-<ol>
-<li>and then add functionality to each of the shapes using pattern matching:</li>
+<li><p>capture the various types of shapes in the datatype definition (use the <code>data</code> keyword to define a datatype):
+<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="kr">data</span> <span class="kt">Shape</span> <span class="ow">=</span> <span class="kt">Circle</span> <span class="kt">Point</span> <span class="kt">Number</span> <span class="o">|</span> <span class="kt">Rectangle</span> <span class="kt">Point</span> <span class="kt">Number</span> <span class="kt">Number</span></code></pre></div></p></li>
+<li><p>and then add functionality to each of the shapes using pattern matching:</p></li>
 </ol>
 
 <div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">area</span> <span class="ow">::</span> <span class="kt">Shape</span> <span class="ow">-&gt;</span> <span class="kt">Number</span>
@@ -194,28 +188,6 @@ algorithm:</p>
     <span class="n">area</span> <span class="p">(</span><span class="kt">Rectangle</span> <span class="kt">Point</span> <span class="kt">Number</span> <span class="kt">Number</span><span class="p">)</span> <span class="ow">=</span> <span class="kt">Number</span> <span class="o">*</span> <span class="kt">Number</span></code></pre></div>
 
 <p>Notice you have access to the data you used to construct the shape with pattern matching. Neat, huh? It makes you think about what a concrete representation of an abstract idea really is. Really, what makes concrete representations of a single type different is the data needed to make them and their name.</p>
-
-<h3>Data / Type Related Keywords:</h3>
-
-<p><strong>data</strong> - what directly follows the data keyword, is the name of the Algebraic Data Type and after the &#39;=&#39; is the constructors for that type. </p>
-
-<p><strong>type</strong> - It defines a type synonym. For example:</p>
-
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="kr">type</span> <span class="kt">Person</span> <span class="ow">=</span> <span class="p">{</span><span class="n">firstName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">,</span> <span class="n">lastName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">}</span></code></pre></div>
-
-<p>This says that Person is equivalent to the record type, which is denoted by the <code>{}</code> (basically a strongly typed representation of the JS object). </p>
-
-<p>Note that that is different from: </p>
-
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="kr">data</span> <span class="kt">Person</span> <span class="ow">=</span> <span class="kt">Person</span> <span class="p">{</span><span class="n">firstName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">,</span> <span class="n">lastName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">}</span></code></pre></div>
-
-<p>which defines a new Algebraic Datatype, <code>Person</code>, that has one constructor by the same name that takes a record (<code>{firstName :: String, lastName :: String}</code>) as an argument.</p>
-
-<p><strong>newtype</strong> - gives a new name to an existing type. A new type must define only one constructor and that constructor must take only one argument, the type that you want to make a new name for. For example:</p>
-
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="kr">newtype</span> <span class="kt">Monster</span> <span class="ow">=</span> <span class="kt">Monster</span> <span class="kt">Person</span></code></pre></div>
-
-<p>Here the ADT, <code>Monster</code> has a constructor by the same name that takes a <code>Person</code> as argument.</p>
 
 
   
