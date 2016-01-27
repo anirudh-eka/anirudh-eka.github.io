@@ -195,7 +195,7 @@ With algebraic data types, we:
 
 {% highlight haskell %}
 	area :: Shape -> Number
-	area (Circle Point Number) = Number * Number * Pi
+	area (Circle _ Number) = Number * Number * Pi
 	area (Rectangle Point Number Number) = Number * Number
 {% endhighlight %}
 

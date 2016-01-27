@@ -190,7 +190,7 @@ algorithm:</p>
 </ol>
 
 <div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">area</span> <span class="ow">::</span> <span class="kt">Shape</span> <span class="ow">-&gt;</span> <span class="kt">Number</span>
-    <span class="n">area</span> <span class="p">(</span><span class="kt">Circle</span> <span class="kt">Point</span> <span class="kt">Number</span><span class="p">)</span> <span class="ow">=</span> <span class="kt">Number</span> <span class="o">*</span> <span class="kt">Number</span> <span class="o">*</span> <span class="kt">Pi</span>
+    <span class="n">area</span> <span class="p">(</span><span class="kt">Circle</span> <span class="kr">_</span> <span class="kt">Number</span><span class="p">)</span> <span class="ow">=</span> <span class="kt">Number</span> <span class="o">*</span> <span class="kt">Number</span> <span class="o">*</span> <span class="kt">Pi</span>
     <span class="n">area</span> <span class="p">(</span><span class="kt">Rectangle</span> <span class="kt">Point</span> <span class="kt">Number</span> <span class="kt">Number</span><span class="p">)</span> <span class="ow">=</span> <span class="kt">Number</span> <span class="o">*</span> <span class="kt">Number</span></code></pre></div>
 
 <p>Notice you have access to the data you used to construct the shape with pattern matching. Neat, huh? It makes you think about what a concrete representation of an abstract idea really is. Really, what makes concrete representations of a single type different is the data needed to make them and their name.</p>
