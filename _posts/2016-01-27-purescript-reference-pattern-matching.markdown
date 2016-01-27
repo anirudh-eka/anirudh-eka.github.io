@@ -64,7 +64,7 @@ In Purescript, you can apply some of the same patterns you can do on a Haskell l
 
 {% endhighlight %}
 
-*NOTE: Purescript does not support pattern matching with cons (:) operator on Data.Array! This is due to poor performance. :(  You can use Cons for pattern matching on Data.List using 'Cons'*
+*Note: Purescript does not support pattern matching with `cons (:)` operator on `Data.Array`! This is due to poor performance. :(  You can use `Cons` for pattern matching on Data.List using `Cons`*
 
 Record Patterns
 -----------------------
@@ -162,8 +162,6 @@ Here we have named the Array itself as well as pieces of its content.
 
 Algebraic Datatypes
 -----------------------------
-(I promise this is related to pattern matching...)
-
 Algebraic Datatypes offers the ability to maintain modularity while extending the functionality of an abstraction. It's helpful to understand it's benefit by comparing it with OO. Imagine we are working with shapes and we wanted to represent some common functionality all shapes will have. In an OO language we might do this:
 
 {% highlight java %}
@@ -190,56 +188,15 @@ Now imagine we decided that shapes should support perimeter. If we add `perimete
 
 With algebraic data types, we:
  
-1. capture the various types of shapes in the datatype definition (use the `data` keyword to define a datatype):
-
-{% highlight haskell %}
-
-	data Shape = Circle Point Number | Rectangle Point Number Number
-
+1. capture the various types of shapes in the datatype definition (use the `data` keyword to define a datatype):{% highlight haskell %} data Shape = Circle Point Number | Rectangle Point Number Number
 {% endhighlight %}
 
 2. and then add functionality to each of the shapes using pattern matching:
 
 {% highlight haskell %}
-	
 	area :: Shape -> Number
 	area (Circle Point Number) = Number * Number * Pi
 	area (Rectangle Point Number Number) = Number * Number
-
 {% endhighlight %}
 
 Notice you have access to the data you used to construct the shape with pattern matching. Neat, huh? It makes you think about what a concrete representation of an abstract idea really is. Really, what makes concrete representations of a single type different is the data needed to make them and their name.
-
-### Data / Type Related Keywords:
-
-**data** - what directly follows the data keyword, is the name of the Algebraic Data Type and after the '=' is the constructors for that type. 
-
-**type** - It defines a type synonym. For example:
-
-{% highlight haskell %}
-
-	type Person = {firstName :: String, lastName :: String}
-
-{% endhighlight %}
-
-This says that Person is equivalent to the record type, which is denoted by the `{}` (basically a strongly typed representation of the JS object). 
-
-Note that that is different from: 
-
-{% highlight haskell %}
-
-	data Person = Person {firstName :: String, lastName :: String}
-
-{% endhighlight %}
-
-which defines a new Algebraic Datatype, `Person`, that has one constructor by the same name that takes a record (`{firstName :: String, lastName :: String}`) as an argument.
-
-**newtype** - gives a new name to an existing type. A new type must define only one constructor and that constructor must take only one argument, the type that you want to make a new name for. For example:
-
-{% highlight haskell %}
-
-	newtype Monster = Monster Person
-
-{% endhighlight %}
-
-Here the ADT, `Monster` has a constructor by the same name that takes a `Person` as argument.
