@@ -1,4 +1,5 @@
-//= require vendor/jquery
+//= require ./vendor/react.js
+//= require_tree ./vendor
 //= require_tree .
 
 $(document).ready(function(){
