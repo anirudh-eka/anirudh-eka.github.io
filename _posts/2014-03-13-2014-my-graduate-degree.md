@@ -8,7 +8,7 @@ share: discuss
 
 Ten months ago I was reaching the end of my second year as an Economics Research Assistant and was facing the question of whether I should go to graduate school. I looked at a few programs, but I couldn't bring myself to write the college essays. I didn't want go selling myself again so that a bunch of folks can decide to give me the privilege to pay them.
 
-<span style="display: none;"><!--more--></span>
+<span style='display: none;'><!--more--></span>
 
 It's safe to say my undergraduate experience left a bad taste in my mouth. I went to a private top-20 university and received good grades, but beyond having professors write me recommendations, I was provided no support in getting an internship or a job. Still, I was one of the lucky ones. I got a job in a recession(fittingly, in economic research), which my university could happily advertise as justification for their expensive service.
 

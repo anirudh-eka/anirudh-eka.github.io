@@ -8,7 +8,7 @@ share: discuss
 
 To kill time as I waited for my flight in the Yangon international airport, where all great revelations happen, I was working on a coding challenge in Haskell when I stumbled on this discovery.
 
-<span style="display: none;"><!--more--></span>
+<span style='display: none;'><!--more--></span>
 
 The problem I was working on required me to filter a list into a sublist based on a function that goes through each item of a list and says if it belongs or doesn't, by returning True or False). The method signiture should look like this:  
 

@@ -16,7 +16,7 @@ but it's the season of change
 
 Aint no reason for doubt, <br/>
 this is when a moth meets its flames
-<span style="display: none;"><!--more--></span>
+<span style='display: none;'><!--more--></span>
 
 when a perfectionist dies <br/>
 so the perfection remains

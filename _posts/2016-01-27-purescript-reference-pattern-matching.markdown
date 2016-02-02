@@ -8,7 +8,7 @@ share: discuss
 
 This is a reference guide for how Purescript pattern matching works. Almost all of it was distilled from [PureScript by Example](https://leanpub.com/purescript/read) by Phil Freeman the original developer of the Purescript compiler. I highly recommend reading it for in depth stuff. This is just for reference. 
 
-<span style="display: none;"><!--more--></span>
+<span style='display: none;'><!--more--></span>
 
 Simple Patterns
 -----------------------
