@@ -50174,10 +50174,13 @@ var PostList = React.createClass({displayName: "PostList",
   }
 });
 
-ReactDOM.render(
-  React.createElement(PostList, {url: "/index.json"}),
-  document.getElementById('container')
-);
+function initPostList() {
+  ReactDOM.render(
+    React.createElement(PostList, {url: "/index.json"}),
+    document.getElementById('container')
+  );  
+}
+;
 $(document).ready(function(){
   var nav_top = $("nav.sticky").offset().top
   $(window).on("scroll", function(){

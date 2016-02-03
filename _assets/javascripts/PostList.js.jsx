@@ -51,7 +51,9 @@ var PostList = React.createClass({
   }
 });
 
-ReactDOM.render(
-  <PostList url="/index.json"/>,
-  document.getElementById('container')
-);
+var initPostList = function() {
+  ReactDOM.render(
+    <PostList url="/index.json"/>,
+    document.getElementById('container')
+  );  
+}
