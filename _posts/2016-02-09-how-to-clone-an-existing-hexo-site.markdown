@@ -37,7 +37,7 @@ Install dependancies:
 $ npm install
 ```
 
-Run the server to check it out locally!
+Run the server to check it out locally at `localhost:4000`!
 
 ```
 $ hexo server
