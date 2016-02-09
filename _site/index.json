@@ -5,7 +5,7 @@
       "slug": "20160209how-to-clone-an-existing-hexo-site",
       "title": "How to clone an existing Hexo site?",
       "date": "09 Feb 2016",
-      "excerpt": "<p><a href=\"%22http://www.hexo.io%22\">Hexo</a> is a cool new static site generator that seems to be solving some of the pain points I&#39;ve faced with <a href=\"%22http://jekyllrb.com/%22\">Jekyll</a>. However, I noticed the documentation is unclear on how to pull down an existing Hexo site via git and contribute to it. Here is what worked for me.</p>\n\n<p><span style='display: none;'></p>\n",
+      "excerpt": "<p><a href=\"http://www.hexo.io\">Hexo</a> is a cool new static site generator that seems to be solving some of the pain points I&#39;ve faced with <a href=\"http://jekyllrb.com/\">Jekyll</a>. However, I noticed the documentation is unclear on how to pull down an existing Hexo site via git and contribute to it. Here is what worked for me.</p>\n\n<p><span style='display: none;'></p>\n",
       "tags": "code, static site, blogging platform",
       "categories": ""
     }

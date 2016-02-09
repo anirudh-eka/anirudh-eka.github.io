@@ -5,7 +5,7 @@ tags: [code, static site, blogging platform]
 share: discuss
 ---
 
-[Hexo]("http://www.hexo.io") is a cool new static site generator that seems to be solving some of the pain points I've faced with [Jekyll]("http://jekyllrb.com/"). However, I noticed the documentation is unclear on how to pull down an existing Hexo site via git and contribute to it. Here is what worked for me.
+[Hexo](http://www.hexo.io) is a cool new static site generator that seems to be solving some of the pain points I've faced with [Jekyll](http://jekyllrb.com/). However, I noticed the documentation is unclear on how to pull down an existing Hexo site via git and contribute to it. Here is what worked for me.
 
 <span style='display: none;'><!--more--></span>
 
