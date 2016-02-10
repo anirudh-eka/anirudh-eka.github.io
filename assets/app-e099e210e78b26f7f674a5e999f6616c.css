@@ -53,8 +53,8 @@
       transition: color 0.5s;
       -webkit-transition: color 0.5s; }
     .header .summary a:hover, .header .subheading a:hover {
-      color: #333;
-      border-bottom: 1px dashed #333;
+      color: #4A4949;
+      border-bottom: 1px dashed #4A4949;
       transition: color 0.5s;
       -webkit-transition: color 0.5s; }
   .header #home-links {
@@ -65,8 +65,8 @@
       transition: color 0.5s;
       -webkit-transition: color 0.5s; }
     .header #home-links a:hover {
-      color: #333;
-      border-bottom: 1px dashed #333;
+      color: #4A4949;
+      border-bottom: 1px dashed #4A4949;
       transition: color 0.5s;
       -webkit-transition: color 0.5s; }
   .header #read-more-arrow {
@@ -704,6 +704,28 @@ nav.scrolled-to-top {
 
 nav.scrolled-to-top + #container {
   margin-top: 1.86em; }
+.posts-by-catagories-filter {
+  text-align: center;
+  margin-bottom: 6em;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between; }
+  .posts-by-catagories-filter .filter-option {
+    font-size: 2.2em;
+    font-family: Open Sans, Helvetica, sans-serif;
+    font-weight: 300;
+    color: #828986;
+    opacity: 0.7;
+    padding-bottom: 0.3em;
+    cursor: pointer;
+    margin-right: 0.1em;
+    margin-left: 0.1em; }
+  .posts-by-catagories-filter .is-selected, .posts-by-catagories-filter .filter-option:not(.is-selected):hover {
+    opacity: 1;
+    border-bottom: 2px solid #828986; }
+  .posts-by-catagories-filter .filter-option:not(.is-selected):hover {
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s; }
 .social-icons .social-icon {
   display: inline;
   font-size: 1.89em; }
@@ -792,6 +814,21 @@ h1 {
   h1 a:hover {
     color: #45A39A; }
 
+h2 {
+  font-size: 120%;
+  color: #757C7A;
+  margin: 2.2em 0em; }
+  h2 a {
+    text-decoration: none;
+    color: #757C7A; }
+
+.meta {
+  color: #A6ADAA;
+  text-align: center;
+  display: block;
+  font-family: Open Sans, Helvetica, sans-serif;
+  font-weight: 300; }
+
 /*code block styling */
 code {
   font-size: 0.78em; }
@@ -818,10 +855,6 @@ body {
         width: 90%;
         padding-left: 4%;
         padding-right: 4%; } }
-  body .meta {
-    color: #828986;
-    text-align: center;
-    display: block; }
   body .read-more {
     text-decoration: none;
     display: inline-block;
@@ -839,6 +872,9 @@ body {
     text-align: right;
     margin-bottom: 2em; }
 
+.post-abstract h1 {
+  font-size: 1.5em; }
+
 .post a {
   text-decoration: none;
   color: #333;
@@ -850,7 +886,3 @@ body {
   border-bottom: 1px dashed #828986;
   transition: color 0.5s;
   -webkit-transition: color 0.5s; }
-.post h2 {
-  font-size: 120%;
-  color: #757C7A;
-  margin: 2.2em 0em; }
