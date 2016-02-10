@@ -5,16 +5,28 @@ var Post = React.createClass({
   },
 	render: function(){
 		return(
-				<div>
+				<article className="post-abstract">
 					<h1><a href={ this.props.data.url }>{ this.props.data.title }</a></h1>
 					<span className='meta'>{ this.props.data.date }</span>
 					<div className='post' dangerouslySetInnerHTML={ this.rawMarkup() } />
           <div className="read-more-container">
             <a className="read-more" href={ this.props.data.url }>Read More &#8594;</a>
           </div>
-        </div>
+        </article>
 			);
 	}
+});
+
+var PostFilterByCatagories = React.createClass({
+  render: function() {
+    return(
+      <header className="posts-by-catagories-filter">
+        <a className="filter-option is-selected">Code</a>
+        <a className="filter-option">Poetry & Essays</a>
+        <a className="filter-option">Projects</a>
+      </header>
+    );
+  }
 });
 
 var PostList = React.createClass({
@@ -45,6 +57,7 @@ var PostList = React.createClass({
   	});
     return (
     	<div>
+        <PostFilterByCatagories/>
     		{postNodes}
     	</div>
     );

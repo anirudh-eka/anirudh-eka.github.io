@@ -50128,7 +50128,7 @@ var Post = React.createClass({displayName: "Post",
   },
 	render: function(){
 		return(
-				React.createElement("div", null, 
+				React.createElement("article", {className: "post-abstract"}, 
 					React.createElement("h1", null, React.createElement("a", {href:  this.props.data.url},  this.props.data.title)), 
 					React.createElement("span", {className: "meta"},  this.props.data.date), 
 					React.createElement("div", {className: "post", dangerouslySetInnerHTML:  this.rawMarkup() }), 
@@ -50138,6 +50138,18 @@ var Post = React.createClass({displayName: "Post",
         )
 			);
 	}
+});
+
+var PostFilterByCatagories = React.createClass({displayName: "PostFilterByCatagories",
+  render: function() {
+    return(
+      React.createElement("header", {className: "posts-by-catagories-filter"}, 
+        React.createElement("a", {className: "filter-option is-selected"}, "Code"), 
+        React.createElement("a", {className: "filter-option"}, "Poetry & Essays"), 
+        React.createElement("a", {className: "filter-option"}, "Projects")
+      )
+    );
+  }
 });
 
 var PostList = React.createClass({displayName: "PostList",
@@ -50168,6 +50180,7 @@ var PostList = React.createClass({displayName: "PostList",
   	});
     return (
     	React.createElement("div", null, 
+        React.createElement(PostFilterByCatagories, null), 
     		postNodes
     	)
     );

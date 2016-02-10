@@ -1,12 +1,10 @@
 //= require_tree .
+@import constants
+
 $beige: #FECFA1
 $teal: #45A39A
-$black: #333
-$gray: #828986
-$dark-gray: #757C7A
 $break-medium: 1024px
 $break-small: 500px
-$serif-font: Open Sans,Helvetica,sans-serif
 
 .l-text-align-right
   text-align: right
@@ -33,6 +31,23 @@ h1
   a:hover
     color: $teal    
 
+h2
+  font-size: 120%
+  color: $dark-gray
+  margin: 2.2em 0em 
+
+  a
+    text-decoration: none
+    color: $dark-gray
+
+.meta
+  color: $light-gray
+  text-align: center
+  display: block
+  font-family: $serif-font
+  font-weight: 300
+  font-size: 0.9em
+
 /*code block styling*/
 code
   font-size: 0.78em
@@ -43,7 +58,7 @@ body
   @media screen and (max-width: $break-small)
     font-size: 17.6px
 
-  color: #333
+  color: $black
   background-color: white
   overflow: initial
   overflow-x: hidden
@@ -61,11 +76,6 @@ body
       width: 90%
       padding-left: 4%
       padding-right: 4%
-
-  .meta
-    color: #828986
-    text-align: center
-    display: block
 
   .read-more
     text-decoration: none
@@ -86,6 +96,10 @@ body
     text-align: right
     margin-bottom: 2em
 
+.post-abstract
+  h1
+    font-size: 1.5em
+
 .post
   a
     text-decoration: none
@@ -98,9 +112,4 @@ body
     color: $gray
     border-bottom: 1px dashed $gray
     transition: color .5s
-    -webkit-transition: color .5s
-
-  h2
-    font-size: 120%
-    color: $dark-gray
-    margin: 2.2em 0em  
+    -webkit-transition: color .5s 
