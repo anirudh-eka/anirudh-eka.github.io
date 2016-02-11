@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Tension between the Individual and Collective"
-categories: [poet, general]
+categories: ["poetry & essays"]
 share: discuss
 tags: [seeking balance]
 ---

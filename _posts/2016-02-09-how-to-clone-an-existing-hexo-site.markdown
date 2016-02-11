@@ -2,6 +2,7 @@
 layout: post
 title:  "How to clone an existing Hexo site?"
 tags: [code, static site, blogging platform]
+categories: [code]
 share: discuss
 ---
 

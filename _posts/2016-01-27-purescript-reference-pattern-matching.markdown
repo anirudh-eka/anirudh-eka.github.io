@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Purescript Reference: Pattern Matching"
-categories: [general, programmer, poet]
+categories: [code]
 tags: [functional programming, frontend, reference]
 share: discuss
 --- 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Studying The Heart"
-tags: [immigrant, short story, poem, India, brown people]
+categories: ["poetry & essays"]
 share: discuss
 ---
 

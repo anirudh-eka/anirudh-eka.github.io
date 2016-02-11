@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Goodbye Facebook"
-categories: [general]
+categories: ["poetry & essays"]
 tags: [Facebook, Cold Turkey]
 share: discuss
 suggested_tweet:

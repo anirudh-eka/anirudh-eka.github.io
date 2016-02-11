@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "My Graduate Degree"
-categories: [general, programmer, poet]
+categories: ["poetry & essays"]
 tags: [creativity, alternative education, education, DC, inequality]
 share: discuss
 ---

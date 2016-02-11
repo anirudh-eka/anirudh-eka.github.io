@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mansion Is A Prison"
-categories: poet
+categories: ["poetry & essays"]
 align: center
 tags: haiku
 share: shout

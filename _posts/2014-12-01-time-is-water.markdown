@@ -2,6 +2,7 @@
 layout: post
 title:  "Time In a Pot"
 tags: time focus patterns
+categories: ["poetry & essays"]
 share: discuss 
 ---
 

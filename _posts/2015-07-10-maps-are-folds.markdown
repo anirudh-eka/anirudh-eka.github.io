@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Maps Are Folds"
-categories: [programmer]
+categories: [code]
 tags: haskell code functional
 share: discuss
 ---
