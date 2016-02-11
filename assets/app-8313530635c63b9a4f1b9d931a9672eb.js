@@ -50140,17 +50140,51 @@ var Post = React.createClass({displayName: "Post",
 	}
 });
 
+var FilterOption = React.createClass({displayName: "FilterOption",
+  classForSelectionState: function(){
+    return (this.props.isSelected ? "is-selected" : "")
+  },
+
+  render: function(){
+    var cssClass = this.classForSelectionState()
+    return(
+      React.createElement("a", {className: "filter-option " + cssClass, onClick:  this.props.onClick}, this.props.children)
+    );
+  }
+});
+
 var PostFilterByCatagories = React.createClass({displayName: "PostFilterByCatagories",
-  poetryClicked: function(e) {
-    e.preventDefault();
+  filterOptions: function(selectedFilterName){
+
+    var filterOptions = [ 
+     {name: "Code", isSelected: false},
+     {name: "Poetry & Essays", isSelected: false},
+     {name: "Projects", isSelected: false} ]
+
+    var isSelectedOption = function(filterOption) {return filterOption.name == selectedFilterName}
+    filterOptions.find(isSelectedOption).isSelected = true;
+
+    return filterOptions;
+  },
+  
+  getInitialState: function() {
+    return {filterOptions: this.filterOptions("Code")}
+  },
+
+  handleClick: function(filterClicked) {
+    this.setState({filterOptions: this.filterOptions(filterClicked)});
   },
 
   render: function() {
+    var self = this;
+    var filterOptions = this.state.filterOptions;
+    var filterOptionNodes = filterOptions.map(function(filterOption){
+      return React.createElement(FilterOption, {isSelected: filterOption.isSelected, onClick:  function(e) {self.handleClick(filterOption.name)}}, filterOption.name)
+    });
+
     return(
       React.createElement("header", {className: "posts-by-catagories-filter"}, 
-        React.createElement("a", {className: "filter-option is-selected"}, "Code"), 
-        React.createElement("a", {className: "filter-option", onClick:  this.poetryClicked}, "Poetry & Essays"), 
-        React.createElement("a", {className: "filter-option"}, "Projects")
+        filterOptionNodes
       )
     );
   }
