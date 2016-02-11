@@ -50141,11 +50141,15 @@ var Post = React.createClass({displayName: "Post",
 });
 
 var PostFilterByCatagories = React.createClass({displayName: "PostFilterByCatagories",
+  poetryClicked: function(e) {
+    e.preventDefault();
+  },
+
   render: function() {
     return(
       React.createElement("header", {className: "posts-by-catagories-filter"}, 
         React.createElement("a", {className: "filter-option is-selected"}, "Code"), 
-        React.createElement("a", {className: "filter-option"}, "Poetry & Essays"), 
+        React.createElement("a", {className: "filter-option", onClick:  this.poetryClicked}, "Poetry & Essays"), 
         React.createElement("a", {className: "filter-option"}, "Projects")
       )
     );

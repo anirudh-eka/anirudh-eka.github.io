@@ -17,13 +17,51 @@ var Post = React.createClass({
 	}
 });
 
+var FilterOption = React.createClass({
+  classForSelectionState: function(){
+    return (this.props.isSelected ? "is-selected" : "")
+  },
+
+  render: function(){
+    var cssClass = this.classForSelectionState()
+    return(
+      <a className={"filter-option " + cssClass } onClick={ this.props.onClick }>{this.props.children}</a>
+    );
+  }
+});
+
 var PostFilterByCatagories = React.createClass({
+  filterOptions: function(selectedFilterName){
+
+    var filterOptions = [ 
+     {name: "Code", isSelected: false},
+     {name: "Poetry & Essays", isSelected: false},
+     {name: "Projects", isSelected: false} ]
+
+    var isSelectedOption = function(filterOption) {return filterOption.name == selectedFilterName}
+    filterOptions.find(isSelectedOption).isSelected = true;
+
+    return filterOptions;
+  },
+  
+  getInitialState: function() {
+    return {filterOptions: this.filterOptions("Code")}
+  },
+
+  handleClick: function(filterClicked) {
+    this.setState({filterOptions: this.filterOptions(filterClicked)});
+  },
+
   render: function() {
+    var self = this;
+    var filterOptions = this.state.filterOptions;
+    var filterOptionNodes = filterOptions.map(function(filterOption){
+      return <FilterOption isSelected={filterOption.isSelected} onClick={ function(e) {self.handleClick(filterOption.name)} }>{filterOption.name}</FilterOption>
+    });
+
     return(
       <header className="posts-by-catagories-filter">
-        <a className="filter-option is-selected">Code</a>
-        <a className="filter-option">Poetry & Essays</a>
-        <a className="filter-option">Projects</a>
+        {filterOptionNodes}
       </header>
     );
   }
