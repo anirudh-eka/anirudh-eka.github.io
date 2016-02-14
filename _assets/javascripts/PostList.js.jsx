@@ -31,6 +31,42 @@ var FilterOption = React.createClass({
 });
 
 var PostFilterByCatagories = React.createClass({
+  render: function() {
+    var self = this;
+    var filterOptions = this.props.filterOptions;
+    var filterOptionNodes = filterOptions.map(function(filterOption){
+      return <FilterOption isSelected={filterOption.isSelected} onClick={ function(e) {self.props.handleClick(filterOption.name)} }>{filterOption.name}</FilterOption>
+    });
+
+    return(
+      <header className="posts-by-catagories-filter">
+        {filterOptionNodes}
+      </header>
+    );
+  }
+});
+
+var PostList = React.createClass({
+	loadPostsFromServer: function(url){
+  	$.ajax({
+      url: url,
+      dataType: 'json',
+      cache: false,
+      success: function(data) {
+        this.setState({data: data});
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error(this.props.url, status, err.toString());
+      }.bind(this)
+    });
+  },
+	getInitialState: function() {
+    return {filterOptions: this.filterOptions("Code"), data: []}
+  },
+  componentDidMount: function() {
+  	this.loadPostsFromServer("/index.json")
+  },
+
   filterOptions: function(selectedFilterName){
 
     var filterOptions = [ 
@@ -43,51 +79,12 @@ var PostFilterByCatagories = React.createClass({
 
     return filterOptions;
   },
-  
-  getInitialState: function() {
-    return {filterOptions: this.filterOptions("Code")}
+
+  handleClick: function(filterName) {
+    this.setState({filterOptions: this.filterOptions(filterName)});
+    this.loadPostsFromServer("/"+filterName+"/index.json");
   },
 
-  handleClick: function(filterClicked) {
-    this.setState({filterOptions: this.filterOptions(filterClicked)});
-  },
-
-  render: function() {
-    var self = this;
-    var filterOptions = this.state.filterOptions;
-    var filterOptionNodes = filterOptions.map(function(filterOption){
-      return <FilterOption isSelected={filterOption.isSelected} onClick={ function(e) {self.handleClick(filterOption.name)} }>{filterOption.name}</FilterOption>
-    });
-
-    return(
-      <header className="posts-by-catagories-filter">
-        {filterOptionNodes}
-      </header>
-    );
-  }
-});
-
-var PostList = React.createClass({
-	loadPostsFromServer: function(){
-  	$.ajax({
-      url: this.props.url,
-      dataType: 'json',
-      cache: false,
-      success: function(data) {
-        this.setState({data: data});
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this.props.url, status, err.toString());
-      }.bind(this)
-    });
-  },
-	getInitialState: function() {
-    return {data: []};
-  },
-  componentDidMount: function() {
-  	this.loadPostsFromServer()
-  	// setInterval(this.loadCommentsFromServer, this.props.pollInterval)
-  },
   render: function() {
   	var postData = this.state.data;
   	var postNodes = postData.map(function(post){
@@ -95,7 +92,7 @@ var PostList = React.createClass({
   	});
     return (
     	<div>
-        <PostFilterByCatagories/>
+        <PostFilterByCatagories filterOptions={this.state.filterOptions} handleClick={this.handleClick}/>
     		{postNodes}
     	</div>
     );

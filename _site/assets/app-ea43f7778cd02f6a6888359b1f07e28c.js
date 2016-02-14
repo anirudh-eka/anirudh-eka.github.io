@@ -50154,6 +50154,43 @@ var FilterOption = React.createClass({displayName: "FilterOption",
 });
 
 var PostFilterByCatagories = React.createClass({displayName: "PostFilterByCatagories",
+  render: function() {
+    var self = this;
+    var filterOptions = this.props.filterOptions;
+    var filterOptionNodes = filterOptions.map(function(filterOption){
+      return React.createElement(FilterOption, {isSelected: filterOption.isSelected, onClick:  function(e) {self.props.handleClick(filterOption.name)}}, filterOption.name)
+    });
+
+    return(
+      React.createElement("header", {className: "posts-by-catagories-filter"}, 
+        filterOptionNodes
+      )
+    );
+  }
+});
+
+var PostList = React.createClass({displayName: "PostList",
+	loadPostsFromServer: function(url){
+  	$.ajax({
+      url: url,
+      dataType: 'json',
+      cache: false,
+      success: function(data) {
+        this.setState({data: data});
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error(this.props.url, status, err.toString());
+      }.bind(this)
+    });
+  },
+	getInitialState: function() {
+    return {filterOptions: this.filterOptions("Code"), data: []}
+  },
+  componentDidMount: function() {
+  	this.loadPostsFromServer("/index.json")
+  	// setInterval(this.loadCommentsFromServer, this.props.pollInterval)
+  },
+
   filterOptions: function(selectedFilterName){
 
     var filterOptions = [ 
@@ -50166,51 +50203,12 @@ var PostFilterByCatagories = React.createClass({displayName: "PostFilterByCatago
 
     return filterOptions;
   },
-  
-  getInitialState: function() {
-    return {filterOptions: this.filterOptions("Code")}
+
+  handleClick: function(filterName) {
+    this.setState({filterOptions: this.filterOptions(filterName)});
+    this.loadPostsFromServer("/"+filterName+"/index.json");
   },
 
-  handleClick: function(filterClicked) {
-    this.setState({filterOptions: this.filterOptions(filterClicked)});
-  },
-
-  render: function() {
-    var self = this;
-    var filterOptions = this.state.filterOptions;
-    var filterOptionNodes = filterOptions.map(function(filterOption){
-      return React.createElement(FilterOption, {isSelected: filterOption.isSelected, onClick:  function(e) {self.handleClick(filterOption.name)}}, filterOption.name)
-    });
-
-    return(
-      React.createElement("header", {className: "posts-by-catagories-filter"}, 
-        filterOptionNodes
-      )
-    );
-  }
-});
-
-var PostList = React.createClass({displayName: "PostList",
-	loadPostsFromServer: function(){
-  	$.ajax({
-      url: this.props.url,
-      dataType: 'json',
-      cache: false,
-      success: function(data) {
-        this.setState({data: data});
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this.props.url, status, err.toString());
-      }.bind(this)
-    });
-  },
-	getInitialState: function() {
-    return {data: []};
-  },
-  componentDidMount: function() {
-  	this.loadPostsFromServer()
-  	// setInterval(this.loadCommentsFromServer, this.props.pollInterval)
-  },
   render: function() {
   	var postData = this.state.data;
   	var postNodes = postData.map(function(post){
@@ -50218,7 +50216,7 @@ var PostList = React.createClass({displayName: "PostList",
   	});
     return (
     	React.createElement("div", null, 
-        React.createElement(PostFilterByCatagories, null), 
+        React.createElement(PostFilterByCatagories, {filterOptions: this.state.filterOptions, handleClick: this.handleClick}), 
     		postNodes
     	)
     );
