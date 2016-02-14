@@ -3,7 +3,8 @@ title : JSON
 ---
 
 [
- {"name": "Code", "isSelected": false},
- {"name": "Poetry & Essays", "isSelected": false},
- {"name": "Projects", "isSelected": false}
+{% for category in site.featured_categories %}
+  {"name": "{{ category }}", "isSelected": {% if site.posts.first.categories.first == category %} true {% else %} false {% endif %} }
+  {% if forloop.rindex0 > 0 %}, {% endif %}
+{% endfor %}
 ]

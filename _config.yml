@@ -7,7 +7,7 @@ poet_url: /poet
 excerpt_separator: <!--more-->
 programmer_url: /programmer
 url: /
-featured: ['all', 'poet', 'programmer', 'about']
+featured_categories: ["code", "poetry & essays", "projects"]
 suggested_tweet:
     url:                  'http://toomanynames.com'
     text:                 'This was cool!'
