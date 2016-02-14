@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>
         
-            How to clone an existing Hexo site? - 
+            Getting Started with Hexo - 
         
             toomanynames
         </title>
@@ -49,37 +49,53 @@
 
 
 
-  <h1><a href="#">How to clone an existing Hexo site?</a></h1>
+  <h1><a href="#">Getting Started with Hexo</a></h1>
   <span class='meta'>09 Feb 2016</span>
   <div class="post">
-  <p><a href="http://www.hexo.io">Hexo</a> is a cool new static site generator that seems to be solving some of the pain points I&#39;ve faced with <a href="http://jekyllrb.com/">Jekyll</a>. However, I noticed the documentation is unclear on how to pull down an existing Hexo site via git and contribute to it. Here is what worked for me.</p>
+  <p><a href="http://www.hexo.io">Hexo</a> is a cool new static site generator that seems to be solving some of the pain points I&#39;ve faced with <a href="http://jekyllrb.com/">Jekyll</a>. However, I noticed the documentation is unclear (at least for me) on how to work with an existing Hexo site on GitHub. Here is what worked for me.</p>
 
 <p><span style='display: none;'>&lt;!--more--&gt;</span></p>
 
-<h2>How to clone</h2>
+<h2>How to get started</h2>
 
-<p>Install the Hexo CLI (you will need <a href="https://www.npmjs.com/">npm</a>) in Terminal:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ npm install -g hexo-cli
+<p>In Hexo, the source code can live in a seperate repo on GitHub from where the static site lives (if you&#39;re using GitHub Pages). To work on an existing Hexo site online, simply clone the source code repo:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">  $ git clone --recursive https://github.com/anirudh-eka/my_hexo_site_source.git
+  $ cd my_hexo_site_source
+  $ npm install
 </code></pre></div>
-<p>Make a folder to house the source code locally, and initialize Hexo:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ mkdir cool-hexo-blog
-$ cd cool-hexo-blog
-$ hexo init
-</code></pre></div>
-<p>Set origin remote repository to this github repo and pull:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ git remote set-url origin https://github.com/anirudh-eka/cool-hexo-blog.git
-$ git pull
-</code></pre></div>
-<p>Install dependancies:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ npm install
-</code></pre></div>
-<p>Run the server to check it out locally at <code>localhost:4000</code>!</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">$ hexo server
-</code></pre></div>
-<h2>How to push &amp; pull</h2>
+<p>We use the <code>--recursive</code> option here to pull down the &#39;themes&#39; that the site uses, which are stored as Git submodules in the source repo. (More about this below.)</p>
 
-<p>Pushing and pulling to remote <code>origin</code> repo is exactly the same as any other repo. Remember, you will need privelages to push to the repo!</p>
+<p>Now, run the server, to check it out locally!</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">  $ hexo serve
+</code></pre></div>
+<h2>Deploy</h2>
 
+<p>Assuming the <a href="https://hexo.io/docs/deployment.html">deployment configuration</a> has already been set and you have push privelages to the live site, deploying is simple:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">  $ hexo deploy
+</code></pre></div>
+<h2>Theme</h2>
+
+<p>Most of the styling of a Hexo site exists in the <code>themes</code> folder. This is a nice separation of data from styling, which allows you to swap themes pretty cleanly. </p>
+
+<h3>Add a theme</h3>
+
+<p>Themes in a Hexo site are <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">git submodules</a>, which are basically git repos inside of a git repo. If there is a Hexo theme already in a remote repo, then all you have to do is:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">    $ git submodule add [git repo url] themes/[name of theme]
+</code></pre></div>
+<p>If you want to create a new theme, then you must make a seperate theme project. <a href="https://hexo.io/docs/themes.html">Check the Hexo docs</a> for more info on how to make a theme. After you push your new theme up to GitHub, add the theme by using the command line command above with the <code>git clone</code> url for your new theme on Github.</p>
+
+<h3>Work on a theme</h3>
+
+<p>Often it&#39;s easiest to work on a custom theme when you are working within a Hexo site. Because of git submodules, this is possible! You can edit, add, do whatever in your theme and see what your site looks like as you make changes. Once you are ready to commit the changes and push. <code>cd</code> into the root of the theme, which would look like this if you were at the root of your site:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">    $ cd themes/[name of theme]
+</code></pre></div>
+<p>Now, if you do a <code>git status</code> in this directory you will only see changes concerning the theme because you&#39;re in it&#39;s repo. You can:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">    $ git add
+    $ git commit -m &quot;the changes I made in my theme are earth shattering&quot;
+</code></pre></div>
+<p>If you have privelages to push this repo:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">    $ git push
+</code></pre></div>
 
   
     <ul class="meta tags">
