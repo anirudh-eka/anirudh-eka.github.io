@@ -3,16 +3,7 @@ title : JSON
 ---
 
 [
-	{% for post in site.posts %}
-    {
-      "url": "{{ site.production_url }}{{ post.url }}",
-      "slug": "{{ post.id | remove:'/' }}",
-      "title": "{{ post.title }}",
-      "date": "{{ post.date | date_to_string }}",
-      "excerpt": {{ post.excerpt | jsonify }},
-      "tags": "{% for tag in post.tags %}{{ tag }}{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}",
-      "categories": "{% for category in post.categories %}{{ category }}{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}"
-    }
-    {% if forloop.rindex0 > 0 %}, {% endif %}
-  {% endfor %}
+ {"name": "Code", "isSelected": false},
+ {"name": "Poetry & Essays", "isSelected": false},
+ {"name": "Projects", "isSelected": false}
 ]

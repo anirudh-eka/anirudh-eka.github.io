@@ -47,7 +47,8 @@ var PostFilterByCatagories = React.createClass({
 });
 
 var PostList = React.createClass({
-	loadPostsFromServer: function(url){
+	loadPostsFromServer: function(filterName){
+    var url = "/"+filterName+"/index.json"
   	$.ajax({
       url: url,
       dataType: 'json',
@@ -60,29 +61,48 @@ var PostList = React.createClass({
       }.bind(this)
     });
   },
+
+  loadFilterOptionsFromServer: function() {
+    $.ajax({
+      url: this.props.url,
+      dataType: 'json',
+      cache: false,
+      success: function(filterOptions) {
+        this.setFilterOptions(filterOptions)
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error(this.props.url, status, err.toString());
+      }.bind(this)
+    });
+  },
+
 	getInitialState: function() {
-    return {filterOptions: this.filterOptions("Code"), data: []}
+    return {filterOptions: [], data: []}
   },
   componentDidMount: function() {
-  	this.loadPostsFromServer("/index.json")
+    this.loadFilterOptionsFromServer()
   },
 
-  filterOptions: function(selectedFilterName){
-
-    var filterOptions = [ 
-     {name: "Code", isSelected: false},
-     {name: "Poetry & Essays", isSelected: false},
-     {name: "Projects", isSelected: false} ]
-
-    var isSelectedOption = function(filterOption) {return filterOption.name == selectedFilterName}
-    filterOptions.find(isSelectedOption).isSelected = true;
-
-    return filterOptions;
+  getSelectedFilterOptionName: function() {
+    var isSelected = function(filterOption) {return filterOption.isSelected == true}
+    return this.state.filterOptions.find(isSelected).name;
   },
 
-  handleClick: function(filterName) {
-    this.setState({filterOptions: this.filterOptions(filterName)});
-    this.loadPostsFromServer("/"+filterName+"/index.json");
+  setFilterOptions: function(filterOptions){
+    this.setState({filterOptions: filterOptions});
+    this.loadPostsFromServer(this.getSelectedFilterOptionName());
+  },
+
+  selectFilterOption: function(selectedFilterName){
+    var filterOptions = this.state.filterOptions;
+
+    var unselectOption = function(filterOption) {filterOption.isSelected = false};
+    filterOptions.map(unselectOption);
+
+    var isOptionToBeSelected = function(filterOption) {return filterOption.name == selectedFilterName}
+    filterOptions.find(isOptionToBeSelected).isSelected = true;
+
+    this.setFilterOptions(filterOptions)
   },
 
   render: function() {
@@ -92,7 +112,7 @@ var PostList = React.createClass({
   	});
     return (
     	<div>
-        <PostFilterByCatagories filterOptions={this.state.filterOptions} handleClick={this.handleClick}/>
+        <PostFilterByCatagories filterOptions={this.state.filterOptions} handleClick={this.selectFilterOption}/>
     		{postNodes}
     	</div>
     );
