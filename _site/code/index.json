@@ -1,8 +1,8 @@
 [
 	
     {
-      "url": "/code/2016/02/09/how-to-clone-an-existing-hexo-site.html",
-      "slug": "code20160209how-to-clone-an-existing-hexo-site",
+      "url": "/code/2016/02/09/getting-started-with-hexo.html",
+      "slug": "code20160209getting-started-with-hexo",
       "title": "Getting Started with Hexo",
       "date": "09 Feb 2016",
       "excerpt": "<p><a href=\"http://www.hexo.io\">Hexo</a> is a cool new static site generator that seems to be solving some of the pain points I&#39;ve faced with <a href=\"http://jekyllrb.com/\">Jekyll</a>. However, I noticed the documentation is unclear (at least for me) on how to work with an existing Hexo site on GitHub. Here is what worked for me.</p>\n\n<p><span style='display: none;'></p>\n",

@@ -15,7 +15,9 @@ layout: simple_home
 			</div>
 		{% endfor %}
 		<script type="text/javascript">
-			initPostList();
+			if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				initPostList(); 
+			}
 		</script>
 		</ul>
     </div>
