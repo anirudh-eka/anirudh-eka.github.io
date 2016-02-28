@@ -10,7 +10,7 @@ var Post = React.createClass({
 					<span className='meta'>{ this.props.data.date }</span>
 					<div className='post' dangerouslySetInnerHTML={ this.rawMarkup() } />
           <div className="read-more-container">
-            <a className="read-more" href={ this.props.data.url }>Read More &#8594;</a>
+            <a className="read-more" href={ this.props.data.url }>More &#8594;</a>
           </div>
         </article>
 			);

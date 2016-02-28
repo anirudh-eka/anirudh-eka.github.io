@@ -3,10 +3,10 @@
   {"name": "code", "isSelected":  false  }
   , 
 
-  {"name": "poetry & essays", "isSelected":  true  }
+  {"name": "poetry & essays", "isSelected":  false  }
   , 
 
-  {"name": "projects", "isSelected":  false  }
+  {"name": "projects", "isSelected":  true  }
   
 
 ]

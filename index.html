@@ -11,7 +11,11 @@ layout: simple_home
 				{{post.excerpt}}
 			</div>
 			<div class="read-more-container">
-				<a class="read-more" href="{{ post.url }}">Read More &#8594;</a>
+				{% if post.external-url %}
+					<a class="read-more" href="{{ post.external-url }}">More &#8594;</a>
+				{% else %}
+					<a class="read-more" href="{{ post.url }}">More &#8594;</a>
+				{% endif %}
 			</div>
 		{% endfor %}
 		<script type="text/javascript">
