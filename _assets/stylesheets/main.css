@@ -292,13 +292,6 @@ hr { border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1); 
   border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
 }
-/*title panel*/
-#container {
-  padding-top: 3em;
-  margin: auto;
-  /*width: 68em;*/
-  /*padding-left: 2em;*/
-}
 
 #title-panel {
   width: 25%;
