@@ -53,8 +53,8 @@
       transition: color 0.5s;
       -webkit-transition: color 0.5s; }
     .header .summary a:hover, .header .subheading a:hover {
-      color: #4A4949;
-      border-bottom: 1px dashed #4A4949;
+      color: #333;
+      border-bottom: 1px dashed #333;
       transition: color 0.5s;
       -webkit-transition: color 0.5s; }
   .header #home-links {
@@ -65,8 +65,8 @@
       transition: color 0.5s;
       -webkit-transition: color 0.5s; }
     .header #home-links a:hover {
-      color: #4A4949;
-      border-bottom: 1px dashed #4A4949;
+      color: #333;
+      border-bottom: 1px dashed #333;
       transition: color 0.5s;
       -webkit-transition: color 0.5s; }
   .header #read-more-arrow {
@@ -808,7 +808,7 @@ h1 {
     color: #45A39A; }
 
 h2 {
-  font-size: 120%;
+  font-size: 1.5em;
   color: #757C7A;
   margin: 2.2em 0em; }
   h2 a {
@@ -828,8 +828,8 @@ code {
   font-size: 0.78em; }
 
 body {
-  font: 23.6px Cardo, Georgia, Cambria, "Times New Roman", Times, serif;
-  color: #4A4949;
+  font: 20px Helvetica;
+  color: #333;
   background-color: white;
   overflow: initial;
   overflow-x: hidden;
@@ -872,8 +872,8 @@ body {
 
 .post a {
   text-decoration: none;
-  color: #4A4949;
-  border-bottom: 1px dashed #4A4949;
+  color: #333;
+  border-bottom: 1px dashed #333;
   transition: color 0.5s;
   -webkit-transition: color 0.5s; }
 .post a:hover {
