@@ -829,6 +829,7 @@ code {
 
 body {
   font: 20px Helvetica;
+  font-weight: 300;
   color: #333;
   background-color: white;
   overflow: initial;
