@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Studying The Heart"
+tags: meditation mantra
 categories: ["poetry & essays"]
 share: discuss
 ---

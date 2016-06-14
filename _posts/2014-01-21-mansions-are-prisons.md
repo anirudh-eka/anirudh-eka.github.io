@@ -3,7 +3,7 @@ layout: post
 title: "Mansion Is A Prison"
 categories: ["poetry & essays"]
 align: center
-tags: haiku
+tags: haiku zen
 share: shout
 suggested_tweet:
   text: "Dont sell yourself, give/yourself, If you cost nothing/Then are you not free?"

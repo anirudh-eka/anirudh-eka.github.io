@@ -3,7 +3,7 @@ layout: post
 title:  "Tension between the Individual and Collective"
 categories: ["poetry & essays"]
 share: discuss
-tags: [seeking balance]
+tags: [seeking balance zen]
 ---
 
 

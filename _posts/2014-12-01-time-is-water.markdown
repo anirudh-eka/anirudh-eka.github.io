@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Time In a Pot"
-tags: time focus patterns
+tags: time focus patterns zen
 categories: ["poetry & essays"]
 share: discuss 
 ---
