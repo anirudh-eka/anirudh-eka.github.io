@@ -15,13 +15,13 @@
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width">
         <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/assets/syntax-26c5bb2ec038f707800c4fb2993b4566.css">
+        <link type="text/css" rel="stylesheet" href="/assets/syntax.css">
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="/assets/app-59ab749006051a634d412e39ec5762aa.css">
+        <link type="text/css" rel="stylesheet" href="/assets/app.css">
     </head>
     <body>
     <!-- Custom JS -->
-    <script src="/assets/app-001623070e6b470a6adbe9ea74ed4f24.js"></script>
+    <script type="text/javascript" src="/assets/app.js"></script>
     
       <body>
 	<nav class="sticky">
@@ -61,39 +61,39 @@
 <p>There are many types of simple patterns. 
 variable patterns  are ones that bind arguments to a name like so:</p>
 
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">add</span> <span class="n">x</span> <span class="n">y</span> <span class="ow">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell">  <span class="n">add</span> <span class="n">x</span> <span class="n">y</span> <span class="ow">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span></code></pre></figure>
 
 <p>wild card patterns matches any argument like a variable pattern, but does not bind a name to it</p>
 
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">avoidArgument</span> <span class="kr">_</span> <span class="ow">=</span> <span class="s">&quot;blah blah&quot;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell">  <span class="n">avoidArgument</span> <span class="kr">_</span> <span class="ow">=</span> <span class="s">&quot;blah blah&quot;</span></code></pre></figure>
 
 <p>literal patterns match to specific values for example here are some Int, String, and Boolean literals:</p>
 
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">addOneWithFour</span> <span class="mi">1</span> <span class="mi">4</span> <span class="ow">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">4</span> 
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell">  <span class="n">addOneWithFour</span> <span class="mi">1</span> <span class="mi">4</span> <span class="ow">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">4</span> 
     <span class="n">reply</span> <span class="s">&quot;hi&quot;</span> <span class="ow">=</span> <span class="s">&quot;why are you talking to me?&quot;</span>
-    <span class="n">toString</span> <span class="n">true</span> <span class="ow">=</span> <span class="s">&quot;true&quot;</span></code></pre></div>
+    <span class="n">toString</span> <span class="n">true</span> <span class="ow">=</span> <span class="s">&quot;true&quot;</span></code></pre></figure>
 
 <h2>Guards</h2>
 
 <p>Purescript supports guards like Haskell. Here is an example for the Euclidean algorithm:</p>
 
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">gcd</span> <span class="ow">::</span> <span class="kt">Int</span> <span class="ow">-&gt;</span> <span class="kt">Int</span> <span class="ow">-&gt;</span> <span class="kt">Int</span>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell">  <span class="n">gcd</span> <span class="ow">::</span> <span class="kt">Int</span> <span class="ow">-&gt;</span> <span class="kt">Int</span> <span class="ow">-&gt;</span> <span class="kt">Int</span>
     <span class="n">gcd</span> <span class="n">n</span> <span class="mi">0</span> <span class="ow">=</span> <span class="n">n</span>
     <span class="n">gcd</span> <span class="mi">0</span> <span class="n">n</span> <span class="ow">=</span> <span class="n">n</span>
     <span class="n">gcd</span> <span class="n">n</span> <span class="n">m</span> <span class="o">|</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="n">m</span> <span class="ow">=</span><span class="n">gcd</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">m</span><span class="p">)</span><span class="n">m</span>
-              <span class="o">|</span> <span class="n">otherwise</span> <span class="ow">=</span> <span class="n">gcd</span> <span class="n">n</span> <span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="n">n</span><span class="p">)</span></code></pre></div>
+              <span class="o">|</span> <span class="n">otherwise</span> <span class="ow">=</span> <span class="n">gcd</span> <span class="n">n</span> <span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="n">n</span><span class="p">)</span></code></pre></figure>
 
 <h2>Array Patterns</h2>
 
 <p>In Purescript, you can apply some of the same patterns you can do on a Haskell list. The purescript Array is based on the JS Array, except it only take entries of a single type. PS also has a linked list that can be found in Data.List, which is like the Haskell List. This one is much more efficient. Anyway I digress! Here is some ways you can pattern match on an Array:</p>
 
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">isEmpty</span> <span class="ow">::</span> <span class="n">forall</span> <span class="n">a</span><span class="o">.</span> <span class="kt">Array</span> <span class="n">a</span> <span class="ow">-&gt;</span> <span class="kt">Boolean</span>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell">  <span class="n">isEmpty</span> <span class="ow">::</span> <span class="n">forall</span> <span class="n">a</span><span class="o">.</span> <span class="kt">Array</span> <span class="n">a</span> <span class="ow">-&gt;</span> <span class="kt">Boolean</span>
     <span class="n">isEmpty</span> <span class="kt">[]</span> <span class="ow">=</span> <span class="n">true</span>
     <span class="n">isEmpty</span> <span class="kr">_</span> <span class="ow">=</span> <span class="n">false</span>
     
     <span class="n">takeFive</span> <span class="ow">::</span> <span class="kt">Array</span> <span class="kt">Int</span> <span class="ow">-&gt;</span> <span class="kt">Int</span>
     <span class="n">takeFive</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="kr">_</span><span class="p">]</span> <span class="ow">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
-    <span class="n">takeFive</span> <span class="kr">_</span> <span class="ow">=</span> <span class="mi">0</span></code></pre></div>
+    <span class="n">takeFive</span> <span class="kr">_</span> <span class="ow">=</span> <span class="mi">0</span></code></pre></figure>
 
 <p><em>Note: Purescript does not support pattern matching with <code>cons (:)</code> operator on <code>Data.Array</code>! This is due to poor performance. :(  You can use <code>Cons</code> for pattern matching on Data.List using <code>Cons</code></em></p>
 
@@ -102,60 +102,62 @@ variable patterns  are ones that bind arguments to a name like so:</p>
 <p>Record patterns are used to match records. Recall a record is a light weight data structure, like so:
 algorithm:</p>
 
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="kr">type</span> <span class="kt">Person</span> <span class="ow">=</span> <span class="p">{</span><span class="n">firstName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">,</span> <span class="n">lastName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">}</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell">  
+    <span class="kr">type</span> <span class="kt">Person</span> <span class="ow">=</span> <span class="p">{</span><span class="n">firstName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">,</span> <span class="n">lastName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">}</span></code></pre></figure>
 
 <p>We can use record patterns to match records, like so:</p>
 
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="kr">type</span> <span class="kt">Person</span> <span class="ow">=</span> <span class="p">{</span><span class="n">firstName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">,</span> <span class="n">lastName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">}</span>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell">  <span class="kr">type</span> <span class="kt">Person</span> <span class="ow">=</span> <span class="p">{</span><span class="n">firstName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">,</span> <span class="n">lastName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">}</span>
     
     <span class="n">showPerson</span> <span class="ow">::</span> <span class="kt">Person</span> <span class="ow">-&gt;</span> <span class="kt">String</span>
     <span class="n">showPerson</span> <span class="p">{</span> <span class="n">firstName</span><span class="kt">:</span> <span class="s">&quot;Anirudh&quot;</span><span class="p">,</span> <span class="n">lastName</span><span class="kt">:</span> <span class="n">y</span><span class="p">}</span> <span class="ow">=</span>  <span class="s">&quot;Anirudh, the baddest&quot;</span>
-    <span class="n">showPerson</span> <span class="p">{</span> <span class="n">firstName</span><span class="kt">:</span> <span class="n">x</span><span class="p">,</span> <span class="n">lastName</span><span class="kt">:</span> <span class="n">y</span><span class="p">}</span> <span class="ow">=</span>  <span class="n">y</span> <span class="o">++</span> <span class="s">&quot;, &quot;</span> <span class="o">++</span> <span class="n">x</span></code></pre></div>
+    <span class="n">showPerson</span> <span class="p">{</span> <span class="n">firstName</span><span class="kt">:</span> <span class="n">x</span><span class="p">,</span> <span class="n">lastName</span><span class="kt">:</span> <span class="n">y</span><span class="p">}</span> <span class="ow">=</span>  <span class="n">y</span> <span class="o">++</span> <span class="s">&quot;, &quot;</span> <span class="o">++</span> <span class="n">x</span></code></pre></figure>
 
 <p><em>Note: If we don&#39;t want to explicitly create a &#39;Person&#39; type, we can also define <code>showPerson</code> as such</em></p>
 
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">showPerson</span> <span class="ow">::</span> <span class="p">{</span> <span class="n">firstName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">,</span> <span class="n">lastName</span> <span class="ow">::</span> <span class="kt">String</span> <span class="p">}</span>  <span class="ow">-&gt;</span> <span class="kt">String</span>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell">  <span class="n">showPerson</span> <span class="ow">::</span> <span class="p">{</span> <span class="n">firstName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">,</span> <span class="n">lastName</span> <span class="ow">::</span> <span class="kt">String</span> <span class="p">}</span>  <span class="ow">-&gt;</span> <span class="kt">String</span>
     <span class="n">showPerson</span> <span class="p">{</span> <span class="n">firstName</span><span class="kt">:</span> <span class="s">&quot;Anirudh&quot;</span><span class="p">,</span> <span class="n">lastName</span><span class="kt">:</span> <span class="n">y</span> <span class="p">}</span> <span class="ow">=</span>  <span class="s">&quot;Anirudh, the baddest&quot;</span>
-    <span class="n">showPerson</span> <span class="p">{</span> <span class="n">firstName</span><span class="kt">:</span> <span class="n">x</span><span class="p">,</span> <span class="n">lastName</span><span class="kt">:</span> <span class="n">y</span> <span class="p">}</span> <span class="ow">=</span>  <span class="n">y</span> <span class="o">++</span> <span class="s">&quot;, &quot;</span> <span class="o">++</span> <span class="n">x</span></code></pre></div>
+    <span class="n">showPerson</span> <span class="p">{</span> <span class="n">firstName</span><span class="kt">:</span> <span class="n">x</span><span class="p">,</span> <span class="n">lastName</span><span class="kt">:</span> <span class="n">y</span> <span class="p">}</span> <span class="ow">=</span>  <span class="n">y</span> <span class="o">++</span> <span class="s">&quot;, &quot;</span> <span class="o">++</span> <span class="n">x</span></code></pre></figure>
 
 <h2>Row Polymorphism</h2>
 
 <p>Row polymorphism is the idea that a function can take a record with a variable number of rows, as long as the explicitly defined rows are matched. To give row polymorphism in the example above:</p>
 
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">showPerson</span> <span class="ow">::</span> <span class="n">forall</span> <span class="n">r</span><span class="o">.</span> <span class="p">{</span><span class="n">firstName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">,</span> <span class="n">lastName</span> <span class="ow">::</span> <span class="kt">String</span> <span class="o">|</span> <span class="n">r</span> <span class="p">}</span> <span class="ow">-&gt;</span> <span class="kt">String</span>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell">  <span class="n">showPerson</span> <span class="ow">::</span> <span class="n">forall</span> <span class="n">r</span><span class="o">.</span> <span class="p">{</span><span class="n">firstName</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">,</span> <span class="n">lastName</span> <span class="ow">::</span> <span class="kt">String</span> <span class="o">|</span> <span class="n">r</span> <span class="p">}</span> <span class="ow">-&gt;</span> <span class="kt">String</span>
     <span class="n">showPerson</span> <span class="p">{</span> <span class="n">firstName</span><span class="kt">:</span> <span class="s">&quot;Anirudh&quot;</span><span class="p">,</span> <span class="n">lastName</span><span class="kt">:</span> <span class="n">y</span><span class="p">}</span> <span class="ow">=</span>  <span class="s">&quot;Anirudh, the baddest&quot;</span>
-    <span class="n">showPerson</span> <span class="p">{</span> <span class="n">firstName</span><span class="kt">:</span> <span class="n">x</span><span class="p">,</span> <span class="n">lastName</span><span class="kt">:</span> <span class="n">y</span><span class="p">}</span> <span class="ow">=</span>  <span class="n">y</span> <span class="o">++</span> <span class="s">&quot;, &quot;</span> <span class="o">++</span> <span class="n">x</span></code></pre></div>
+    <span class="n">showPerson</span> <span class="p">{</span> <span class="n">firstName</span><span class="kt">:</span> <span class="n">x</span><span class="p">,</span> <span class="n">lastName</span><span class="kt">:</span> <span class="n">y</span><span class="p">}</span> <span class="ow">=</span>  <span class="n">y</span> <span class="o">++</span> <span class="s">&quot;, &quot;</span> <span class="o">++</span> <span class="n">x</span></code></pre></figure>
 
 <p>Now you can do this:</p>
 
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="o">&gt;</span> <span class="n">showPerson</span> <span class="p">{</span> <span class="n">firstName</span><span class="kt">:</span> <span class="s">&quot;Anirudh&quot;</span><span class="p">,</span> <span class="n">lastName</span><span class="kt">:</span> <span class="s">&quot;Dhullipalla&quot;</span><span class="p">,</span> <span class="n">nickname</span><span class="kt">:</span> <span class="s">&quot;rudy&quot;</span><span class="p">}</span>
-    <span class="s">&quot;Anirudh, the baddest&quot;</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell">  <span class="o">&gt;</span> <span class="n">showPerson</span> <span class="p">{</span> <span class="n">firstName</span><span class="kt">:</span> <span class="s">&quot;Anirudh&quot;</span><span class="p">,</span> <span class="n">lastName</span><span class="kt">:</span> <span class="s">&quot;Dhullipalla&quot;</span><span class="p">,</span> <span class="n">nickname</span><span class="kt">:</span> <span class="s">&quot;rudy&quot;</span><span class="p">}</span>
+    <span class="s">&quot;Anirudh, the baddest&quot;</span></code></pre></figure>
 
 <p>But not this: </p>
 
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="o">&gt;</span> <span class="n">showPerson</span> <span class="p">{</span> <span class="n">firstName</span><span class="kt">:</span> <span class="s">&quot;Anirudh&quot;</span><span class="p">}</span>
-    <span class="kt">Error</span> <span class="n">found</span><span class="kt">:</span> <span class="o">...</span></code></pre></div>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell">  <span class="o">&gt;</span> <span class="n">showPerson</span> <span class="p">{</span> <span class="n">firstName</span><span class="kt">:</span> <span class="s">&quot;Anirudh&quot;</span><span class="p">}</span>
+    <span class="kt">Error</span> <span class="n">found</span><span class="kt">:</span> <span class="o">...</span>
+    </code></pre></figure>
 
 <h2>Nested Patterns</h2>
 
 <p>Nested Patterns are exactly what you think. Array and Record patterns use them, but you can make them deep, like so:</p>
 
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="kr">type</span> <span class="kt">Address</span> <span class="ow">=</span> <span class="p">{</span> <span class="n">street</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">,</span> <span class="n">city</span> <span class="ow">::</span> <span class="kt">String</span> <span class="p">}</span>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell">  <span class="kr">type</span> <span class="kt">Address</span> <span class="ow">=</span> <span class="p">{</span> <span class="n">street</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">,</span> <span class="n">city</span> <span class="ow">::</span> <span class="kt">String</span> <span class="p">}</span>
     
     <span class="kr">type</span> <span class="kt">Person</span> <span class="ow">=</span> <span class="p">{</span> <span class="n">name</span> <span class="ow">::</span> <span class="kt">String</span><span class="p">,</span> <span class="n">address</span> <span class="ow">::</span> <span class="kt">Address</span> <span class="p">}</span>
     
     <span class="n">livesInLA</span> <span class="ow">::</span> <span class="kt">Person</span> <span class="ow">-&gt;</span> <span class="kt">Boolean</span>
     <span class="n">livesInLA</span> <span class="p">{</span> <span class="n">address</span><span class="kt">:</span> <span class="p">{</span> <span class="n">city</span><span class="kt">:</span> <span class="s">&quot;Los Angeles&quot;</span> <span class="p">}</span> <span class="p">}</span> <span class="ow">=</span> <span class="n">true</span> 
-    <span class="n">livesInLA</span> <span class="kr">_</span> <span class="ow">=</span> <span class="n">false</span></code></pre></div>
+    <span class="n">livesInLA</span> <span class="kr">_</span> <span class="ow">=</span> <span class="n">false</span></code></pre></figure>
 
 <h2>Named Patterns</h2>
 
 <p>You can bring additional names into scope with nested patterns by naming the array itself:</p>
 
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">sortPair</span> <span class="ow">::</span> <span class="kt">Array</span> <span class="kt">Int</span> <span class="ow">-&gt;</span> <span class="kt">Array</span> <span class="kt">Int</span> 
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell">  <span class="n">sortPair</span> <span class="ow">::</span> <span class="kt">Array</span> <span class="kt">Int</span> <span class="ow">-&gt;</span> <span class="kt">Array</span> <span class="kt">Int</span> 
     <span class="n">sortPair</span> <span class="n">arr</span><span class="o">@</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span>
         <span class="o">|</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span> <span class="ow">=</span> <span class="n">arr</span>
-        <span class="o">|</span> <span class="n">otherwise</span> <span class="ow">=</span> <span class="p">[</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span></code></pre></div>
+        <span class="o">|</span> <span class="n">otherwise</span> <span class="ow">=</span> <span class="p">[</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span></code></pre></figure>
 
 <p>Here we have named the Array itself as well as pieces of its content. </p>
 
@@ -163,7 +165,7 @@ algorithm:</p>
 
 <p>Algebraic Datatypes offers the ability to maintain modularity while extending the functionality of an abstraction. It&#39;s helpful to understand it&#39;s benefit by comparing it with OO. Imagine we are working with shapes and we wanted to represent some common functionality all shapes will have. In an OO language we might do this:</p>
 
-<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">interface</span> <span class="nc">Shape</span> <span class="o">{</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java">    <span class="kd">interface</span> <span class="nc">Shape</span> <span class="o">{</span>
         <span class="n">area</span><span class="o">()</span> 
     <span class="o">}</span> 
     
@@ -177,7 +179,7 @@ algorithm:</p>
         <span class="n">area</span><span class="o">()</span> <span class="o">{</span>
             <span class="o">...</span>
         <span class="o">}</span>    
-    <span class="o">}</span></code></pre></div>
+    <span class="o">}</span></code></pre></figure>
 
 <p>Now imagine we decided that shapes should support perimeter. If we add <code>perimeter()</code> to <code>Shape</code> then we would be forced to modify all of the classes that implement <code>Shape</code>. This in a way breaks modularity.</p>
 
@@ -185,13 +187,13 @@ algorithm:</p>
 
 <ol>
 <li><p>capture the various types of shapes in the datatype definition (use the <code>data</code> keyword to define a datatype):
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="kr">data</span> <span class="kt">Shape</span> <span class="ow">=</span> <span class="kt">Circle</span> <span class="kt">Point</span> <span class="kt">Number</span> <span class="o">|</span> <span class="kt">Rectangle</span> <span class="kt">Point</span> <span class="kt">Number</span> <span class="kt">Number</span></code></pre></div></p></li>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"> <span class="kr">data</span> <span class="kt">Shape</span> <span class="ow">=</span> <span class="kt">Circle</span> <span class="kt">Point</span> <span class="kt">Number</span> <span class="o">|</span> <span class="kt">Rectangle</span> <span class="kt">Point</span> <span class="kt">Number</span> <span class="kt">Number</span></code></pre></figure></p></li>
 <li><p>and then add functionality to each of the shapes using pattern matching:</p></li>
 </ol>
 
-<div class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">area</span> <span class="ow">::</span> <span class="kt">Shape</span> <span class="ow">-&gt;</span> <span class="kt">Number</span>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell">  <span class="n">area</span> <span class="ow">::</span> <span class="kt">Shape</span> <span class="ow">-&gt;</span> <span class="kt">Number</span>
     <span class="n">area</span> <span class="p">(</span><span class="kt">Circle</span> <span class="kr">_</span> <span class="kt">Number</span><span class="p">)</span> <span class="ow">=</span> <span class="kt">Number</span> <span class="o">*</span> <span class="kt">Number</span> <span class="o">*</span> <span class="kt">Pi</span>
-    <span class="n">area</span> <span class="p">(</span><span class="kt">Rectangle</span> <span class="kt">Point</span> <span class="kt">Number</span> <span class="kt">Number</span><span class="p">)</span> <span class="ow">=</span> <span class="kt">Number</span> <span class="o">*</span> <span class="kt">Number</span></code></pre></div>
+    <span class="n">area</span> <span class="p">(</span><span class="kt">Rectangle</span> <span class="kt">Point</span> <span class="kt">Number</span> <span class="kt">Number</span><span class="p">)</span> <span class="ow">=</span> <span class="kt">Number</span> <span class="o">*</span> <span class="kt">Number</span></code></pre></figure>
 
 <p>Notice you have access to the data you used to construct the shape with pattern matching. Neat, huh? It makes you think about what a concrete representation of an abstract idea really is. Really, what makes concrete representations of a single type different is the data needed to make them and their name.</p>
 

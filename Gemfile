@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'jekyll'
-gem 'jekyll-assets'
+gem 'jekyll-assets', '~> 2.2', '>= 2.2.7'
 gem 'sass'
 gem 'twitter_web_intents'
 gem 'react-jsx-sprockets'
+gem 'redcarpet'
+gem 'pygments.rb'
+gem 'mini_magick'
