@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>
         
-            The Problem with Justice - 
+            How to clone an existing Hexo site? - 
         
             toomanynames
         </title>
@@ -49,38 +49,50 @@
 
 
 
-  <h1><a href="#">The Problem with Justice</a></h1>
-  <span class='meta'>13 Jun 2016</span>
+  <h1><a href="#">How to clone an existing Hexo site?</a></h1>
+  <span class='meta'>18 Jul 2016</span>
   <div class="post">
-  <blockquote>
-<p>I am not saying someone who visciously attacks us should not be disciplined. But what is most important is that we first take care of the seeds of negativity in ourselves. Then if someone needs to be helped or disciplined, we will do so out of compassion, not anger and retribution.</p>
-
-<p><strong>- Thich Nhat Hanh</strong>, <em>Peace Is Every Step</em></p>
-</blockquote>
-
-<p>The problem with justice is it often deteriorates into revenge. And revenge is always hungry. They can catch the murderer, sentence her to death, but it still won&#39;t bring back the lives of those she&#39;s killed. It won&#39;t stop the hurt. So we put tougher rules on those that look like the murderer, and live where she lives. We treat those who are innocent as guilty. And one day one of them with all their rightful anger seeks justice, as they see it.</p>
+  <p><a href="%22http://www.hexo.io%22">Hexo</a> is a cool new static site generator that seems to be solving some of the pain points I&#39;ve faced with <a href="%22http://jekyllrb.com/%22">Jekyll</a>. However, I noticed the documentation is unclear on how to pull down an existing Hexo site via git and contribute to it. Here is what worked for me.</p>
 
 <p><span style='display: none;'>&lt;!--more--&gt;</span></p>
 
-<p>Revenge is taking a piece of wood from your burning house and tossing it back at the home of the arsonist. It does not really address the fire in your own home. Certainly, if you believe you did not provoke the arsonist, it feels like that action is right. But almost everyone feels that the actions they do are correct given their conditions. Even the arsonist. He probably felt he himself was the victim of an injustice and burning your home was the only way to rectify the situation. The only way you would hear his pain.</p>
+<h2>How to clone</h2>
 
-<p>So who is right? How do you compare the feeling of injustice between two warring parties? Feelings are not objective. They cannot be weighed. What is incredibly painful to one person may be a minor irritation to another. I honestly don&#39;t have a universal answer for this.</p>
+<p>Install the Hexo CLI (you will need <a href="https://www.npmjs.com/">npm</a>) in Terminal:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ npm install -g hexo-cli
+</code></pre></div>
+<p>Make a folder to house the source code locally, and initialize Hexo:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ mkdir cool-hexo-blog
+$ cd cool-hexo-blog
+$ hexo init
+</code></pre></div>
+<p>Set origin remote repository to this github repo and pull:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git remote set-url origin https://github.com/anirudh-eka/cool-hexo-blog.git
+$ git pull
+</code></pre></div>
+<p>Install dependancies:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ npm install
+</code></pre></div>
+<p>Run the server to check it out locally!</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ hexo server
+</code></pre></div>
+<h2>How to push &amp; pull</h2>
 
-<p>But if I&#39;m speaking to the person with the flaming piece of wood in their hands, I would ask them will burning another home really stop yours from burning? Or will it just contribute to a never ending cycle of revenge? </p>
-
-<p>Subdue the flames of your rage. Find its roots. It may lead to the arsonists home. Perhaps, you will find his home is burning as well. So don&#39;t forget to bring the water.</p>
+<p>Pushing and pulling to remote <code>origin</code> repo is exactly the same as any other repo. Remember, you will need privelages to push to the repo!</p>
 
 
   
     <ul class="meta tags">
       
-        <li>#meditation<li>
+        <li>#code<li>
+      
+        <li>#static site<li>
+      
+        <li>#blogging platform<li>
       
     </ul>
   
   </div>
-  
-    <div id="disqus_thread"></div>
   
 
 
