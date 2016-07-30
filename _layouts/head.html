@@ -14,7 +14,7 @@
         <meta name="twitter:creator" content="@anirudh_eka">
         <meta name="twitter:title" content="{{ page.title }}">
         <meta name="twitter:description" content="{{ page.text_excerpt }}">
-        <meta name="twitter:image" content="http://toomanynames.com/{{assets[page.image_file].digest_path }}" >
+        <meta name="twitter:image" content="http://toomanynames.com{% asset_path "mexican_flowers.jpg" %}" >
         <meta name="description" content="{{ site.summary_as_plain_text }}">
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -26,6 +26,7 @@
         {% stylesheet app %}
     </head>
     <body>
+      {% asset_path "mexican_flowers" %}
     <!-- Custom JS -->
     {% javascript app %}
     
