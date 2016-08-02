@@ -14,3 +14,5 @@ suggested_tweet:
     text:                 'This was cool!'
     hashtags:             ['PoetProgrammer']
     related: 			  'anirudh_eka'
+defaults:
+    image_file: sipping_tea.jpg

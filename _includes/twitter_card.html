@@ -1,0 +1,10 @@
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@anirudh_eka">
+<meta name="twitter:creator" content="@anirudh_eka">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.text_excerpt }}">
+{% if page.image_file %}
+  <meta name="twitter:image" content="http://toomanynames.com{% asset_path '{{ page.image_file }}' %}" >
+{% else %}
+  <meta name="twitter:image" content="http://toomanynames.com{% asset_path '{{ site.defaults.image_file }}' %}" >
+{% endif %}
