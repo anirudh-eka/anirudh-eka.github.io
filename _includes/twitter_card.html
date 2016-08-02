@@ -1,8 +1,19 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@anirudh_eka">
 <meta name="twitter:creator" content="@anirudh_eka">
-<meta name="twitter:title" content="{{ page.title }}">
-<meta name="twitter:description" content="{{ page.text_excerpt }}">
+
+{% if page.title %}
+  <meta name="twitter:title" content="{{ page.title }}">
+{% else %}
+  <meta name="twitter:title" content="{{ site.name }}">
+{% endif %}
+
+{% if page.text_excerpt %}
+  <meta name="twitter:description" content="{{ page.text_excerpt }}">
+{% else %}
+  <meta name="twitter:description" content="{{ site.summary_as_plain_text }}">
+{% endif %}
+
 {% if page.image_file %}
   <meta name="twitter:image" content="http://toomanynames.com{% asset_path '{{ page.image_file }}' %}" >
 {% else %}
