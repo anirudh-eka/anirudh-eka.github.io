@@ -3,6 +3,7 @@ layout: post
 title: "The Problem with Justice"
 tags: meditation
 categories: ["poetry & essays"]
+text_excerpt:  Revenge is taking a piece of wood from your burning house and tossing it back at the home of the arsonist.
 share: discuss
 ---
 
