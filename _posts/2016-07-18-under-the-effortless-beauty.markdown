@@ -15,6 +15,6 @@ A palanquin of luxury paraded through Mexican Streets on stiff brown backs that 
 
 <span style='display: none;'><!--more--></span>
 
-Undocumented.
+Undocumented. Just squatters really.
 
-It's always the trees that get gentrified out the neighborhood first. Those brown backs are just squatters really.
+It's always the trees that get gentrified out the neighborhood first.
