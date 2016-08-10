@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Under the Effortless Beauty"
-tags: Mexico
+tags: Mexico PictureWorthAPoem
 categories: ["poetry & essays"]
 share: discuss
 image_file: mexican_flowers.jpg
