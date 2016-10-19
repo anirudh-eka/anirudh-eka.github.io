@@ -722,7 +722,7 @@ nav.scrolled-to-top + #container {
 .social-icons .social-icon {
   display: inline;
   font-size: 1.89em; }
-.social-icons .social-icon:last-child {
+.social-icons .social-icon:not(:first-child) {
   padding-left: 0.73em; }
 .highlight  { background: #ffffff; }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
