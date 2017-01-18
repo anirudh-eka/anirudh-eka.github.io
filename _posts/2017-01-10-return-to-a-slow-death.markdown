@@ -5,7 +5,7 @@ tags: Chennai ClimateJustice PictureWorthAPoem
 categories: ["poetry & essays"]
 share: discuss
 image_file: chennai_beach.jpg
-text_excerpt: Fierce vermillion flowers lazily sprawl across a bed of leaves, chewing on sunshine limelight like royalty swallowing whole songs about their own grandeur.
+text_excerpt: Return to a slow death as Chennai recovers from the cyclone. As expected, those who have the kind of carbon footprint that could fit inside of their shoes were fed first.
 ---
 {% img chennai_beach magick:1x alt="Chennai Beach" %}
 
