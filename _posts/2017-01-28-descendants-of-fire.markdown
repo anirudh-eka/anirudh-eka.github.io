@@ -7,7 +7,7 @@ share: discuss
 text_excerpt: When it comes to the evolution of warfare, bullets are not the children of arrows, but the descendants of boomerangs.
 ---
 
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/hs75LSO7nZI" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="370" src="https://www.youtube.com/embed/oZ7cSW3osUc" frameborder="0" allowfullscreen></iframe>
 
 Coconut trees launch from the earth like rockets hurtling towards
 American fighter jets flying above, but explode prematurely into an
@@ -20,9 +20,9 @@ The hungry little fire chews at the wood as the match plummets towards a
 surface full of oil like a bomb over Iraq. Like these places are meant
 to burn.
 
-<span style='display: none;'><!--more--></span>
 An act of "protest" for the war.
 
+<span style='display: none;'><!--more--></span>
 Dear Monk,
 
 You can't protest entropy? I'm a fucking law of physics.
@@ -50,7 +50,7 @@ She's been suffering from this disease since birth and it is genetic.
 It is me in her, but I also see me in her heart beat.
 In the willingness for humans to thrive.
 I used to believe your capacity for self reflection,
-you're ingenuity, you're creativity could save Humanity!
+your ingenuity, your creativity could save Humanity!
 I used to thought your technology would bring you closer,
 but time has proven that the distance between human hearts cannot be
 created nor destroyed.

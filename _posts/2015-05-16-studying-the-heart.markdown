@@ -6,108 +6,99 @@ categories: ["poetry & essays"]
 share: discuss
 ---
 
-I'm studying my heart  <br/>
+I'm studying my heart 
 and digesting my name
 
-I'm taking borders apart <br/>
+I'm taking borders apart 
 putting my pride to shame
 
-I've been a shell of myself <br/>
+I've been a shell of myself 
 but it's the season of change
 
-Aint no reason for doubt, <br/>
+Aint no reason for doubt, 
 this is when a moth meets its flames
 <span style='display: none;'><!--more--></span>
 
-when a perfectionist dies <br/>
+when a perfectionist dies 
 so the perfection remains
 
-like this universe was beautiful <br/>
+like this universe was beautiful 
 before I ever came 
 
-I've got nothin to claim <br/>
+I've got nothin to claim 
 not even the place where I stay
 
-because if you give a fish <br/>
+because if you give a fish 
 a bowl you take its ocean away
 
-if they asked what I've learned <br/> 
+if they asked what I've learned 
 tell em its as simple as this
 
-anger is just fear <br/>
+anger is just fear 
 clenched in a fist
 
-Learning to let go <br/>
+Learning to let go 
 is what it means to resist
 
-I've learned, to have the mind of an elder <br/>
-with the heart of a child
-
-I live in a cage, <br/>
-but I was born to be wild
-
-And Freedom, ain't nothin, but <br/>
-staring down fear with a smile
-
-All the while, to love myself fully <br/>
+I've learned to love myself fully 
 and not just for the positive things
 
-For When I grew wings,  <br/>
+For When I grew wings, 
 they said they were proud. 
 
-They adorned them in jewels so heavy  <br/>
+They adorned them in jewels so heavy 
 I could never leave the ground. 
 
-That's why I'd rather be a pidgin than a peacock,  <br/> 
+That's why I'd rather be a pidgin than a peacock, 
 A feather too many, is too heavy for me
 
-Don't sweeten my air with sugar,  <br/>
+Don't sweeten my air with sugar,
 because I like it when I can breath
 
-a feather could be a tether <br/>
+a feather could be a tether 
 just as much as it is a key
 
-It's better to give it to someone with lesser <br/> 
+It's better to give it to someone with lesser 
 than letting it hold me down by my greed
 
-Cuz the fruits that I eat, <br/>
+Cuz the fruits that I eat, 
 are the product of someone else's hard work
 
-I've learned, that the guilt of privilege hurts, <br/>
+I've learned, that the guilt of privilege hurts, 
 ignorance is the most painful of losses
 
-But it doesn't compare to the pain <br/>
+But it doesn't compare to the pain 
 the cost of that privilege causes
 
-Compassion can build solidarity <br/>
+Compassion can build solidarity 
 pity is a narrow way to feel tall
 
-If you grow like a red wood,  <br/>
-you may scrape the sun for a moment, <br/>
+If you grow like a red wood, 
+you may scrape the sun for a moment, 
 but you are destined to fall
 
-But, if you grow like a banyan tree, <br/>
-in every leaf in the forest <br/>
+But, if you grow like a banyan tree, 
+in every leaf in the forest 
 you feel the light through us all 
 
-I've learned, the furthest you can travel <br/>
+I've learned, the furthest you can travel 
 is to the corners of your mind
 
-Genius is not something you have, <br/>
+Genius is not something you have, 
 But it is something that you find
 
-But most of all, I've learned, <br/>
-I was never a poet <br/>
+But most of all, I've learned, 
+I was never a poet 
 in all that I've written
 
-I've just been trying to interpret <br/>
+I've just been trying to interpret 
 the metaphor that we live in
 
-So to all I've been given, <br/>
+So to all I've been given, 
 Since my journey's begun
 
-Every stroke of my pen <br/>
+Every stroke of my pen 
 Every breath in my lung
 
-Is a thank you <br/>
+Is a thank you 
 in the voice of the dumb

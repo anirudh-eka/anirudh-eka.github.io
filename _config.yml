@@ -9,6 +9,8 @@ programmer_url: /programmer
 url: /
 featured_categories: ["code", "poetry & essays", "projects"]
 future: true
+redcarpet:
+    extensions: ["hard_wrap"]
 suggested_tweet:
     url:                  'http://toomanynames.com'
     text:                 'This was cool!'

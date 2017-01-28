@@ -119,7 +119,7 @@
 <figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">foldl</span> <span class="p">(</span><span class="nf">\</span><span class="n">bs</span> <span class="n">a</span> <span class="ow">-&gt;</span> <span class="kr">if</span> <span class="n">a</span> <span class="o">/=</span> <span class="mi">2</span> <span class="kr">then</span> <span class="n">bs</span> <span class="o">++</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="kr">else</span> <span class="n">bs</span><span class="p">)</span> <span class="kt">[]</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="c1">-- =&gt; [1, 3]    </span></code></pre></figure>
 
-<p>We expressed filter, in terms of fold. Well I did, and you watched if you got this far... Here&#39;s a named definition
+<p>We expressed filter, in terms of fold. Well I did, and you watched if you got this far... Here&#39;s a named definition<br>
 of filter using a fold:</p>
 
 <figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="nf">filter&#39;</span> <span class="ow">::</span> <span class="p">(</span><span class="n">a</span> <span class="ow">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span> <span class="ow">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="ow">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span>
