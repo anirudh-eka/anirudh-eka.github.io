@@ -7,6 +7,8 @@ share: discuss
 text_excerpt: When it comes to the evolution of warfare, bullets are not the children of arrows, but the descendants of boomerangs.
 ---
 
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/hs75LSO7nZI" frameborder="0" allowfullscreen></iframe>
+
 Coconut trees launch from the earth like rockets hurtling towards
 American fighter jets flying above, but explode prematurely into an
 umbrella of branches and leaves. Inside a ring of observers, a monk sits
