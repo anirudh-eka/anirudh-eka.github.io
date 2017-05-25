@@ -12,7 +12,7 @@ future: true
 redcarpet:
     extensions: ["hard_wrap"]
 suggested_tweet:
-    url:                  'http://toomanynames.com'
+    url:                  'https://toomanynames.com'
     text:                 'This was cool!'
     hashtags:             ['PoetProgrammer']
     related: 			  'anirudh_eka'
