@@ -1,0 +1,29 @@
+{
+  "name": "anirudh-eka.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "lunr": "^2.0.4",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "webpack": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anirudh-eka/anirudh-eka.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anirudh-eka/anirudh-eka.github.io/issues"
+  },
+  "homepage": "https://github.com/anirudh-eka/anirudh-eka.github.io#readme"
+}
