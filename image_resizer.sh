@@ -13,3 +13,9 @@ echo Converting Image...
 convert $1 -gravity center -crop 1080x617+0+0 -resize 700x400 ./_assets/images/$2.png
 
 open ./_assets/images/$2.png
+
+echo Your image is ready!
+echo Drop this line in the post markdown:
+echo ""
+echo "{% img $2 alt="$2" %}"
+echo ""
